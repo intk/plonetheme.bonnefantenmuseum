@@ -1,45 +1,29 @@
 @font-face {
-    font-family: 'FranklinBook';
-    src: url('/++theme++plonetheme.bonnefantenmuseum/fonts/ITCFranklinGothicStd-Book.eot'),
-         url('/nl/intk/images/itcfranklingothicstd-book.woff') format('woff'),
-         url('/++theme++plonetheme.bonnefantenmuseum/fonts/ITCFranklinGothicStd-Book.otf') format('opentype');
+    font-family: 'StyreneRegular';
+    src: url('/++theme++plonetheme.hetpark/fonts/StyreneB-Regular.woff') format('woff'),
+         url('/++theme++plonetheme.hetpark/fonts/StyreneB-Regular.woff2') format('woff2'),
+         url('/++theme++plonetheme.hetpark/fonts/StyreneB-Regular.otf') format('opentype');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
 }
 
 @font-face {
-    font-family: 'FranklinDmCp';
-    src: url('/++theme++plonetheme.bonnefantenmuseum/fonts/ITCFranklinGothicStd-DmCp.eot'),
-         url('/nl/intk/images/itcfranklingothicstd-dmcp.woff') format('woff'),
-         url('/++theme++plonetheme.bonnefantenmuseum/fonts/ITCFranklinGothicStd-DmCp.otf') format('opentype');
+    font-family: 'StyreneBold';
+    src: url('/++theme++plonetheme.hetpark/fonts/StyreneB-Bold.woff') format('woff'),
+         url('/++theme++plonetheme.hetpark/fonts/StyreneB-Bold.woff2') format('woff2'),
+         url('/++theme++plonetheme.hetpark/fonts/StyreneB-Bold.otf') format('opentype');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
 }
 
-@font-face {
-    font-family: 'FranklinMed';
-
-    src: url('/++theme++plonetheme.bonnefantenmuseum/fonts/ITCFranklinGothicStd-Med.eot'),
-         url('/nl/intk/images/itcfranklingothicstd-med.woff') format('woff'),
-         url('/++theme++plonetheme.bonnefantenmuseum/fonts/ITCFranklinGothicStd-Med.otf') format('opentype');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
+.StyreneRegular() {
+    font-family: 'StyreneRegular', Arial, sans-serif;
 }
 
-
-.FranklinBook() {
-    font-family: 'FranklinBook', Arial, sans-serif;
-}
-
-.FranklinDmCp() {
-    font-family: 'FranklinDmCp', Arial, sans-serif;
-}
-
-.FranklinMed() {
-    font-family: 'FranklinMed', Arial, sans-serif;
+.StyreneBold() {
+    font-family: 'StyreneBold', Arial, sans-serif;
 }
 
 .backendFont() {
@@ -49,8 +33,8 @@
 }
 
 @brand-primary: #282931;
-@brand-primary-titles: #282931;
-@brand-primary-text: #494A51;
+@brand-primary-titles: #575656;
+@brand-primary-text: #575656;
 @brand-primary-lines: #EAEAEA;
 
 @gray-dark: lighten(black, 25%);

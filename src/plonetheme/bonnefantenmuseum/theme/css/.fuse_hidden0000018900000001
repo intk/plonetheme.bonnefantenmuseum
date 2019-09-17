@@ -366,11 +366,11 @@ body.frontend {
 
 			
 			.slick-next {
-				background: url("++theme++plonetheme.bonnefantenmuseum/img/arrow-right.svg") no-repeat 10px !important;
+				background: url("++theme++plonetheme.hetpark/img/arrow-right.svg") no-repeat 10px !important;
 			}
 
 			.slick-prev {
-				background: url("++theme++plonetheme.bonnefantenmuseum/img/arrow-left.svg") no-repeat 10px !important;
+				background: url("++theme++plonetheme.hetpark/img/arrow-left.svg") no-repeat 10px !important;
 			}
 		}
 	}

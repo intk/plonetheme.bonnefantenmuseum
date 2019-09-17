@@ -856,7 +856,7 @@ body:not(.frontend) {
 }
 
 .buttonField() {
-	.FranklinBook();
+	.StyreneRegular();
     margin: 0 auto;
     display: block;
     padding: 18px;
@@ -894,7 +894,7 @@ body:not(.frontend) {
 }
 
 .inputField() {
-	.FranklinBook();
+	.StyreneRegular();
     margin: 0 auto;
     display: block;
     padding: 16px;
@@ -934,7 +934,7 @@ body:not(.frontend) {
 .documentLayout() {
 	h1 {
 		color: #000000;
-		.FranklinBook();
+		.StyreneRegular();
 		font-size: 3.750em;
 		font-weight: 400;
 		text-transform: uppercase;
@@ -946,14 +946,14 @@ body:not(.frontend) {
 	}
 
 	div {
-		.FranklinBook();
+		.StyreneRegular();
     	font-size: 16px;
     	letter-spacing: 0.05em;
     	color: #000000;
 	}
 
     ol li, ul li {
-    	.FranklinBook();
+    	.StyreneRegular();
     	letter-spacing: 0.05em;
     	color: #000000;
     	font-size: 17px;
@@ -1002,7 +1002,7 @@ body:not(.frontend) {
 		padding-right: 20px;
 		padding-top: 3px;
 		line-height: 32px;
-		.FranklinDmCp();
+		.StyreneBold();
 		font-size: 17px;
 		letter-spacing: 0.075em;
 		vertical-align: middle;
@@ -1012,7 +1012,7 @@ body:not(.frontend) {
 	}
 
 	table tr:first-child td {
-		.FranklinBook();
+		.StyreneRegular();
 		text-transform: uppercase;
 		font-size: 17px;
 		line-height: 22px;
@@ -1053,12 +1053,12 @@ body:not(.frontend) {
 		width: 180px;
 		height: auto;
 		/*img {
-			content: url('++resource++plonetheme.bonnefantenmuseum/logo-glyph.svg') !important;
+			content: url('++resource++plonetheme.hetpark/logo-glyph.svg') !important;
 			height: 70px;
 		}
 
 		img:before {
-			content: url('++resource++plonetheme.bonnefantenmuseum/logo-glyph.svg') !important;
+			content: url('++resource++plonetheme.hetpark/logo-glyph.svg') !important;
 		}*/
 	}
 }
@@ -1260,7 +1260,7 @@ body.frontend, body#tinymce {
     	h1 {
     		color: #000000;
     		margin-bottom: 12px;
-    		.FranklinBook();
+    		.StyreneRegular();
     		font-size: 3.750em;
     		font-weight: 400;
     		text-transform: uppercase;
@@ -1275,7 +1275,7 @@ body.frontend, body#tinymce {
     		color: #666666;
     		font-size: 1.063em;
     		letter-spacing: 0.05em;
-    		.FranklinDmCp();
+    		.StyreneBold();
     	}
 
     	.separator-wrapper {
@@ -1329,7 +1329,7 @@ body.frontend, body#tinymce {
 
     /* DOCUMENT LAYOUT */
     h2 {
-    	.FranklinBook();
+    	.StyreneRegular();
     	font-size: 2.000em;
     	line-height: 40px;
     	color: #000000;
@@ -1343,7 +1343,7 @@ body.frontend, body#tinymce {
     }
 
     h3 {
-    	.FranklinBook();
+    	.StyreneRegular();
     	font-size: 1.625em;
     	color: #000000;
     	letter-spacing: 0.075em;
@@ -1357,7 +1357,7 @@ body.frontend, body#tinymce {
     }
 
     h4 {
-    	.FranklinBook();
+    	.StyreneRegular();
     	font-size: 1.375em;
     	color: #000000;
     	letter-spacing: 0.075em;
@@ -1371,7 +1371,7 @@ body.frontend, body#tinymce {
     }
 
     h5 {
-    	.FranklinBook();
+    	.StyreneRegular();
     	font-size: 1.250em;
     	color: #000000;
     	letter-spacing: 0.075em;
@@ -1385,7 +1385,7 @@ body.frontend, body#tinymce {
     }
 
     h6 {
-    	.FranklinBook();
+    	.StyreneRegular();
     	font-size: 1.125em;
     	color: #000000;
     	letter-spacing: 0.075em;
@@ -1399,7 +1399,7 @@ body.frontend, body#tinymce {
     }
 
     p {
-    	.FranklinBook();
+    	.StyreneRegular();
     	font-size: 1.188em;
     	line-height: 37px;
     	letter-spacing: 0.05em;
@@ -1418,7 +1418,7 @@ body.frontend, body#tinymce {
     }
 
     p strong {
-    	.FranklinBook();
+    	.StyreneRegular();
     	font-size: 1.000em;
     	line-height: 37px;
     	color: #000000;
@@ -1634,7 +1634,7 @@ body.frontend, body#tinymce {
 		    line-height: 35px;
 		    color: #666666;
 		    letter-spacing: 0.05em;
-		    .FranklinDmCp();
+		    .StyreneBold();
 		}
 
 		.event.summary {
@@ -1668,7 +1668,7 @@ body.frontend, body#tinymce {
 		h1 {
 			font-size: 40px;
 			color: #000000;
-			.FranklinBook();
+			.StyreneRegular();
 			text-align: center;
 			margin-top: 25px;
 			font-weight: 400;
@@ -2213,7 +2213,7 @@ footer {
 			margin-top: 0px;
 
 			a:not(.text-button) {
-				.FranklinBook();
+				.StyreneRegular();
 				font-size: 17px;
 				text-transform: uppercase;
 				text-decoration: none;
@@ -2314,7 +2314,7 @@ footer {
 		}
 
 		p strong {
-			.FranklinBook();
+			.StyreneRegular();
 			font-size: 24px;
 			color: #4b4b4b;
 		}
@@ -2335,7 +2335,7 @@ footer {
 				left: 0;
 				width: 300px;
 				height: 145px;
-				background: url('++resource++plonetheme.bonnefantenmuseum/footer-topleft.svg');
+				background: url('++resource++plonetheme.hetpark/footer-topleft.svg');
 			}
 
 			.bottom-left-background {
@@ -2344,7 +2344,7 @@ footer {
 			    bottom: 0;
 			    width: 200px;
 			    height: 250px;
-			    background: url("++resource++plonetheme.bonnefantenmuseum/footer-bottomleft.svg");
+			    background: url("++resource++plonetheme.hetpark/footer-bottomleft.svg");
 			}
 
 			.right-background {
@@ -2353,7 +2353,7 @@ footer {
 			    right: 0;
 			    width: 250px;
 			    height: 330px;
-			    background: url('++resource++plonetheme.bonnefantenmuseum/footer-right.svg');
+			    background: url('++resource++plonetheme.hetpark/footer-right.svg');
 			}
 
 		}
@@ -2510,7 +2510,7 @@ footer {
 			left: 0;
 			width: 24px;
 			height: 60px;
-			background: url('++resource++plonetheme.bonnefantenmuseum/ticketbox.svg');
+			background: url('++resource++plonetheme.hetpark/ticketbox.svg');
 		}
 	}
 
@@ -2656,7 +2656,7 @@ footer {
 			left: 0;
 			width: 200px;
 			height: 250px;
-			background: url('++resource++plonetheme.bonnefantenmuseum/email-left.svg');
+			background: url('++resource++plonetheme.hetpark/email-left.svg');
 		}
 
 		.email-right-background {
@@ -2665,7 +2665,7 @@ footer {
 			right: 0;
 			width: 200px;
 			height: 250px;
-			background: url('++resource++plonetheme.bonnefantenmuseum/email-right.svg');
+			background: url('++resource++plonetheme.hetpark/email-right.svg');
 		}
 	}
 
@@ -2674,7 +2674,7 @@ footer {
 	}
 
 	.portletTitle p {
-		.FranklinBook();
+		.StyreneRegular();
 		font-size: 17px;
 		text-transform: uppercase;
 		text-decoration: none;
@@ -3980,7 +3980,7 @@ body.template-listing_view {
 
 .plone-navbar-nav li .submenu a {
 	color: #000000;
-	.FranklinBook();
+	.StyreneRegular();
 	letter-spacing: 0.05em;
 	padding: 4px;
 	padding-bottom: 6px;
@@ -4002,7 +4002,7 @@ body.template-listing_view {
 	color: #000000;
 	font-size: 17px;
 	text-transform: uppercase;
-	.FranklinBook();
+	.StyreneRegular();
 	letter-spacing: 0.075em;
 
 	&:hover,
@@ -4028,28 +4028,28 @@ body.template-listing_view {
 
 body.plone-toolbar-left-expanded {
 	.navbar-default .menu-search-button > a.nav-btn {
-		background: url("++resource++plonetheme.bonnefantenmuseum/icon-search-blue.svg") no-repeat center;
-		background: url("++resource++plonetheme.bonnefantenmuseum/icon-search.svg") no-repeat center;
+		background: url("++resource++plonetheme.hetpark/icon-search-blue.svg") no-repeat center;
+		background: url("++resource++plonetheme.hetpark/icon-search.svg") no-repeat center;
 		background-size: 25px;
 
 		&:hover,
 		&:focus,
 		&:active {
-			background: url("++resource++plonetheme.bonnefantenmuseum/icon-search-blue.svg") no-repeat center;
+			background: url("++resource++plonetheme.hetpark/icon-search-blue.svg") no-repeat center;
 			background-size: 25px;
 			@media (max-width: 1150px) {
-				background: url("++resource++plonetheme.bonnefantenmuseum/icon-search-blue.svg") no-repeat 20px;
+				background: url("++resource++plonetheme.hetpark/icon-search-blue.svg") no-repeat 20px;
 				background-size: 25px;
 			}
 		}
 
 		@media (max-width: 1150px) {
-			background: url("++resource++plonetheme.bonnefantenmuseum/icon-search.svg") no-repeat 20px;
+			background: url("++resource++plonetheme.hetpark/icon-search.svg") no-repeat 20px;
 			background-size: 25px;
 		}
 
 		&:after {
-			content: url("++resource++plonetheme.bonnefantenmuseum/icon-search-blue.svg");
+			content: url("++resource++plonetheme.hetpark/icon-search-blue.svg");
 	    	display: none;
 		}
 	}
@@ -4057,28 +4057,28 @@ body.plone-toolbar-left-expanded {
 
 body:not(.plone-toolbar-left-expanded) {
 	.navbar-default .menu-search-button > a.nav-btn {
-		background: url("++resource++plonetheme.bonnefantenmuseum/icon-search-blue.svg") no-repeat center;
-		background: url("++resource++plonetheme.bonnefantenmuseum/icon-search.svg") no-repeat center;
+		background: url("++resource++plonetheme.hetpark/icon-search-blue.svg") no-repeat center;
+		background: url("++resource++plonetheme.hetpark/icon-search.svg") no-repeat center;
 		background-size: 25px;
 
 		&:hover,
 		&:focus,
 		&:active {
-			background: url("++resource++plonetheme.bonnefantenmuseum/icon-search-blue.svg") no-repeat center;
+			background: url("++resource++plonetheme.hetpark/icon-search-blue.svg") no-repeat center;
 			background-size: 25px;
 			@media (max-width: 1050px) {
-				background: url("++resource++plonetheme.bonnefantenmuseum/icon-search-blue.svg") no-repeat 20px;
+				background: url("++resource++plonetheme.hetpark/icon-search-blue.svg") no-repeat 20px;
 				background-size: 25px;
 			}
 		}
 
 		@media (max-width: 1050px) {
-			background: url("++resource++plonetheme.bonnefantenmuseum/icon-search.svg") no-repeat 20px;
+			background: url("++resource++plonetheme.hetpark/icon-search.svg") no-repeat 20px;
 			background-size: 25px;
 		}
 
 		&:after {
-			content: url("++resource++plonetheme.bonnefantenmuseum/icon-search-blue.svg");
+			content: url("++resource++plonetheme.hetpark/icon-search-blue.svg");
 	    	display: none;
 		}
 	}
@@ -4143,7 +4143,7 @@ body.plone-toolbar-left-expanded {
 }
 
 .navbar-default a.navbar-brand {
-	.FranklinBook();
+	.StyreneRegular();
 	color: @brand-primary;
 	font-size: 30px;
 	padding-top: 24px;
@@ -4225,7 +4225,7 @@ body.plone-toolbar-left-expanded {
 }
 
 .navbar-default a.lang-btn {
-	.FranklinBook();
+	.StyreneRegular();
 	&:hover,
 	&:focus,
 	&:active {

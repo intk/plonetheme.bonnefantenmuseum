@@ -2596,7 +2596,7 @@ require([
   // initialize only if we are in top frame
   if (window.parent === window) {
     jQuery(document).ready(function() {
-      jQuery('body').addClass('bonnefantenmuseum-main');
+      jQuery('body').addClass('hetpark-main');
     });
   }
 });

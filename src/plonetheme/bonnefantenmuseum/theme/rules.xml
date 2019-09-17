@@ -323,7 +323,7 @@
         </div>
       </replace>
 
-      <!--<xsl:template match="//script[contains(@src, 'bonnefantenmuseum-bundle')]">
+      <!--<xsl:template match="//script[contains(@src, 'hetpark-bundle')]">
         <xsl:copy>
           <xsl:attribute name="async">true</xsl:attribute>
           <xsl:copy-of select="@*" />
