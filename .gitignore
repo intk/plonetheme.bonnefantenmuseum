@@ -4,6 +4,11 @@
 *.mo
 *.py?
 *.swp
+*.woff
+*.otf
+*.woff2
+*.ttf
+*.eot
 # dirs
 bin/
 buildout-cache/
