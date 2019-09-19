@@ -989,6 +989,7 @@ jQuery(document).ready(function($) {
 });
 
 jQuery(document).ready(function($){
+  
   var mainHeader = jQuery('.cd-auto-hide-header'),
     secondaryNavigation = jQuery('.cd-secondary-nav'),
     //this applies only if secondary nav is below intro section
@@ -1008,12 +1009,22 @@ jQuery(document).ready(function($){
     mainHeader.toggleClass('nav-open');
   });
 
-  jQuery(window).on('resize', function(){
+  jQuery("#website-wrapper").on('scroll', function(){
+    if( !scrolling ) {
+      scrolling = true;
+      (!window.requestAnimationFrame)
+        ? setTimeout(autoHideHeader, 250)
+        : requestAnimationFrame(autoHideHeader);
+    }
+  });
+
+  jQuery("#website-wrapper").on('resize', function(){
     headerHeight = mainHeader.height();
   });
 
+
   function autoHideHeader() {
-    var currentTop = jQuery(window).scrollTop();
+    var currentTop = jQuery("#website-wrapper").scrollTop();
 
     ( belowNavHeroContent.length > 0 ) 
       ? checkStickyNavigation(currentTop) // secondary navigation below intro

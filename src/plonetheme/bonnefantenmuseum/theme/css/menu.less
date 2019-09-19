@@ -35,14 +35,15 @@ xnugget info
 }
 
 .cd-nav-trigger {
-  position: fixed;
+  position: relative;
   z-index: 3;
-  right: 25px;
-  top: 25px;
-  height: 50px;
-  width: 50px;
-  background-color: #fbf9f2;
-  border-radius: 50%;
+  float: left;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: transparent;
+  border-radius: 0;
   /* image replacement */
   overflow: hidden;
   text-indent: 100%;
@@ -142,11 +143,11 @@ body:not(.navigation-is-open) .cd-nav-trigger:hover .cd-nav-icon::before {
 }
 .navigation-is-open .cd-nav-trigger {
   /* rotate trigger when navigation becomes visible */
-  -webkit-transform: rotate(180deg);
-  -moz-transform: rotate(180deg);
-  -ms-transform: rotate(180deg);
-  -o-transform: rotate(180deg);
-  transform: rotate(180deg);
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  transform: rotate(90deg);
 }
 
 .navigation-is-open .cd-nav-trigger .cd-nav-icon::after,
@@ -228,7 +229,7 @@ body:not(.navigation-is-open) .cd-nav-trigger:hover .cd-nav-icon::before {
 
   @media(max-width: 992px) {
     position: relative;
-    background-color: #fbf9f2;
+    background-color: #ffffff;
   }
 }
 
@@ -339,13 +340,14 @@ body:not(.navigation-is-open) .cd-nav-trigger:hover .cd-nav-icon::before {
 @media only screen and (min-width: 992px) {
   .cd-nav .cd-navigation-wrapper {
     padding: 0px;
-    padding-top: 0px;
-    background-color: #ad3c4f;
+    padding-top: 150px;
+    margin-top: 0px;
+    background-color: #ffffff;
   }
 
   .main-block {
-    padding-top: 150px;
-    margin-left: 320px;
+    padding-top: 100px;
+    margin-left: 0px;
     padding-right: 10px;
     height: auto;
     min-height: 100%;
@@ -447,7 +449,7 @@ body:not(.template-online_experience) {
 ul.cd-primary-nav {
   margin-left: -40px;
   @media(min-width: 991px) {
-    margin-left: 20px;
+    margin-left: -40px;
     margin-bottom: 0px;
   }
 }
@@ -470,7 +472,7 @@ ul.cd-primary-nav {
   color: @brand-primary-titles;
 
   @media(max-width: 992px) {
-    font-size: 28px;
+    font-size: 26px;
   }
 
   &:hover {
