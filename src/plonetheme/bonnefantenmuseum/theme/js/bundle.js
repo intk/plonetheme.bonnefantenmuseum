@@ -947,7 +947,7 @@ jQuery(document).ready(function($) {
       hover_limit = 1150;
     }
 
-    jQuery('ul.nav li.dropdown').hover(function() {
+    /*jQuery('ul.nav li.dropdown').hover(function() {
         if (window.innerWidth >= hover_limit) {
           jQuery(this).closest('.dropdown-menu').stop(true, true).show();
           jQuery(this).addClass('open');
@@ -957,7 +957,7 @@ jQuery(document).ready(function($) {
           jQuery(this).closest('.dropdown-menu').stop(true, true).hide();
           jQuery(this).removeClass('open');
         }
-    });
+    });*/
   }
   
   var isLateralNavAnimating = false;
@@ -973,11 +973,10 @@ jQuery(document).ready(function($) {
     }
     if( !isLateralNavAnimating ) {
       if(jQuery(this).parents('.csstransitions').length > 0 ) isLateralNavAnimating = true; 
-      jQuery('body').toggleClass('navigation-is-open');
-      
+      	jQuery('body').toggleClass('navigation-is-open');
       jQuery('.cd-navigation-wrapper').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', function(){
         //animation is over
-        
+        jQuery('body').toggleClass('navigation-is-open-end');
         isLateralNavAnimating = false;
       });
     }
