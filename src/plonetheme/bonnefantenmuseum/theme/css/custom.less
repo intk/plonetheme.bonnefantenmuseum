@@ -833,6 +833,15 @@ body.frontend .intro-header {
 	background-color: #fddace;
 }
 
+body.frontend.portaltype-collection,
+body.frontend.portaltype-folder,
+body.frontend.portaltype-person {
+
+	.page-container, .intro-header {
+		background-color: #777894;
+	}
+}
+
 .logo-nav-wrapper {
 	position: absolute;
     top: 17px;
@@ -1504,8 +1513,8 @@ body.frontend, body#tinymce {
     		width: 100%;
     		margin: 0 auto;
     		text-align: left;
-    		padding-left: 40px;
-    		padding-right: 40px;
+    		padding-left: 30px;
+    		padding-right: 30px;
     		padding-bottom: 50px;
     		padding-top: 34px;
     	}
@@ -1939,24 +1948,25 @@ body.frontend, body#tinymce {
 			}
 
 			@media (max-width: 768px) {
-				padding-top: 20px;
+				padding-top: 10px !important;
+				padding-bottom: 0px !important;
 			}
 
 			h1 {
-				font-size: 83px !important;
-				text-align: center;
+				font-size: 38px !important;
+				text-align: left;
 				margin-top: 25px;
 				font-weight: 400;
 				text-transform: none;
 				letter-spacing: 0.0em;
 				width: 100%;
-				max-width: 100%;
+				max-width: 710px;
 				line-height: 75px;
 
 				@media (max-width: 768px) {
 					font-size: 35px !important;
 					line-height: 42px;
-					text-align: center;
+					text-align: left;
 				}
 			}
 
@@ -1968,14 +1978,14 @@ body.frontend, body#tinymce {
 
 		.main-container {
 			@media (min-width: 480px) {
-				padding-right: 75px;
-				padding-left: 75px;
+				padding-right: 15px;
+				padding-left: 15px;
 			}
 
-			@media (min-width: 767px) {
+			@media (min-width: 770px) {
 				width: 100%;
-				padding-right: 100px;
-				padding-left: 100px;
+				padding-right: 15px;
+				padding-left: 15px;
 
 				.row {
 					margin-left: 0px;
@@ -1989,20 +1999,20 @@ body.frontend, body#tinymce {
 			margin-bottom: 0px;
 			padding-top: 0px;
 			.StyreneBold();
-			font-size: 32px;
-			line-height: 40px;
-			color: @brand-primary-titles;
+			font-size: 26px;
+			line-height: 30px;
+			color: #fa7d6c;
 
 			clear:both;
 			a {
-				color: @brand-primary-titles;
+				color: #fa7d6c;
 				border-bottom: 0px !important;
 
 				&:hover,
 				&:focus,
 				&:active {
-					border-bottom: 2px solid @brand-primary-text !important;
-					color: @brand-primary-titles !important;
+					border-bottom: 2px solid #fa7d6c !important;
+					color: #fa7d6c !important;
 				}
 			}
 		}
@@ -2027,16 +2037,16 @@ body.frontend, body#tinymce {
 			margin: 0;
 			width: 100%;
 
-			padding-top: 60px;
+			padding-top: 5px;
 			float:left;
 
 			@media(max-width: 768px) {
 				padding-top: 0px;
-				padding-bottom: 50px;
+				padding-bottom: 0px;
 			}
 
 			@media(min-width: 768px) {
-				padding-bottom: 80px;
+				padding-bottom: 0px;
 
 			}
 		}
@@ -2061,28 +2071,31 @@ body.frontend, body#tinymce {
 			img:not(.lazy-img) {
 				width: 100%;
 				padding: 0px;
-				margin-bottom: 20px;
+				margin-bottom: 10px;
 			}
 		}
 
 		.item-description {
 			margin-top: 10px;
-			line-height: 30px;
+			line-height: 25px;
 			margin-bottom: 5px;
+			color: #b5a685;
+			font-size: 19px;
+			letter-spacing: 0.00em;
 			/*font-size: 1.063em;*/
 		}
 
 
 		.listing-item {
-			padding-bottom: 52px;
+			padding-bottom: 50px;
 
 			@media(min-width: 992px) {
-				padding-left: 25px;
-				padding-right: 25px;
+				padding-left: 12px;
+				padding-right: 12px;
 			}
 
 			@media(max-width: 767px) {
-				padding-bottom: 60px;
+				padding-bottom: 40px;
 			}
 		}
 
@@ -2174,17 +2187,17 @@ body.frontend, body#tinymce {
 		.event-date {
 		    font-size: 17px;
 		    line-height: 35px;
-		    color: @brand-primary-titles;
+		    color: #b5a685;
 		    letter-spacing: 0.05em;
 		    text-transform: uppercase;
 		    .StyreneBold();
 
 		    @media (max-width: 991px) {
 		    	font-size: 17px;
-		    	line-height: 35px;
+		    	line-height: 25px;
 
 		    	&:not(.is_past) {
-		    		color: #ffffff;
+		    		color: #b5a685;
 		    	}
 		    }
 
@@ -2199,6 +2212,10 @@ body.frontend, body#tinymce {
 				padding-bottom: 0px;
 				margin-top: 0px;
 			}
+		}
+
+		h1.brand-name {
+			padding-top: 0px;
 		}
 	}
 
@@ -5387,9 +5404,16 @@ body.frontend.portaltype-person,
 body.portaltype-person.template-listing_view,
 body.frontend.portaltype-folder {
     .title-container {
-    	@media (min-width: 768px) {
+    	@media (min-width: 769px) {
     		padding-bottom: 0px;
-    		padding-top: 47px;
+    		padding-top: 30px !important;
+
+
+    		
+    	}
+
+    	@media (max-width: 768px) {
+    		padding-top: 0px !important;
     	}
 	}
 }
@@ -5808,13 +5832,13 @@ body:not(.plone-toolbar-left-expanded) {
 }
 
 .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
-	background-color: #ffffff;
+	background-color: transparent;
 	color: @brand-primary;
 }
 
 .dropdown-menu > .active > a, .dropdown-menu > .active > a:hover, .dropdown-menu > .active > a:focus {
-	background-color: #ffffff;
-	color: @brand-primary !important;
+	background-color: transparent;
+	color: #b5a685 !important;
 }
 
 .navbar-default {
@@ -7041,7 +7065,7 @@ body.portaltype-event .event.summary,
 body.portaltype-occurrence .event.summary {
 
 	&:not(.recurrence) {
-		display: none;
+		
 	}
 
 	&:not(.recurrence).is_past {
@@ -7135,6 +7159,7 @@ body.portaltype-occurrence .event.summary {
 body.portaltype-event #website-wrapper.empty-slideshow .event.summary {
 	&:not(.recurrence) {
 		display: block !important;
+		margin-bottom: 0px;
 	}
 }
 
@@ -7142,6 +7167,7 @@ body.portaltype-occurrence .event.summary {
 	&.recurrence { 
 		.event-date > span {
 			display: block !important;
+
 
 			&> span.datedisplay {
 				display: inline !important;
@@ -9006,12 +9032,28 @@ body.frontend.portaltype-folder #slickcarousel .carousel-item.portrait {
 	}
 }
 
+body.frontend.portaltype-collection,
+body.frontend.portaltype-folder,
+body.frontend.portaltype-person {
+	#website-wrapper.empty-slideshow .page-container {
+		@media(max-width: 768px) {
+			#title-container-wrapper {
+				padding-bottom: 0px;
+			}
+		}
+	}
+}
+
 body.userrole-authenticated #website-wrapper.empty-slideshow .page-container {
 	padding-top: 0px;
 
 	#title-container-wrapper {
 		padding-top: 90px;
 		padding-bottom: 60px;
+
+		@media(max-width: 768px) {
+			padding-bottom: 0px;
+		}
 	}
 }
 
@@ -9146,14 +9188,14 @@ body.template-listing_view {
 	}
 
 	body:not(.portaltype-portlet-page) #website-wrapper.empty-slideshow .page-container {
-		padding-left: 55px;
-		padding-right: 55px;
+		padding-left: 0px;
+		padding-right: 0px;
 	}
 
 	body.portaltype-portlet-page.subsection-nu-te-zien .title-container,
 	body.portaltype-portlet-page.subsection-now-in-the-museum .title-container {
-		padding-left: 60px;
-		padding-right: 60px;
+		padding-left: 0px;
+		padding-right: 0px;
 	}
 
 	body.portaltype-portlet-page.subsection-zien-en-doen .title-container {
@@ -9168,18 +9210,18 @@ body.template-listing_view {
 	}
 
 	body.portaltype-collection #website-wrapper.empty-slideshow .page-container {
-		padding-left: 55px;
-		padding-right: 55px;
+		padding-left: 0px;
+		padding-right: 0px;
 	}
 
 	body.portaltype-person #website-wrapper.empty-slideshow .page-container {
-		padding-left: 55px;
-		padding-right: 55px;
+		padding-left: 0px;
+		padding-right: 0px;
 	}
 
 	body.portaltype-folder #website-wrapper.empty-slideshow .page-container {
-		padding-left: 50px;
-		padding-right: 50px;
+		padding-left: 0px;
+		padding-right: 0px;
 	}
 }
 
@@ -12438,35 +12480,31 @@ body.frontend.portaltype-portlet-page.subsection-now-in-the-museum {
 
 	#website-wrapper.empty-slideshow {
 		.title-container {
-			@media(max-width: 991px) {
-				h1.brand-name {
-					font-size: 45px !important;
-    				line-height: 42px;
-				}
+			h1.brand-name {
+				font-size: 38px !important;
+				margin: 0 auto;
+				margin-bottom: 40px;
+				
 
-				span.subheading {
-					margin: 0 auto;
-					font-size: 1.180em;
-					line-height: 1.5;
-					color: @brand-primary-text;
-					text-align: center;
+				@media(min-width: 992px) {
+					margin-left: 65px;
 				}
 			}
-			@media(min-width: 992px) {
-				h1.brand-name {
-					font-size: 60px !important;
-					margin-bottom: 10px;
+
+			span.subheading {
+				max-width: 710px;
+				margin: 0 auto;
+				font-size: 25px;
+				line-height: 33px;
+				color: #b5a685;
+				text-align: left;
+
+				@media(min-width: 992px) {
+					margin-left: 65px;
 				}
 
-				span.subheading {
-					max-width: 660px;
-					margin: 0 auto;
-					font-size: 1.500em;
-					line-height: 1.5;
-					color: @brand-primary-text;
-					text-align: center;
-				}
 			}
+
 		}
 	}
 }
@@ -14092,6 +14130,14 @@ body.frontend:not(.portaltype-object) {
 
 body.frontend #global_statusmessage div.portalMessage {
 	margin-bottom: 0px;
+	padding-top: 15px;
+}
+
+body.frontend #global_statusmessage {
+	position: relative;
+	display: block;
+	float: left;
+	width: 100%;
 }
 
 
