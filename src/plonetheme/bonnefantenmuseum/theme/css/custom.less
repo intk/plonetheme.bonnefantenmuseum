@@ -939,6 +939,7 @@ body:not(.frontend) {
 		background: #777894;
 		color: #fa7d6c;
 		box-shadow: none;
+
 	}
 }
 
@@ -2463,24 +2464,24 @@ body.frontend, body#tinymce {
 
 		@media(min-width: 768px) {
 			#content-core {
-				width: 90% !important;
-				margin-right: auto !important;
+				width: 100% !important;
+				
 			}
 
 			.title-container {
 				    width: 90% !important;
-    				margin-right: auto !important;
+				    max-width: 1080px;
+				    padding-left: 15px;
+				    padding-right: 15px;
 			}
 		}
 
 		#website-wrapper.empty-slideshow .page-container {
-			padding-left: 50px !important;
-    		padding-right: 25px !important;
-    		padding-top: 10px !important;
+			
 		}
 
 		.label {
-			color: @brand-primary-text;
+			color: #b5a685;
 			font-size: 18px;
 			text-align: left;
 			padding-left: 0px;
@@ -2512,11 +2513,15 @@ body.frontend, body#tinymce {
 
 		article#content {
 			margin-bottom: 75px;
+
+			@media(max-width: 991px) {
+				margin-bottom: 0px;
+			}
 		}
 
 		label {
 			letter-spacing: 0.0em;
-			color: @brand-primary-text;
+			color: #b5a685;
 			margin-left: 4px;
 			font-size: 16px;
 			font-weight: 400;
@@ -2561,22 +2566,11 @@ body.frontend, body#tinymce {
 			padding-bottom: 0px !important;
 
 			h1 {
-				font-size: 60px;
-				text-align: left;
-				margin-top: 25px;
-				font-weight: 400;
-				text-transform: none;
-				letter-spacing: 0.05em;
-				padding-bottom: 0px;
-
-				@media (max-width: 768px) {
-					font-size: 35px;
-				}
+				
 			}
 
 			.separator-wrapper {
-				margin-top: 55px;
-				margin-bottom: 70px;
+				
 			}
 		}
 
@@ -2603,12 +2597,7 @@ body.frontend, body#tinymce {
 		
 
 		.subheading {
-			color: @brand-primary-text;
-			line-height: 2em;
-			width: 100%;
-		    max-width: 100%;
-		    margin-left: 0;
-		    text-align: left;
+			
 		}
 
 		.floating-label-form-group {
@@ -2620,44 +2609,42 @@ body.frontend, body#tinymce {
 			}
 
 			textarea, input[type="text"] {
-				border: 1px  solid #c3c3c3;
-				color: #727276;
+				
 
 				&::-webkit-input-placeholder {
-				   color: #727276;
+				   
 				}
 
 				&:-moz-placeholder { /* Firefox 18- */
-				   color: #727276;  
+				   
 				}
 
 				&::-moz-placeholder {  /* Firefox 19+ */
-				   color: #727276;  
+				   
 				}
 
 				&:-ms-input-placeholder {  
-				   color: #727276;  
+				   
 				}
 
 				&:focus,
 				&:active {
-					border: 1px solid #8e8e90;
-					color: #373739;
+					
 
 					&::-webkit-input-placeholder {
-					   color: #373739;
+					   
 					}
 
 					&:-moz-placeholder { /* Firefox 18- */
-					   color: #373739;  
+					  
 					}
 
 					&::-moz-placeholder {  /* Firefox 19+ */
-					   color: #373739;  
+					   
 					}
 
 					&:-ms-input-placeholder {  
-					   color: #373739;  
+					   
 					}
 				}
 			}
@@ -2671,9 +2658,14 @@ body.frontend, body#tinymce {
 			&> .field:not(.ArchetypesBooleanWidget):not(.ArchetypesCalendarWidget):not(.ArchetypesMultiSelectionWidget):not(.ArchetypesSelectionWidget):not(.ArchetypesDateWidget)  label {
 				letter-spacing: 0.0em;
 				font-size: 18px;
-				color: @brand-primary-text;
+				color: #b5a685;
 				text-transform: none;
 				line-height: 24px;
+				padding-right: 15px;
+
+				@media(max-width: 991px) {
+					display: none;
+				}
 			}
 		}	
 
@@ -2693,7 +2685,7 @@ body.frontend, body#tinymce {
 				display: initial;
 			}
 
-			padding-bottom: 65px;
+			padding-bottom: 0px;
 		}
 
 		button.pattern-pickadate-now,
@@ -2815,9 +2807,9 @@ body.frontend, body#tinymce {
 
 			div.field:not(.ArchetypesBooleanWidget) {
 				label.formQuestion {
-					margin-top: 16px !important;
+					margin-top: 12px !important;
 					display: inline-block;
-					width: 40%;
+					width: 30%;
 					float:left;
 				}
 			}
@@ -2833,7 +2825,7 @@ body.frontend, body#tinymce {
 			div.field:not(.ArchetypesDateWidget):not(.ArchetypesBooleanWidget):not(.ArchetypesMultiSelectionWidget) {
 				input,textarea,select {
 					display: inline-block;
-					width: 60% !important;
+					width: 70% !important;
 					float: left;
 				}
 			}
@@ -2857,12 +2849,15 @@ body.frontend, body#tinymce {
 
 			div.field.ArchetypesMultiSelectionWidget {
 				div.formQuestion {
-					width: 40% !important;
+					width: 30% !important;
+					padding-right: 15px;
+					white-space: normal;
+					line-height: 24px;
 					float: left;
 				}
 
 				.ArchetypesMultiSelectionValue {
-					width: 60%;
+					width: 70%;
     				float: right;
 				}
 			}
@@ -6621,10 +6616,30 @@ body.frontend {
 
 /* FORMS */
 
-body.portaltype-formfolder {
+body.frontend.portaltype-formfolder {
 	input,
 	textarea {
 		width: 100% !important;
+	}
+
+	#website-wrapper.empty-slideshow .page-container {
+		background-color: #777894;
+	}
+
+	#website-wrapper.empty-slideshow .main-container {
+		width: 90% !important;
+		max-width: 1080px;
+
+		@media(max-width: 991px) {
+			width: 100% !important;
+		}
+	}
+
+	#website-wrapper.empty-slideshow .page-container #title-container-wrapper {
+		@media(max-width: 991px) {
+			padding-top: 20px;
+			padding-bottom: 0px;
+		}
 	}
 
 	input[type="checkbox"],
@@ -6643,11 +6658,26 @@ body.portaltype-formfolder {
 
 	.form-group fieldset.PFGFieldsetWidget > legend {
 		padding-top: 50px;
+		color: #b5a685;
+		border-bottom: 1px solid #b5a685;
+
+		
+	}
+
+
+	.form-group fieldset.PFGFieldsetWidget > .formHelp {
+		color: #b5a685;
 	}
 
 	#content-core {
 		p.help-block {
 			margin: 0px 0 !important;
+		}
+	}
+
+	div[id^="parent-fieldname-formEpilogue"] {
+		h4, p {
+			color: #b5a685;
 		}
 	}
 }
@@ -7316,7 +7346,7 @@ body.frontend:not(.subsection-verhalen):not(.subsection-world-of-utrecht) #websi
 }
 
 body.frontend h4.item-title a.hover {
-	border-bottom: 2px solid #494a51 !important;
+	border-bottom: 2px solid #fa7d6c !important;
 }
 
 
@@ -9094,7 +9124,7 @@ body.frontend.portaltype-folder #slickcarousel .carousel-item.portrait {
 
 
 #website-wrapper.empty-slideshow .page-container {
-	min-height: 100vh;
+	
 
 	#title-container-wrapper {
 		padding-top: 90px;
@@ -9124,6 +9154,7 @@ body.frontend.portaltype-person {
 
 body.userrole-authenticated #website-wrapper.empty-slideshow .page-container {
 	padding-top: 0px;
+
 
 	#title-container-wrapper {
 		padding-top: 90px;
@@ -9508,6 +9539,8 @@ body.frontend.portaltype-formthankspage {
 	#content-core {
 		margin-right: auto !important;
 		margin-left: auto !important;
+		padding-top: 50px;
+		padding-bottom: 40px;
 
 		blockquote {
 			margin-left: 0px !important;
@@ -11325,26 +11358,16 @@ body.frontend.portaltype-object {
 		    -webkit-transition: all 100ms linear;
 		    transition: all 100ms linear;
 			
-			&:hover,
-			&:active,
-			&:focus,
-			&:focus:active {
-				color: #ffffff;
-				background: #000000;
-				border: 1px solid #000000;
-			};
+			
 
 			margin-top: 0px;
 			margin-bottom: 0px;
 			padding: 18px;
 			padding-bottom: 18px;
 			line-height: 15px;
-			color: #666666;
-			letter-spacing: 0.00em;
-			border: 1px solid #e6e6e6;
 
 			@media(max-width: 991px) {
-				width: 170px;
+				width: 250px;
 				padding-left: 10px;
 				padding-right: 10px;
 			}
@@ -14222,7 +14245,7 @@ footer .logo-footer img {
 body.frontend.portaltype-object {
 	#object-details-btn {
 		.share-btn, .toolbox__download {
-			display: none !important;
+			
 		}
 	}
 }
