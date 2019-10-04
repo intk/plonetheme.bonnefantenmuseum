@@ -3049,7 +3049,7 @@ body.frontend, body#tinymce {
             padding-bottom: 0px;
             padding-right: 0px;
             padding-left: 0px;
-            top: 25px;
+            top: 45px;
             left: 0px;
             width: 45px;
             border: 0px;
@@ -3662,6 +3662,11 @@ footer {
 	@media (max-width: 991px) {
 		.line-wrapper.logo-footer {
 			padding-top: 0px;
+		}
+
+		.line-wrapper {
+			padding-right: 0px;
+			padding-left: 0px;
 		}
 	}
 
@@ -5709,7 +5714,7 @@ body.frontend, body.mce-content-body {
 
 	@media (min-width: 992px) and (max-width: 1200px) {
 		footer .container .footer-wrapper {
-			padding-left: 20px;
+			padding-left: 0px;
 		}
 
 		footer .portletWrapper:nth-child(3) {
@@ -14420,4 +14425,59 @@ body.navigation-is-open-end {
 	}
 }
 
+.header-quotes-wrapper {
+	position: relative;
+	width: 100%;
+    display: none;
+
+    @media(min-width: 1200px) {
+    	display: block;
+    }
+}
+
+.quote-bonnefanten {
+	.BonnefantenBlock();
+	color: #b5a685;
+    font-size: 100px;
+    position: absolute;
+
+    &.quote-top-right {
+    	right: 0;
+    }
+
+    &.quote-top-left {
+    	left: 0;
+    }
+}
+
+body.frontend {
+	.header-quotes-wrapper {
+		margin-left: 0px;
+	    margin-right: 0px;
+
+	    @media(min-width: 1200px) {
+	    	display: block;
+	    }
+
+	    .quote-bonnefanten { 
+	    	top: 30px;
+
+	    	&.quote-top-right {
+		    	right: 20px;
+		    }
+
+		    &.quote-top-left {
+		    	left: 20px;
+		    }
+	    }
+	}
+}
+
+body.frontend #website-wrapper:not(.empty-slideshow) {
+	.header-quotes-wrapper {
+		.quote-bonnefanten { 
+	    	top: 20px;
+	    }
+	}
+}
 
