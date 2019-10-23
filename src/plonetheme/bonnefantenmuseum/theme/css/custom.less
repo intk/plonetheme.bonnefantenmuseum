@@ -1178,6 +1178,13 @@ div.logo-wrapper {
 	color: #fa7d6c;
 	margin-left: 5px;
 
+
+	transition: all 0.2s ease-in;
+    -webkit-transition: all 0.2s ease-in;
+	-moz-transition: all 0.2s ease-in;
+	-o-transition: all 0.2s ease-in;
+	transition: all 0.2s ease-in;
+
 	.BonnefantenBlock();
 	
 	font-size: 30px;
@@ -2262,6 +2269,10 @@ body.frontend, body#tinymce {
 	&.portaltype-event #below-content,
 	&.portaltype-person #below-content {
 
+		#title-container-wrapper .header-quotes-wrapper {
+			display: none;
+		}
+
 		#column-collective-portletpage-toprow-portlet-slideshow,
 		#column-collective-portletpage-toprow-portlet-ontdek,
 		#column-collective-portletpage-toprow-portlet-ontdek-het-paleis {
@@ -2303,23 +2314,31 @@ body.frontend, body#tinymce {
 			}
 		}
 
-		h1 {
-			font-size: 45px;
-			color: @brand-primary-titles;
-			.StyreneBold();
-			text-align: center;
+		.portletHeader h3 {
+			font-size: 7.5vw;
+		    line-height: 8vw;
+		    margin-top: 8px;
+		    color: #b5a685;
+			.BonnefantenBlock();
+			text-align: left;
 			margin-top: 25px;
 			font-weight: 400;
 			text-transform: none;
 			letter-spacing: 0.00em;
 
 			@media (max-width: 991px) {
-				font-size: 45px;
+				font-size: 10vw;
+				line-height: 10.5vw;
+				padding-left: 10px;
+    			padding-right: 10px;
+    			margin-top: 0px;
+    			padding-top: 0px;
+    			padding-bottom: 15px;
 			}
 		}
 
 		&.subsection-nu-te-zien {
-			h1 {
+			h3 {
 				@media (max-width: 991px) {
 					font-size: 35px;
 				}
@@ -2327,7 +2346,7 @@ body.frontend, body#tinymce {
 		}
 
 		&.subsection-now-in-the-museum {
-			h1 {
+			h3 {
 				@media (max-width: 991px) {
 					font-size: 35px;
 				}
@@ -2335,7 +2354,7 @@ body.frontend, body#tinymce {
 		}
 
 		&.subsection-zien-en-doen {
-			h1 {
+			h3 {
 				@media (max-width: 991px) {
 					font-size: 35px;
 				}
@@ -2426,8 +2445,8 @@ body.frontend, body#tinymce {
 
 		@media (min-width: 769px) {
 			#row-items {
-				padding-left: 25px !important;
-				padding-right: 25px !important;
+				padding-left: 0px !important;
+				padding-right: 0px !important;
 			}
 		}
 
@@ -5708,7 +5727,7 @@ body.frontend, body.mce-content-body {
 
 		.page-container .container {
 			width: auto;
-			padding-top: 20px;
+			padding-top: 0px;
 		}
 	}
 
@@ -11711,7 +11730,7 @@ body.frontend.portaltype-portlet-page.section-home-page {
 		}
 
 		#portal-logo {
-			display: none !important;
+			
 		}
 
 		#slickcarousel {
@@ -11720,7 +11739,7 @@ body.frontend.portaltype-portlet-page.section-home-page {
 		    margin-left: 0;
 
 		    .slideshow-wrapper {
-		    	margin-left: 300px;
+		    	
 		    }
 		}
 
@@ -11768,7 +11787,7 @@ body.frontend.portaltype-portlet-page.section-home-page {
 
 		#slickcarousel {
 		    .slideshow-wrapper {
-		    	margin-left: 410px;
+		    	
 		    }
 		}
 	}
@@ -11832,8 +11851,8 @@ body.frontend.portaltype-portlet-page.section-home-page {
 
 		#row-items > .portlet-item {
 			@media(max-width: 767px) {
-				padding-left: 30px;
-				padding-right: 30px;
+				padding-left: 15px;
+				padding-right: 15px;
 			}
 		}
 	}
@@ -11851,7 +11870,25 @@ body.frontend.portaltype-portlet-page.section-home-page {
 
 				input {
 					margin-left: 0;
-					width: 135px
+				    width: auto;
+				    text-transform: uppercase;
+				    background-color: #7841af;
+				    border: 1px solid #7841af;
+				    color: #f6f4bd;
+				    padding-left: 15px;
+				    padding-right: 15px;
+				    padding-top: 5px;
+				    padding-bottom: 5px;
+				    font-size: 19px;
+
+					&:hover,
+					&:active,
+					&:focus,
+					&:focus:active {
+						background-color: #b5a685;
+						color: #f6f4bd;
+						border: 1px solid #b5a685;
+					}
 				}
 			}
 		}
@@ -11901,11 +11938,13 @@ body.frontend.portaltype-portlet-page.section-home-page {
 
 		.portletCollection.frontpage-portlet-collection {
 			.portletHeader {
-				margin-bottom: 25px;
+				margin-bottom: 45px;
 
-				h1 {
-					font-size: 80px;
-					margin-top: 5px;
+				h3 {
+					font-size: 7.5vw;
+				    line-height: 8vw;
+				    margin-top: 8px;
+				    color: #b5a685;
 				}
 			}
 
@@ -11920,7 +11959,7 @@ body.frontend.portaltype-portlet-page.section-home-page {
 				}
 
 				.thumb-wrapper {
-					width: 55%;
+					width: 60%;
 					float: left;
 					padding: 15px;
 
@@ -11934,10 +11973,10 @@ body.frontend.portaltype-portlet-page.section-home-page {
 				}
 
 				.entry-wrapper {
-					width: 45%;
+					width: 40%;
 					float: right;
-					padding: 50px;
-					padding-top: 5.5vw;
+					padding: 10px;
+					padding-top: 0px;
     				padding-bottom: 30px;
     				max-width: 550px;
 
@@ -11946,19 +11985,22 @@ body.frontend.portaltype-portlet-page.section-home-page {
     				}
 
 					h4 {
-						font-size: 70px;
-    					line-height: 65px;
+						font-size: 30px;
+    					line-height: 35px;
 
     					@media(max-width: 1280px) {
-    						font-size: 5.5vw;
-    						line-height: 5vw;
+    						font-size: 1.85vw;
+						    line-height: 2.5vw;
+						    
     					}
 
     					a {
+    						color: #7841af;
     						&:hover,
     						&:focus,
     						&:active,
     						&:active:focus {
+    							color: #7841af !important;
     							border-bottom: 0px !important;
     							text-decoration: underline;
     						}
@@ -11966,7 +12008,7 @@ body.frontend.portaltype-portlet-page.section-home-page {
 					}
 
 					p.event-date {
-						margin-left: 3px;
+						margin-left: 0px;
 					}
 
 
@@ -11974,43 +12016,19 @@ body.frontend.portaltype-portlet-page.section-home-page {
 
 				}
 
-				&> .portlet-item:nth-child(even) {
-					.thumb-wrapper {
-						width: 60%;
+				
+				.thumb-wrapper {
+					padding-left: 75px;
+					img {
 						float: right;
-						padding-right: 55px;
-
-						img {
-							float: right;
-						}
-
 					}
-					.entry-wrapper {
-						width: 40%;
-						float: left;
-						padding-left: 75px;
-						float: right;
-						padding-top: 3vw;
-						@media(min-width: 1300px) {
-							padding-top: 40px;
-						}
-					}
-				} 
+					
+				}
 
-				&> .portlet-item:nth-child(odd) {
-					.thumb-wrapper {
-						padding-left: 55px;
-						img {
-							float: right;
-						}
-						
-					}
-
-					.entry-wrapper {
-						padding-right: 75px;
-						float: left;
-					}
-				} 
+				.entry-wrapper {
+					padding-right: 60px;
+					float: left;
+				}
 			}
 
 			&.alternate-color {
@@ -12119,8 +12137,6 @@ body.frontend.portaltype-portlet-page.section-home-page {
 				}
 			}
 		}
-
-
 	}
 }
 
@@ -12134,20 +12150,20 @@ body.frontend.portaltype-portlet-page.section-home-page {
 
 	.portlet-collection-nu-te-zien {
 		.portletHeader {
-			display: none;
+			
 		}
 		@media(min-width: 768px) {
 			padding-top: 0px !important;
-                        padding-bottom: 50px !important;
+            padding-bottom: 0px !important;
 		}
-		margin-left: -15px;
-		margin-right: -15px;
+		margin-left: 0px;
+		margin-right: 0px;
 
 		@media(min-width: 992px) {
-			padding-top: 70px !important;
+			padding-top: 0px !important;
 			padding-bottom: 0px !important;
-			margin-left: -15px;
-			margin-right: -15px; 
+			margin-left: 0px;
+			margin-right: 0px; 
 		}
 	}
 
@@ -12189,15 +12205,24 @@ body.frontend.portaltype-portlet-page.section-home-page {
 		}
 
 		margin-left: -15px;
-		margin-right: -15px;
-		background-color: #fbf9f2;
-		padding-top: 40px;
-		padding-bottom: 30px;
+	    margin-right: -15px;
+	    padding-left: 15px;
+	    padding-right: 15px;
+	    padding-top: 0px;
+	    padding-bottom: 0px;
+	    background: #ab3c4f;
+
+	    @media(max-width: 768px) {
+	    	margin-left: 0px;
+	    	margin-right: 0px;
+	    	padding-left: 0px;
+	    	padding-right: 0px;
+	    }
 
 		@media(min-width: 992px) {
 			
-			padding-top: 60px;
-			padding-bottom: 60px;
+			padding-top: 0px;
+			padding-bottom: 0px;
 
 
 			.desc-mdash {
@@ -12685,8 +12710,7 @@ body:not(.frontend).template-folder_contents {
 body.frontend.portaltype-portlet-page.section-frontpage,
 body.frontend.portaltype-portlet-page.section-home-page {
 	#slickcarousel {
-		height: auto !important;
-		min-height: auto !important;
+		
 	}
 
 	#slickcarousel .carousel-wrapper {
@@ -12706,7 +12730,7 @@ body.frontend.portaltype-portlet-page.section-home-page {
 
 	@media(max-width: 991px) {
 		#top-left-header-below {
-			padding-left: 60px;
+			
 		}
 	}
 }
@@ -14480,4 +14504,227 @@ body.frontend #website-wrapper:not(.empty-slideshow) {
 	    }
 	}
 }
+
+/* New frontpage */
+
+body.frontend.portaltype-portlet-page.section-frontpage {
+	#portal-logo {
+		color: #f6d03b;
+	}
+	#above-content {
+		display: none;
+	}
+	.nav-trigger-wrapper svg path {
+		fill: #f6d03b;
+	}
+
+	&.navigation-is-open-end #portal-logo {
+    	color: #f6433f;
+	}
+
+	&.navigation-is-open-end .cd-nav-trigger svg path {
+    	fill: #f6433f;
+	}
+
+	.nav-trigger-wrapper:hover svg path, 
+	.nav-trigger-wrapper:focus svg path {
+   		fill: #b5a685;
+	}
+
+
+	#slickcarousel {
+		.title-description-carousel-wrapper {
+			position: absolute;
+    		bottom: 0px;
+    		pointer-events: all;
+
+		    padding-left: 20px;
+		    padding-right: 20px;
+		    margin-bottom: 25px;
+
+		    width: 100%;
+
+    		.header-quotes-wrapper {
+    			.quote-bonnefanten {
+    				line-height: 60px;
+    			}
+
+    			.quote-bonnefanten.quote-top-left {
+    				left: -95px;
+    			}
+
+    			.quote-bonnefanten.quote-top-right {
+    				right: -95px;
+    			}
+    		}
+
+    		p.event-date {
+    			color: #f6d03b;
+    			text-transform: uppercase;
+    			margin-bottom: 10px;
+    			letter-spacing: -0.05em;
+    		}
+
+    		h3.carousel-title {
+    			color: #f6d03b;
+    			margin-bottom: 5px;
+    			margin-top: 5px;
+
+    			a {
+    				color: #f6d03b;
+    				&:hover,
+    				&:active,
+    				&:focus,
+    				&:focus:active {
+    					color: #f6d03b;
+    					text-decoration: underline;
+    					border-bottom: 0px;
+    				}
+    			}
+    		}
+
+    		@media(min-width: 1200px) {
+		    	padding-left: 120px;
+		    	padding-right: 120px;
+
+		    	.header-quotes-wrapper {
+    			
+	    		}
+
+	    		p.event-date {
+	    			font-size: 25px;
+	    		}
+
+	    		h3.carousel-title {
+	    			font-size: 38px;
+	    		}
+		    }
+		}
+	}
+
+
+	.portlet-collection-wrapper {
+		padding-left: 10px;
+	    padding-right: 10px;
+	    padding-top: 40px;
+	    background: #f6f4bd;
+
+	    @media(max-width: 768px) {
+	    	padding-left: 10px;
+	    	padding-right: 10px;
+	    }
+
+	    .portletHeader {
+	    
+	    }
+
+	    #row-items {
+	    	.portlet-item {
+	    		.thumb-wrapper {
+
+	    		}
+
+	    		.entry-wrapper {
+	    			p.event-date {
+	    				.StyreneRegular();
+	    				margin-top: 10px;
+	    				font-size: 20px;
+	    				line-height: 25px;
+	    				margin-bottom: 7px;
+	    			}
+
+	    			p.item-description {
+	    				margin-top: 30px;
+	    			}
+	    		}
+	    	}
+	    }
+
+	    .portlet-item {
+	    	.header-quotes-wrapper .quote-bonnefanten.quote-top-left {
+			    left: -15px;
+			    top: 0px !important;
+			    line-height: 100px;
+			}
+
+			.header-quotes-wrapper .quote-bonnefanten.quote-top-right {
+			    right: -15px;
+			    top: 0px !important;
+			    line-height: 100px;
+			}
+	    }
+
+	}
+
+	@media(min-width: 992px) {
+		.header-quotes-wrapper {
+			display: block;
+		}
+	}
+
+	#content-core {
+		padding-bottom: 0px;
+	}
+
+	.main-container {
+		padding-bottom: 0px;
+	}
+
+	.page-container {
+		background-color: #f6f4bd;
+	}
+
+	.frontpage-collection-online {
+		h3 {
+			color: #b5a685;
+		}
+
+		.portlet-collection-wrapper {
+			background: #ab3c4f;
+		}
+
+		.slide-inner-title {
+			h4 a {
+
+				@media(max-width: 991px) {
+					color: #b5a685;
+
+					&:hover,
+					&:focus,
+					&:active,
+					&:active:focus {
+						color: #b5a685 !important;
+						border-bottom: 1px #b5a685 !important;
+					}
+				}
+			}
+
+			p.item-description {
+				@media(max-width: 991px) {
+					color: #b5a685;
+				}
+			}
+		}
+	}
+
+	#column2-container {
+		display: none;
+	}
+
+
+}
+
+.nav-trigger-wrapper svg path {
+	transition: fill 0.1s ease-in;
+    -webkit-transition: fill 0.1s ease-in;
+    -moz-transition: fill 0.1s ease-in;
+    -o-transition: fill 0.1s ease-in;
+    transition: fill 0.1s ease-in;
+}
+
+
+
+
+
+
 
