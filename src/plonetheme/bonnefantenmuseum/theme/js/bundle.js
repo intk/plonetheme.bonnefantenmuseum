@@ -736,7 +736,7 @@ function register($form) {
     dataType: 'json',
     contentType: 'application/json; charset=utf-8',
     error: function (err) { 
-    	$form.find('#form-widgets-email').css('borderColor', '#e70518');
+    	$form.find('#form-widgets-email').css('borderColor', '#fa7d6c');
     	$form.find('#subscribe-result .success-msg').hide();
     	$form.find('#subscribe-result .error-msg').show();
     	$loader.hide();
@@ -745,19 +745,19 @@ function register($form) {
       
       if (data.result === 'success') {
         // Yeahhhh Success
-        $form.find('#form-widgets-email').css('borderColor', '#c3c3c3')
-        $form.find('#subscribe-result').css('color', 'rgb(53, 114, 210)')
+        $form.find('#form-widgets-email').css('borderColor', '#ffd100')
+        $form.find('#subscribe-result').css('color', 'rgb(181, 166, 133)')
         $form.find('#subscribe-result .success-msg').show();
     	$form.find('#subscribe-result .error-msg').hide();
         $form.find('#form-widgets-email').val('');
         $loader.hide();
       } else {
         // Something went wrong, do something to notify the user.
-        $form.find('#form-widgets-email').css('borderColor', '#e70518');
-        $form.find('#subscribe-result').css('color', '#e70518');
+        $form.find('#form-widgets-email').css('borderColor', '#fa7d6c');
+        $form.find('#subscribe-result').css('color', '#fa7d6c');
         $form.find('#subscribe-result .success-msg').hide();
 
-        if (data.msg.indexOf("reeds geabonneerd op lijst") > 0 || data.msg.indexOf("zich al ingeschreven") > 0) {
+        if (data.msg.indexOf("reeds geabonneerd op lijst") > 0 || data.msg.indexOf("zich al ingeschreven") > 0 || data.msg.indexOf("is already subscribed") > 0) {
        		$form.find('#subscribe-result .error-msg').html(data.msg);
        	}
     	$form.find('#subscribe-result .error-msg').show();

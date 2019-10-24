@@ -1286,7 +1286,7 @@ body.frontend, body#tinymce {
 
 	.pager .disabled > span {
 		background-color: transparent;
-		color: #b5a685;
+		color: #b6a782;
 	}
 
 	#website-wrapper.empty-slideshow .title-container {
@@ -1568,7 +1568,7 @@ body.frontend, body#tinymce {
     	}
 
     	h1 {
-    		color: #b5a685;
+    		color: #b6a782;
     		.StyreneBold();
     		font-size: 38px;
     		font-weight: 400;
@@ -1589,7 +1589,7 @@ body.frontend, body#tinymce {
     	}
 
     	.subheading {
-    		color: #b5a685;
+    		color: #b6a782;
     		font-size: 25px;
     		letter-spacing: 0.00em;
     		line-height: 32px;
@@ -2052,7 +2052,7 @@ body.frontend, body#tinymce {
 		p.event-date {
 			font-size: 15px;
 		    line-height: 35px;
-		    color: #b5a685;
+		    color: #b6a782;
 		    letter-spacing: 0.05em;
 			margin-bottom: 0px;
 			margin-top: 14px;
@@ -2111,7 +2111,7 @@ body.frontend, body#tinymce {
 			margin-top: 10px;
 			line-height: 25px;
 			margin-bottom: 5px;
-			color: #b5a685;
+			color: #b6a782;
 			font-size: 19px;
 			letter-spacing: 0.00em;
 			/*font-size: 1.063em;*/
@@ -2219,7 +2219,7 @@ body.frontend, body#tinymce {
 		.event-date {
 		    font-size: 17px;
 		    line-height: 35px;
-		    color: #b5a685;
+		    color: #b6a782;
 		    letter-spacing: 0.05em;
 		    text-transform: uppercase;
 		    .StyreneBold();
@@ -2229,7 +2229,7 @@ body.frontend, body#tinymce {
 		    	line-height: 25px;
 
 		    	&:not(.is_past) {
-		    		color: #b5a685;
+		    		color: #b6a782;
 		    	}
 		    }
 
@@ -2318,7 +2318,7 @@ body.frontend, body#tinymce {
 			font-size: 7.5vw;
 		    line-height: 8vw;
 		    margin-top: 8px;
-		    color: #b5a685;
+		    color: #b6a782;
 			.BonnefantenBlock();
 			text-align: left;
 			margin-top: 25px;
@@ -2500,7 +2500,7 @@ body.frontend, body#tinymce {
 		}
 
 		.label {
-			color: #b5a685;
+			color: #b6a782;
 			font-size: 18px;
 			text-align: left;
 			padding-left: 0px;
@@ -2540,7 +2540,7 @@ body.frontend, body#tinymce {
 
 		label {
 			letter-spacing: 0.0em;
-			color: #b5a685;
+			color: #b6a782;
 			margin-left: 4px;
 			font-size: 16px;
 			font-weight: 400;
@@ -2677,7 +2677,7 @@ body.frontend, body#tinymce {
 			&> .field:not(.ArchetypesBooleanWidget):not(.ArchetypesCalendarWidget):not(.ArchetypesMultiSelectionWidget):not(.ArchetypesSelectionWidget):not(.ArchetypesDateWidget)  label {
 				letter-spacing: 0.0em;
 				font-size: 18px;
-				color: #b5a685;
+				color: #b6a782;
 				text-transform: none;
 				line-height: 24px;
 				padding-right: 15px;
@@ -3161,16 +3161,56 @@ footer, body.mce-content-body {
 		}
 	}
 
+	div.sponsors-wrapper {
+		display: none !important;
+		padding-top: 50px;
+
+		a {
+			
+			&:hover,
+			&:focus,
+			&:active,
+			&:focus:active {
+				svg path {
+					fill: #b6a782;
+				}
+
+				svg .fil0 {
+					fill: #b6a782;
+				}
+			}
+		}
+		svg {
+
+			max-width: 150px;
+    		height: 100px;
+    		margin-left: 20px;
+    		margin-right: 20px;
+		}
+
+		svg#mondriaanfondssvg {
+			max-width: 60px;
+		}
+	}
+
 	ul.social-media li {
 	  display: inline-block;
 	  padding-right: 15px;
 	  line-height: 20px;
 	}
 
+	ul.contact-wrapper {
+		padding-top: 40px;
+
+		@media (max-width: 991px) {
+			padding-top: 5px !important;
+		}
+	}
+
 	ul.social-media {
 		margin-left: 0;
 		padding-left: 0;
-		padding-top: 17px;
+		padding-top: 35px;
 
 		a {
 			border-bottom: 0px !important;
@@ -3178,7 +3218,7 @@ footer, body.mce-content-body {
 			&:hover,
 			&:active,
 			&:focus {
-				color: #b5a685 !important;
+				color: #b6a782 !important;
 				border-bottom: 0px !important;
 			}
 		}
@@ -3187,7 +3227,7 @@ footer, body.mce-content-body {
 			font-size: 40px !important;
 		}
 
-		@media (max-width: 768px) {
+		@media (max-width: 991px) {
 			padding-top: 15px !important;
 		}
 	}
@@ -3219,13 +3259,15 @@ footer, body.mce-content-body {
 
 	border-top: 0px solid #e7e7e7;
 	padding-top: 0px;
-	padding-bottom: 30px;
+	padding-bottom: 0px;
 
 	.portlet-static-footer {
-		padding-top: 42px;
+		padding-top: 145px;
+		padding-bottom: 110px;
 
 		@media(max-width: 767px) {
 			padding-top: 50px;
+			padding-bottom: 50px;
 		}
 	}
 
@@ -3388,6 +3430,23 @@ footer, body.mce-content-body {
 	.logo-footer.empty {
 		display: none !important
 	}
+
+	div.portlet-static-footer {
+		background-color: #ffd100;
+
+		li a:not(.text-button) {
+			color: #7841b3;
+			&:hover,
+			&:focus,
+			&:active,
+			&:active:focus {
+				color: #b6a782;
+				text-decoration: none;
+				border-bottom: 2px solid #b6a782;
+			}
+
+		}
+	}
 }
 
 body.portaltype-folder,
@@ -3445,8 +3504,8 @@ footer {
 			}
 
 			.footer-wrapper {
-				padding-left: 0px;
-				padding-right: 0px;
+				padding-left: 90px;
+				padding-right: 90px;
 			}
 		}
 	}
@@ -3465,33 +3524,33 @@ footer {
 	}
 
 	div.portlet-static-footer {
-		background-color: #777894;
+		background-color: #ffd100;
 		margin-left: -15px;
 		margin-right: -15px;
 
 		p {
 			color: #ffffff;
-			margin-bottom: 24px;
+			margin-bottom: 36px;
 			margin-top: 0px;
 
 			a:not(.text-button) {
 				.BonnefantenBlock();
-				font-size: 52px;
+				font-size: 4.5vw;
 				text-transform: uppercase;
 				text-decoration: none;
-				color: #b5a685;
+				color: #b6a782;
 				letter-spacing: 0.00em;
 				border-bottom: 0px;
-				line-height: 56px;
+				line-height: 5vw;
 
 				&:hover {
-					color: #b5a685;
+					color: #b6a782;
 					text-decoration: none;
 				}
 
 				&:active,
 				&:focus {
-					color: #b5a685;
+					color: #b6a782;
 					text-decoration: none;
 				}
 
@@ -3535,30 +3594,30 @@ footer {
 		}
 
 		li a:not(.text-button) {
-			color: #fa7d6c;
+			color: #7841b3;
 			border-bottom: 0px;
 
 			.StyreneBold();
 
 			&:hover {
-				color: #fa7d6c;
+				color: #b6a782;;
 				border-bottom: 0px;
 				text-decoration: none;
-				border-bottom: 2px solid #fa7d6c;
+				border-bottom: 2px solid #b6a782;;
 			}
 
 			&:active,
 			&:focus {
-				color: #fa7d6c;
+				color: #b6a782;;
 				text-decoration: none;
-				border-bottom: 2px solid #fa7d6c;
+				border-bottom: 2px solid #b6a782;;
 			}
 		}
 
 		li {
 			color: @brand-primary-text;
 			font-size: 24px;
-			line-height: 33px;
+			line-height: 45px;
 		}
 	}
 
@@ -3571,12 +3630,16 @@ footer {
 
 		@media(max-width: 768px) {
 			padding-bottom: 50px;
+			padding-left: 15px;
+			padding-right: 15px;
 		}
 	}
 
 	@media (min-width: 769px) and (max-width: 991px) {
 		.footer-wrapper {
 			max-width: 750px;
+			padding-left: 30px;
+			padding-right: 30px;
 		}
 	}
 
@@ -3853,14 +3916,50 @@ footer {
 }
 
 /* Mailchimp portlet */
+body.frontend.portaltype-portlet-page .portletMailChimp,
 .portletMailChimp, .portlet-mailplus {
 
 	padding-top: 0px;
-	padding-bottom: 90px;
-	background-color: #e1ecf2;
+	padding-bottom: 50px;
+	background-color: #7841b3;
 	margin: 0px;
 	margin-left: -15px;
 	margin-right: -15px;
+
+	@media(max-width: 768px) {
+		margin-left: 0px;
+		margin-right: 0px;
+	}
+
+	#privacy-statement-wrapper {
+		margin-top: 25px;
+		margin-left: 25px;
+	}
+	#privacy-statement-wrapper a {
+		.StyreneBold();
+		color: #ffd100;
+	    border-bottom: 0px;
+	    font-size: 13px;
+
+	    &:hover,
+	    &:focus,
+	    &:active,
+	    &:active:focus {
+	    	text-decoration: underline;
+	    	border-bottom: 0px;
+	    }
+	}
+
+	#mailchimp-footer {
+		text-align: center;
+		padding-top: 30px;
+	}
+
+	#mailchimp-footer p {
+		.BonnefantenBlock();
+		font-size: 100px;
+		color: #b6a782;
+	}
 
 	@media (max-width: 992px) {
 		padding-left: 45px;
@@ -3875,6 +3974,7 @@ footer {
 		padding-left: 30px;
 		padding-right: 30px;
 		padding-top: 50px;
+		padding-bottom: 20px;
 	}
 
 	@media (max-width: 480px) {
@@ -3934,12 +4034,32 @@ footer {
 	}
 
 	.portletHeader {
-		padding-top: 0px;
+		padding-top: 80px;
+		padding-bottom: 70px !important;
 
-		@media (min-width: 768px) {
+		
+
+		@media (min-width: 769px) {
 			width: 100%;
 			margin: 0 auto;
 			text-align: left;
+		}
+
+		h3 {
+			font-size: 4vw;
+			line-height: 4.5vw;
+			text-align: center;
+			margin-top: 0px;
+		}
+
+		@media(max-width: 768px) {
+			padding-top: 10px !important;
+			padding-bottom: 20px !important;
+
+			h3 {
+				font-size: 6vw;
+				line-height: 6.5vw;
+			}
 		}
 
 	}
@@ -4009,6 +4129,32 @@ footer {
 	#form-widgets-email {
 		@media (min-width: 992px) {
 
+		}
+
+		border: 2px solid #ffd100;
+		background-color: #7841b3;
+		color: #ffd100;
+		font-size: 25px;
+
+
+		&::-webkit-input-placeholder {
+		   color: #ffd100;
+		   text-shadow: none;
+		}
+
+		&:-moz-placeholder { /* Firefox 18- */
+		   color: #ffd100;  
+		   text-shadow: none;
+		}
+
+		&::-moz-placeholder {  /* Firefox 19+ */
+		   color: #ffd100;  
+		   text-shadow: none;
+		}
+
+		&:-ms-input-placeholder {  
+		   color: #ffd100;  
+		   text-shadow: none;
 		}
 	}
 
@@ -4148,7 +4294,7 @@ body.frontend.template-advancedsearch {
 
 	#search-filter label {
 		font-weight: 300;
-		color: #b5a685;
+		color: #b6a782;
 	}
 
 	#search-filter input {
@@ -4229,7 +4375,7 @@ body.frontend.template-advancedsearch {
 	p.event-date {
 		font-size: 16px;
 	    line-height: 35px;
-	    color: #b5a685;
+	    color: #b6a782;
 	    letter-spacing: 0.00em;
 		margin-bottom: 0px;
 		margin-top: 0px;
@@ -4241,7 +4387,7 @@ body.frontend.template-advancedsearch {
 		margin-top: 10px;
 	    line-height: 25px;
 	    margin-bottom: 5px;
-	    color: #b5a685;
+	    color: #b6a782;
 	    font-size: 19px;
 	    letter-spacing: 0.00em;
 	}
@@ -4314,7 +4460,7 @@ body.frontend.template-advancedsearch {
 
 	#search-results-bar-wrapper {
 		padding-bottom: 10px;
-		color: #b5a685;
+		color: #b6a782;
 
 		@media (min-width: 768px) {
 			padding-bottom: 40px;
@@ -4677,7 +4823,7 @@ body.frontend.template-search {
 	}
 
 	p {
-		color: #b5a685;
+		color: #b6a782;
 	}
 }
 
@@ -4791,10 +4937,10 @@ body.frontend.template-default_error_message {
 		height: 35px;
 		font-size: 15px;
 		font-style: italic;
-		color: #f6433f;
-		border: 1px solid #f6433f;
-		background: #f6d03b;
-		background-color: #f6d03b;
+		color: #ff4438;
+		border: 1px solid #ff4438;
+		background: #ffd100;
+		background-color: #ffd100;
 		padding-top: 5px;
 		padding-bottom: 5px;
 		width: 100%;
@@ -4823,35 +4969,35 @@ body.frontend.template-default_error_message {
 	}*/
 
 	.searchField::-webkit-input-placeholder {
-	   color: #f6433f;
+	   color: #ff4438;
 	}
 
 	.searchField:-moz-placeholder { 
-	   color: #f6433f;  
+	   color: #ff4438;  
 	}
 
 	.searchField::-moz-placeholder {
-	   color: #f6433f;  
+	   color: #ff4438;  
 	}
 
 	.searchField:-ms-input-placeholder {  
-	   color: #f6433f;  
+	   color: #ff4438;  
 	}
 
 	.searchField:focus::-webkit-input-placeholder {
-	   color: #f6433f;
+	   color: #ff4438;
 	}
 
 	.searchField:focus:-moz-placeholder { 
-	   color: #f6433f;  
+	   color: #ff4438;  
 	}
 
 	.searchField:focus::-moz-placeholder {
-	   color: #f6433f;  
+	   color: #ff4438;  
 	}
 
 	.searchField:focus:-ms-input-placeholder {  
-	   color: #f6433f;  
+	   color: #ff4438;  
 	}
 
 	.searchSection {
@@ -4859,7 +5005,7 @@ body.frontend.template-default_error_message {
 	}
 
 	.searchField:focus + .searchButton {
-		color: #b5a685;
+		color: #b6a782;
 	}
 
 	.fa.fa-search {
@@ -4872,7 +5018,7 @@ body.frontend.template-default_error_message {
 		position: absolute;
 		top:0;
 		right:0;
-		color: #f6433f;
+		color: #ff4438;
 		width: auto;
 		margin: 0;
 		margin-top: -1px;
@@ -4892,7 +5038,7 @@ body.frontend.template-default_error_message {
 			outline: none;
 			outline: 0px;
 			outline-offset: 0px;
-			color: #b5a685 !important;
+			color: #b6a782 !important;
 		}
 
 		&:active {
@@ -4902,7 +5048,7 @@ body.frontend.template-default_error_message {
 			outline: none;
 			outline: 0px;
 			outline-offset: 0px;
-			color: #b5a685 !important;
+			color: #b6a782 !important;
 		}
 
 		&:focus {
@@ -4912,7 +5058,7 @@ body.frontend.template-default_error_message {
 			outline: none;
 			outline: 0px;
 			outline-offset: 0px;
-			color: #b5a685 !important;
+			color: #b6a782 !important;
 		};
 
 		&:focus:active {
@@ -4922,7 +5068,7 @@ body.frontend.template-default_error_message {
 			outline: none;
 			outline: 0px;
 			outline-offset: 0px;
-			color: #b5a685 !important;
+			color: #b6a782 !important;
 		}
 	}
 
@@ -5733,7 +5879,8 @@ body.frontend, body.mce-content-body {
 
 	@media (min-width: 992px) and (max-width: 1200px) {
 		footer .container .footer-wrapper {
-			padding-left: 0px;
+			padding-left: 50px;
+			padding-right: 50px;
 		}
 
 		footer .portletWrapper:nth-child(3) {
@@ -5932,7 +6079,7 @@ body:not(.plone-toolbar-left-expanded) {
 
 .dropdown-menu > .active > a, .dropdown-menu > .active > a:hover, .dropdown-menu > .active > a:focus {
 	background-color: transparent;
-	color: #b5a685 !important;
+	color: #b6a782 !important;
 }
 
 .navbar-default {
@@ -6136,7 +6283,7 @@ body.frontend {
 					padding: 5px 9px;
 					font-weight: 400;
 					font-size: 19px;
-					color: #b5a685;
+					color: #b6a782;
 					-webkit-box-shadow: none;
 					box-shadow: none;
 					&:hover,
@@ -6682,15 +6829,15 @@ body.frontend.portaltype-formfolder {
 
 	.form-group fieldset.PFGFieldsetWidget > legend {
 		padding-top: 50px;
-		color: #b5a685;
-		border-bottom: 1px solid #b5a685;
+		color: #b6a782;
+		border-bottom: 1px solid #b6a782;
 
 		
 	}
 
 
 	.form-group fieldset.PFGFieldsetWidget > .formHelp {
-		color: #b5a685;
+		color: #b6a782;
 	}
 
 	#content-core {
@@ -6701,7 +6848,7 @@ body.frontend.portaltype-formfolder {
 
 	div[id^="parent-fieldname-formEpilogue"] {
 		h4, p {
-			color: #b5a685;
+			color: #b6a782;
 		}
 	}
 }
@@ -8239,7 +8386,7 @@ body.template-checkout {
 	    padding-right: 10px;
 	    height: auto;
 	    min-height: 100%;
-	    background-color: #f6d03b;
+	    background-color: #ffd100;
 	}
 }
 
@@ -9586,8 +9733,8 @@ body.frontend.portaltype-formthankspage {
 	}
 
 	.portletHeader {
-		padding-top: 25px;
-		padding-bottom: 10px !important;
+		padding-top: 80px;
+		padding-bottom: 70px !important;
 	}
 
 	#formfield-form-widgets-email_type, #formfield-form-widgets-interest_groups, #formfield-form-widgets-list_id {
@@ -9595,10 +9742,29 @@ body.frontend.portaltype-formthankspage {
 	}
 
 	input#form-buttons-subscribe {
-		padding-top: 15px;
-	    padding-bottom: 12px;
-	    padding-left: 15px;
-	    padding-right: 15px;
+		    background: #ffd100;
+		    font-size: 25px;
+		    border: 2px solid #ffd100;
+		    color: #7841b3;
+		    padding-left: 10px;
+		    padding-right: 10px;
+		    
+		    &:active:focus,
+			&:focus,
+			&:active {
+				background: #7841b3;
+				border: 2px solid #ffd100;
+				color: #ffd100;
+				outline: none;
+			}
+
+			&:hover {
+				background: #7841b3;
+				border: 2px solid #ffd100;
+				color: #ffd100;
+				box-shadow: none;
+
+			}
 	}
 
 	@media (min-width: 992px) {
@@ -9611,7 +9777,7 @@ body.frontend.portaltype-formthankspage {
 
 		#formfield-form-widgets-email {
 			display: inline-block;
-			width: 70%;
+			width: 75%;
 
 			&.error {
 				width: 100%;
@@ -9620,11 +9786,11 @@ body.frontend.portaltype-formthankspage {
 
 		.formControls {
 			display: inline-block;
-	    	width: 28%;
+	    	width: 23%;
 		}
 
 		#newsletter-subscriber-form {
-			width: 40%;
+			width: 85%;
 			margin:0 auto;
 		}
 
@@ -9632,7 +9798,7 @@ body.frontend.portaltype-formthankspage {
 
 	@media (min-width: 992px) and (max-width: 1222px) {
 		#newsletter-subscriber-form {
-			width: 50%;
+			width: 95%;
 		}
 	}
 
@@ -9647,6 +9813,8 @@ body.frontend.portaltype-formthankspage {
 		.formControls {
 			display: block;
 	    	width: 100%;
+	    	padding:0px;
+	    	padding-top: 10px !important;
 		}
 
 		#newsletter-subscriber-form {
@@ -11872,9 +12040,9 @@ body.frontend.portaltype-portlet-page.section-home-page {
 					margin-left: 0;
 				    width: auto;
 				    text-transform: uppercase;
-				    background-color: #7841af;
-				    border: 1px solid #7841af;
-				    color: #f6f4bd;
+				    background-color: #7841b3;
+				    border: 1px solid #7841b3;
+				    color: #faf5b8;
 				    padding-left: 15px;
 				    padding-right: 15px;
 				    padding-top: 5px;
@@ -11885,9 +12053,9 @@ body.frontend.portaltype-portlet-page.section-home-page {
 					&:active,
 					&:focus,
 					&:focus:active {
-						background-color: #b5a685;
-						color: #f6f4bd;
-						border: 1px solid #b5a685;
+						background-color: #b6a782;
+						color: #faf5b8;
+						border: 1px solid #b6a782;
 					}
 				}
 			}
@@ -11928,6 +12096,20 @@ body.frontend.portaltype-portlet-page.section-home-page {
 		
 	}
 
+	.entry-wrapper {
+		h4 a {
+			color: #7841b3;
+			&:hover,
+			&:focus,
+			&:active,
+			&:active:focus {
+				color: #7841b3 !important;
+				border-bottom: 0px !important;
+				text-decoration: underline !important;
+			}
+		}
+	}
+
 	@media (min-width: 992px) {
 
 		.portlet.portletCollection {
@@ -11944,7 +12126,7 @@ body.frontend.portaltype-portlet-page.section-home-page {
 					font-size: 7.5vw;
 				    line-height: 8vw;
 				    margin-top: 8px;
-				    color: #b5a685;
+				    color: #b6a782;
 				}
 			}
 
@@ -11955,7 +12137,7 @@ body.frontend.portaltype-portlet-page.section-home-page {
 
 				.portlet-item {
 					margin-bottom: 0px !important;
-					padding-bottom: 75px;
+					padding-bottom: 40px;
 				}
 
 				.thumb-wrapper {
@@ -11995,12 +12177,12 @@ body.frontend.portaltype-portlet-page.section-home-page {
     					}
 
     					a {
-    						color: #7841af;
+    						color: #7841b3;
     						&:hover,
     						&:focus,
     						&:active,
     						&:active:focus {
-    							color: #7841af !important;
+    							color: #7841b3 !important;
     							border-bottom: 0px !important;
     							text-decoration: underline;
     						}
@@ -12210,7 +12392,7 @@ body.frontend.portaltype-portlet-page.section-home-page {
 	    padding-right: 15px;
 	    padding-top: 0px;
 	    padding-bottom: 0px;
-	    background: #ab3c4f;
+	    background: #ab3c4e;
 
 	    @media(max-width: 768px) {
 	    	margin-left: 0px;
@@ -12663,7 +12845,7 @@ body.frontend.portaltype-portlet-page.subsection-now-in-the-museum {
 				margin: 0 auto;
 				font-size: 25px;
 				line-height: 33px;
-				color: #b5a685;
+				color: #b6a782;
 				text-align: left;
 
 				@media(min-width: 992px) {
@@ -14339,7 +14521,7 @@ body.frontend #global_statusmessage {
     &:hover,
 	&:focus {
 		svg path {
-			fill: #b5a685;
+			fill: #b6a782;
 		}
 	}
 
@@ -14371,8 +14553,8 @@ body.navigation-is-open {
 }
 
 .footer-link {
-	margin-top: 10px;
-	margin-bottom: 10px;
+	margin-top: 0px;
+	margin-bottom: 0px;
 
 	@media(max-width: 768px) {
 		margin-top: 0px;
@@ -14417,13 +14599,13 @@ html {
     h5 {
     	margin-top: 5px !important;
     	a {
-    		color: #f6433f;
+    		color: #ff4438;
 
     		&:hover,
     		&:focus,
     		&:active,
     		&:active:focus {
-    			color: #b5a685;
+    			color: #b6a782;
     			text-decoration: underline;
     		}
     	}
@@ -14432,19 +14614,19 @@ html {
 
 body.navigation-is-open-end {
 	#portal-logo {
-		color: #f6433f;
+		color: #ff4438;
 	}
 }
 
 body.navigation-is-open-end {
 	.cd-nav-trigger svg path {
-		fill: #f6433f;
+		fill: #ff4438;
 
 		&:hover,
 		&:focus,
 		&:active,
 		&:active:focus {
-			fill: #b5a685;
+			fill: #b6a782;
 		}
 	}
 }
@@ -14461,7 +14643,7 @@ body.navigation-is-open-end {
 
 .quote-bonnefanten {
 	.BonnefantenBlock();
-	color: #b5a685;
+	color: #b6a782;
     font-size: 100px;
     position: absolute;
 
@@ -14507,28 +14689,54 @@ body.frontend #website-wrapper:not(.empty-slideshow) {
 
 /* New frontpage */
 
+/*body.frontend:not(.portaltype-portlet-page) {
+	div.sponsors-wrapper {
+		svg {
+			path, .fil0 {
+				fill: #fa7d6c;
+			}
+			
+		}
+
+		a {
+			&:hover,
+			&:focus,
+			&:active,
+			&:focus:active {
+				svg path {
+					fill: #b6a782;
+				}
+
+				svg .fil0 {
+					fill: #b6a782;
+				}
+			}
+		}
+	}
+}*/
+
 body.frontend.portaltype-portlet-page.section-frontpage {
 	#portal-logo {
-		color: #f6d03b;
+		color: #ffd100;
 	}
 	#above-content {
 		display: none;
 	}
 	.nav-trigger-wrapper svg path {
-		fill: #f6d03b;
+		fill: #ffd100;
 	}
 
 	&.navigation-is-open-end #portal-logo {
-    	color: #f6433f;
+    	color: #ff4438;
 	}
 
 	&.navigation-is-open-end .cd-nav-trigger svg path {
-    	fill: #f6433f;
+    	fill: #ff4438;
 	}
 
 	.nav-trigger-wrapper:hover svg path, 
 	.nav-trigger-wrapper:focus svg path {
-   		fill: #b5a685;
+   		fill: #b6a782;
 	}
 
 
@@ -14559,24 +14767,24 @@ body.frontend.portaltype-portlet-page.section-frontpage {
     		}
 
     		p.event-date {
-    			color: #f6d03b;
+    			color: #ffd100;
     			text-transform: uppercase;
     			margin-bottom: 10px;
     			letter-spacing: -0.05em;
     		}
 
     		h3.carousel-title {
-    			color: #f6d03b;
+    			color: #ffd100;
     			margin-bottom: 5px;
     			margin-top: 5px;
 
     			a {
-    				color: #f6d03b;
+    				color: #ffd100;
     				&:hover,
     				&:active,
     				&:focus,
     				&:focus:active {
-    					color: #f6d03b;
+    					color: #ffd100;
     					text-decoration: underline;
     					border-bottom: 0px;
     				}
@@ -14607,7 +14815,7 @@ body.frontend.portaltype-portlet-page.section-frontpage {
 		padding-left: 10px;
 	    padding-right: 10px;
 	    padding-top: 40px;
-	    background: #f6f4bd;
+	    background: #faf5b8;
 
 	    @media(max-width: 768px) {
 	    	padding-left: 10px;
@@ -14631,10 +14839,13 @@ body.frontend.portaltype-portlet-page.section-frontpage {
 	    				font-size: 20px;
 	    				line-height: 25px;
 	    				margin-bottom: 7px;
+	    				letter-spacing: -0.05em;
 	    			}
 
 	    			p.item-description {
-	    				margin-top: 30px;
+	    				@media(min-width: 992px) {
+	    					margin-top: 30px;
+	    				}
 	    			}
 	    		}
 	    	}
@@ -14671,37 +14882,37 @@ body.frontend.portaltype-portlet-page.section-frontpage {
 	}
 
 	.page-container {
-		background-color: #f6f4bd;
+		background-color: #faf5b8;
 	}
 
 	.frontpage-collection-online {
 		h3 {
-			color: #b5a685;
+			color: #b6a782;
 		}
 
 		.portlet-collection-wrapper {
-			background: #ab3c4f;
+			background: #ab3c4e;
 		}
 
 		.slide-inner-title {
 			h4 a {
 
 				@media(max-width: 991px) {
-					color: #b5a685;
+					color: #b6a782;
 
 					&:hover,
 					&:focus,
 					&:active,
 					&:active:focus {
-						color: #b5a685 !important;
-						border-bottom: 1px #b5a685 !important;
+						color: #b6a782 !important;
+						border-bottom: 1px #b6a782 !important;
 					}
 				}
 			}
 
 			p.item-description {
 				@media(max-width: 991px) {
-					color: #b5a685;
+					color: #b6a782;
 				}
 			}
 		}
@@ -14712,6 +14923,25 @@ body.frontend.portaltype-portlet-page.section-frontpage {
 	}
 
 
+	/* footer frontpage */
+	footer  {
+		div.portlet-static-footer {
+			background-color: #ffd100;
+
+			li a:not(.text-button) {
+				color: #7841b3;
+				&:hover,
+				&:focus,
+				&:active,
+				&:active:focus {
+					color: #b6a782;
+					text-decoration: none;
+					border-bottom: 2px solid #b6a782;
+				}
+
+			}
+		}
+	}
 }
 
 .nav-trigger-wrapper svg path {
@@ -14722,7 +14952,19 @@ body.frontend.portaltype-portlet-page.section-frontpage {
     transition: fill 0.1s ease-in;
 }
 
+body.frontend #content-core p.error-msg a {
+	color: #fa7d6c;
 
+	border-bottom: 0px;
+	text-decoration: underline;
+
+	&:hover,
+	&:focus,
+	&:active,
+	&:active:focus {
+		text-decoration: none;
+	}
+}
 
 
 
