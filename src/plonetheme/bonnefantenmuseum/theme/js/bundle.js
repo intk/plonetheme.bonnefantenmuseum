@@ -787,6 +787,18 @@ jQuery(document).ready(function($) {
 	  });
 	}
 
+	if (jQuery(".frontpage-permanent #row-items").length) {
+		imagesLoaded('.frontpage-permanent #row-items', function() {
+		    var elem = document.querySelector('.frontpage-permanent #row-items');
+		    jQuery(".frontpage-permanent #row-items").masonry({
+		       itemSelector: '.frontpage-permanent #row-items .portlet-item',
+		       horizontalOrder: true,
+		       percentPosition: true
+		    });
+		    $(".frontpage-permanent #row-items").addClass('init');		    
+	 	});
+	}
+
 	if (jQuery('body.portaltype-portlet-page').length) {
 		jQuery(".frontpage-portlet-collection .thumb-wrapper").each(function() {
 			var imagescount = jQuery(this).data('imagescount');
@@ -1001,6 +1013,8 @@ jQuery(document).ready(function($){
     currentTop = 0,
     scrollDelta = 10,
     scrollOffset = 150;
+
+  var already_scrolled_masonry = false;
 
   mainHeader.on('click', '.nav-trigger', function(event){
     // open primary navigation on mobile

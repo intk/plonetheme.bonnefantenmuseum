@@ -14942,6 +14942,76 @@ body.frontend.portaltype-portlet-page.section-frontpage {
 			}
 		}
 	}
+
+	
+}
+
+body.frontend.portaltype-portlet-page.section-frontpage {
+	section.frontpage-permanent {
+		#row-items:not(.init) {
+			visibility: hidden;
+		}
+
+		#row-items.init {
+			visibility: visible !important;
+		}
+
+		.portlet-item {
+			display: block;
+
+			margin-bottom: 40px;
+		}
+
+		margin-left: -15px;
+		margin-right: -15px;
+
+		@media(max-width: 768px) {
+			margin-left: 0px;
+			margin-right: 0px;
+		}
+
+		.portletHeader {
+			@media(min-width: 992px) {
+				margin-left: 15px;
+				margin-right: 15px;
+				padding-bottom: 25px;
+			}
+		}
+
+		.portlet-collection-wrapper, .portletFooter {
+			background: #276d6a;
+		}
+
+		h4.item-title {
+			padding-top: 5px;
+			padding-bottom: 5px;
+			a {
+				color: #fdcdc0 !important;
+				&:hover,
+				&:focus,
+				&:active,
+				&:active:focus {
+					color: #fdcdc0 !important;
+				}
+			}
+		}
+
+		p.item-description {
+			margin-top: 5px !important;
+		}
+
+		span.permanent-dash {
+			.BonnefantenBlock();
+			font-size: 4vw;
+			line-height: 3.5vw;
+			color: #b6a782;
+
+			@media(max-width: 768px) {
+				font-size: 6vw;
+				line-height: 5.5vw;
+			}
+		}
+	}
 }
 
 .nav-trigger-wrapper svg path {
