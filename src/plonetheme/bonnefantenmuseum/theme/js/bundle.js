@@ -947,6 +947,16 @@ jQuery(document).ready(function($) {
   jQuery('ul.nav li.dropdown').click(function() {
       jQuery(this).closest('.dropdown-menu').stop(true, true).show();
       jQuery(this).toggleClass("open");
+
+      var current_dropdown = jQuery(this);
+      if (jQuery(this).hasClass('open')) {
+      	jQuery('ul.nav li.dropdown.open').not(current_dropdown).removeClass('open');
+      }
+
+  });
+
+  jQuery('ul.nav li.dropdown .dropdown-menu').click(function (e) {
+  	e.stopPropagation();
   });
   
   if (isMobile.any()) {
