@@ -1188,8 +1188,8 @@ div.logo-wrapper {
 
 	.BonnefantenBlock();
 	
-	font-size: 30px;
-    line-height: 60px;
+	font-size: 6vw;
+    line-height: 8vw;
 
 	span.block {
 		.BonnefantenBlock();
@@ -2330,13 +2330,18 @@ body.frontend, body#tinymce {
 			letter-spacing: 0.00em;
 
 			@media (max-width: 991px) {
-				font-size: 10vw;
-				line-height: 10.5vw;
-				padding-left: 10px;
-    			padding-right: 10px;
+				font-size: 6vw;
+				line-height: 6.5vw;
+				padding-left: 12px;
+    			padding-right: 12px;
     			margin-top: 0px;
     			padding-top: 0px;
-    			padding-bottom: 15px;
+    			padding-bottom: 0px;
+			}
+
+			@media(min-width: 1400px) {
+				font-size: 95px;
+		    	line-height: 120px;
 			}
 		}
 
@@ -3165,11 +3170,12 @@ footer, body.mce-content-body {
 	}
 
 	div.sponsors-wrapper {
-		display: none !important;
-		padding-top: 50px;
+		/*display: none !important;*/
+		padding-top: 0px;
+		margin-top: -5px;
 
 		a {
-			
+			margin-bottom: 0px;
 			&:hover,
 			&:focus,
 			&:active,
@@ -3178,17 +3184,26 @@ footer, body.mce-content-body {
 					fill: #b6a782;
 				}
 
-				svg .fil0 {
+				svg .cls-1 {
 					fill: #b6a782;
 				}
 			}
 		}
 		svg {
-
 			max-width: 150px;
-    		height: 100px;
+    		height: 65px;
     		margin-left: 20px;
     		margin-right: 20px;
+    		-webkit-transform: scale(1.01); 
+			transform: scale(1.01);
+
+			@media(max-width: 768px) {
+				max-width: 120px;
+			}
+		}
+
+		svg:first-child {
+			margin-left:0px;
 		}
 
 		svg#mondriaanfondssvg {
@@ -3228,10 +3243,16 @@ footer, body.mce-content-body {
 
 		li {
 			font-size: 40px !important;
+
+			@media(max-width: 768px) {
+				font-size: 25px !important;
+				line-height: 25px !important;
+			}
 		}
 
 		@media (max-width: 991px) {
 			padding-top: 15px !important;
+			padding-bottom: 20px;
 		}
 	}
 
@@ -3557,9 +3578,14 @@ footer {
 					text-decoration: none;
 				}
 
-				@media(max-width: 768px) {
-					font-size: 8vw;
-					line-height: 8.5vw;
+				@media(max-width: 991px) {
+					font-size: 6vw;
+					line-height: 6.5vw;
+				}
+
+				@media(min-width: 1400px) {
+					font-size: 95px;
+					line-height: 120px;
 				}
 			}
 
@@ -3622,6 +3648,11 @@ footer {
 			font-size: 24px;
 			line-height: 45px;
 			transform: scale(1);
+
+			@media(max-width: 768px) {
+				font-size: 20px;
+				line-height: 35px;
+			}
 		}
 	}
 
@@ -4077,6 +4108,11 @@ body.frontend .portletMailChimp,
 			line-height: 4.5vw;
 			text-align: center;
 			margin-top: 0px;
+
+			@media(min-width: 1400px) {
+				font-size: 95px;
+				line-height: 120px;
+			}
 		}
 
 
@@ -4085,6 +4121,13 @@ body.frontend .portletMailChimp,
 			padding-top: 10px !important;
 			padding-bottom: 20px !important;
 
+			h3 {
+				font-size: 6vw;
+				line-height: 6.5vw;
+			}
+		}
+
+		@media(max-width: 991px) {
 			h3 {
 				font-size: 6vw;
 				line-height: 6.5vw;
@@ -6889,6 +6932,10 @@ body.frontend.portaltype-formfolder {
 	box-shadow: none;
 	background: transparent;
 	border-bottom: 0px;
+
+	@media(max-width: 768px) {
+		margin-top: 10px;
+	}
 }
 
 .navbar {
@@ -12349,6 +12396,19 @@ body.frontend.portaltype-portlet-page.section-home-page {
 			}
 		}
 	}
+
+	@media (min-width: 1400px) {
+
+		.portletCollection.frontpage-portlet-collection {
+			.portletHeader {
+
+				h3 {
+					font-size: 95px;
+				    line-height: 120px;
+				}
+			}
+		}
+	}
 }
 
 .desc-mdash {
@@ -14522,9 +14582,9 @@ body.frontend #global_statusmessage {
 .nav-trigger-wrapper {
 	position: absolute;
     right: 35px;
-    top: 15px;
-    width: 35px;
-    height: 35px;
+    top: 1.55vw;
+    width: 5vw;
+    height: 5vw;
 
     div.nav-trigger-open,
     div.nav-trigger-close {
@@ -14943,7 +15003,8 @@ body.frontend.portaltype-portlet-page.section-frontpage {
 					&:active,
 					&:active:focus {
 						color: #b6a782 !important;
-						border-bottom: 1px #b6a782 !important;
+						border-bottom: 0px #b6a782 !important;
+						text-decoration: underline !important;
 					}
 				}
 			}
@@ -15112,6 +15173,11 @@ body.frontend.portaltype-document {
 						padding-top: 40px;
 						padding-bottom: 0px;
 					}
+
+					@media(min-width: 1400px) {
+						font-size: 95px;
+    					line-height: 120px;
+					}
 				}
 
 			}
@@ -15171,6 +15237,12 @@ span.rrssb-text {
 	display: none !important;
 }
 
+body.frontend .portlet.frontpage-collection-online {
+	.slick-slider img {
+		width: 100%;
+	}
+}
+
 body.frontend #below-content .portlet.frontpage-collection-online.portlet-collection-slideshow {
 
 	.slick-prev,
@@ -15180,6 +15252,7 @@ body.frontend #below-content .portlet.frontpage-collection-online.portlet-collec
 		-ms-transform: translate(0, -50%) scale(0.5);
 		transform: translate(0, -50%) scale(0.5);
 	}
+
 
 
 
@@ -15200,12 +15273,16 @@ body.frontend #below-content .portlet.frontpage-collection-online.portlet-collec
 
 	@media(max-width: 991px) {
 		.slick-prev {
-			left: -30px;
+			left: -35px;
 		}
 
 		.slick-next {
-			right: -30px;
+			right: -35px;
 		}
+	}
+
+	.slick-slide img {
+		width: 100%;
 	}
 
 	.slide-inner-img-wrapper {
