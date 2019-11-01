@@ -1177,7 +1177,7 @@ div.logo-wrapper {
 	z-index: 2;
 	overflow-x: hidden;
 	color: #fa7d6c;
-	margin-left: 5px;
+	margin-left: 0px;
 
 
 	transition: all 0.2s ease-in;
@@ -1188,8 +1188,8 @@ div.logo-wrapper {
 
 	.BonnefantenBlock();
 	
-	font-size: 6vw;
-    line-height: 8vw;
+	font-size: 9vw;
+    line-height: 11vw;
 
 	span.block {
 		.BonnefantenBlock();
@@ -2055,11 +2055,11 @@ body.frontend, body#tinymce {
 			font-size: 15px;
 		    line-height: 35px;
 		    color: #b6a782;
-		    letter-spacing: 0.05em;
+		    letter-spacing: 0.0em;
 			margin-bottom: 0px;
 			margin-top: 14px;
 			text-transform: uppercase;
-			.StyreneBold();
+			.StyreneRegular();
 
 			@media(max-width: 767px) {
 				margin-bottom: 0px;
@@ -2330,8 +2330,8 @@ body.frontend, body#tinymce {
 			letter-spacing: 0.00em;
 
 			@media (max-width: 991px) {
-				font-size: 6vw;
-				line-height: 6.5vw;
+				font-size: 9vw;
+				line-height: 11vw;
 				padding-left: 12px;
     			padding-right: 12px;
     			margin-top: 0px;
@@ -2431,7 +2431,7 @@ body.frontend, body#tinymce {
 			.portletFooter {
 				clear: both;
 				padding-bottom: 0px;
-				padding-top: 30px;
+				padding-top: 0px;
 
 				a:hover {
 					text-decoration: none;
@@ -3579,8 +3579,8 @@ footer {
 				}
 
 				@media(max-width: 991px) {
-					font-size: 6vw;
-					line-height: 6.5vw;
+					font-size: 8vw;
+					line-height: 10vw;
 				}
 
 				@media(min-width: 1400px) {
@@ -3672,7 +3672,7 @@ footer {
 
 	@media (min-width: 769px) and (max-width: 991px) {
 		.footer-wrapper {
-			max-width: 750px;
+			max-width: 100%;
 			padding-left: 30px;
 			padding-right: 30px;
 		}
@@ -4129,8 +4129,8 @@ body.frontend .portletMailChimp,
 
 		@media(max-width: 991px) {
 			h3 {
-				font-size: 6vw;
-				line-height: 6.5vw;
+				font-size: 9vw;
+				line-height: 11vw;
 			}
 		}
 
@@ -6934,7 +6934,7 @@ body.frontend.portaltype-formfolder {
 	border-bottom: 0px;
 
 	@media(max-width: 768px) {
-		margin-top: 10px;
+		margin-top: 5px;
 	}
 }
 
@@ -7437,7 +7437,7 @@ body.portaltype-occurrence .event.summary {
 			padding-top: 12px;
 
 			.event-date-title {
-				display: block;
+				display: none;
 			}
 
 			span {
@@ -7468,15 +7468,23 @@ body.portaltype-occurrence .event.summary {
 			}
 
 			a {
-				border-bottom: 1px solid #494a51;
+				color: #b6a782;
+				border-bottom: 1px solid #b6a782;
 				cursor: pointer;
 				&:hover,
 				&:focus,
 				&:active,
 				&:active:focus {
-					border-bottom: 0px solid #494a51;
+					color: #b6a782;
+					border-bottom: 0px solid #b6a782;
+				}
+
+				abbr {
+					cursor: pointer;
 				}
 			}
+
+
 		}
 
 		li.event-url {
@@ -7521,7 +7529,7 @@ body.portaltype-event #website-wrapper.empty-slideshow .event.summary {
 body.portaltype-occurrence .event.summary {
 	&.recurrence { 
 		.event-date > span {
-			display: block !important;
+			display: none !important;
 
 
 			&> span.datedisplay {
@@ -9550,8 +9558,9 @@ body.template-listing_view {
 
 	body.portaltype-portlet-page.subsection-nu-te-zien .title-container,
 	body.portaltype-portlet-page.subsection-now-in-the-museum .title-container {
-		padding-left: 0px;
-		padding-right: 0px;
+		padding-left: 25px;
+		padding-right: 25px;
+		padding-top: 10px !important;
 	}
 
 	body.portaltype-portlet-page.subsection-zien-en-doen .title-container {
@@ -12592,6 +12601,7 @@ body.frontend.portaltype-portlet-page.section-home-page {
 
 /* portlet news styles */
 body.frontend.portaltype-portlet-page.section-frontpage,
+
 body.frontend.portaltype-portlet-page.section-home-page,
 body.frontend.portaltype-portlet-page.subsection-nu-te-zien,
 body.frontend.portaltype-portlet-page.subsection-now-in-the-museum,
@@ -12607,6 +12617,19 @@ body.frontend.portaltype-person {
 		padding-top: 30px;
 		padding-bottom: 30px;
 
+		@media(max-width: 991px) {
+			padding-left: 30px;
+			padding-right: 30px;
+		}
+
+	
+		@media(max-width: 768px) {
+			padding-left: 20px;
+			padding-right: 20px;
+		}
+
+
+		
 		.portletHeader {
 			h2 {
 				display: none;
@@ -12629,7 +12652,7 @@ body.frontend.portaltype-person {
 
 		.entry-wrapper {
 			p.event-date {
-				color: #a1a1a3;
+				
 			}
 		}
 
@@ -12658,9 +12681,9 @@ body.frontend.portaltype-person {
 				width: 25%;
 				float: right;
 
-				h1 {
-					max-width: 170px;
-				    font-size: 4.5vw;
+				h3 {
+					max-width: 200px;
+				    font-size: 3vw;
 				    line-height: 4.0vw;
 				    margin-top: 0.8vw;
 				    text-align: left;
@@ -12694,10 +12717,10 @@ body.frontend.portaltype-person {
     				font-size: 20px;
 				    line-height: 25px;
 				    .StyreneBold();
-				    color: #494A51;
+				    
 
 				    a {
-				    	color: #494A51;
+				    	
 				    	margin-top: 0px;
 				    }
 				}
@@ -12790,8 +12813,8 @@ body.frontend.portaltype-portlet-page.subsection-now-in-the-museum {
 
 	@media(max-width: 768px) {
 		#portletPageTopRow > div .portletCollection {
-			padding-left: 35px;
-			padding-right: 35px;
+			padding-left: 15px;
+			padding-right: 15px;
 		}
 
 		.page-container {
@@ -12805,6 +12828,7 @@ body.frontend.portaltype-portlet-page.subsection-now-in-the-museum {
 
 		#content-core {
 			padding-bottom: 0px;
+			padding-top: 0px;
 		}
 
 		.portletFooter {
@@ -12852,21 +12876,94 @@ body.frontend.portaltype-portlet-page.subsection-now-in-the-museum {
 		}
 	}
 
-	#content-core #portletPageTopRow > div:nth-child(even) .portletCollection.frontpage-news {
-		background: #fbf9f2;
-		margin-bottom: 0px;
+	#content-core #portletPageTopRow > div:nth-child(odd) .portletCollection.frontpage-news {
+		background: #faf5b8;
 
-		.portletFooter {
-			background: transparent;
+		.formControls {
+			background: #faf5b8;
+		}
 
-			.show-more {
-				background: transparent;
+		.entry-wrapper h4.item-title a {
+			color: #7841b3 !important;
+			&:hover,
+			&:focus,
+			&:active,
+			&:active:focus {
+				border-bottom: 2px solid #7841b3 !important;
+    			color: #7841b3 !important;
+			}
+		}
+
+		.portletHeader {
+			.show-more-header {
+				color: #7841b3 !important;
+				border-bottom: 1px solid #7841b3 !important;
+				text-decoration: none !important;
 
 				&:hover,
 				&:focus,
 				&:active,
 				&:active:focus {
-					background: #282931;
+	    			border-bottom: 0px solid #7841b3 !important;
+				}
+			}
+
+			a {
+				&:hover,
+				&:focus,
+				&:active,
+				&:active:focus {
+	    			color: #b6a782 !important;
+				}
+			}
+		}
+	}
+
+	#content-core #portletPageTopRow > div:nth-child(even) .portletCollection.frontpage-news {
+		background: #7841b3;
+		margin-bottom: 0px;
+
+		.formControls {
+			background: #7841b3;
+		}
+
+		.portletFooter {
+			background: #fa7d6c;
+
+			.show-more {
+				background: #fa7d6c;
+
+				&:hover,
+				&:focus,
+				&:active,
+				&:active:focus {
+					background: #777894;
+    				color: #fa7d6c;
+    				border: 1px solid #fa7d6c;
+				}
+			}
+		}
+
+		.portletHeader {
+			.show-more-header {
+				color: #fa7d6c !important;
+				border-bottom: 1px solid #fa7d6c !important;
+				text-decoration: none !important;
+
+				&:hover,
+				&:focus,
+				&:active,
+				&:active:focus {
+	    			border-bottom: 0px solid #fa7d6c !important;
+				}
+			}
+
+			a {
+				&:hover,
+				&:focus,
+				&:active,
+				&:active:focus {
+	    			color: #b6a782 !important;
 				}
 			}
 		}
@@ -12931,7 +13028,7 @@ body.frontend.portaltype-portlet-page.subsection-now-in-the-museum {
 
 			span.subheading {
 				max-width: 710px;
-				margin: 0 auto;
+				margin: 0;
 				font-size: 25px;
 				line-height: 33px;
 				color: #b6a782;
@@ -12943,6 +13040,14 @@ body.frontend.portaltype-portlet-page.subsection-now-in-the-museum {
 
 			}
 
+		}
+
+		.page-container {
+			@media(max-width: 991px) {
+				background: #faf5b8;
+				padding-left: 0px;
+	    		padding-right: 0px;
+    		}
 		}
 	}
 }
@@ -13805,11 +13910,10 @@ html.no-object-fit body.portaltype-object .ie-object-fit {
 }
 
 body:not(.frontend).viewpermission-add-portal-content {
-	height: auto !important;
+	
 
 	#website-wrapper {
-		overflow-y: initial !important;
-		height: auto;
+		
 	}
 
 	#babel-edit {
@@ -14583,8 +14687,8 @@ body.frontend #global_statusmessage {
 	position: absolute;
     right: 35px;
     top: 1.55vw;
-    width: 5vw;
-    height: 5vw;
+    width: 8vw;
+    height: 8vw;
 
     div.nav-trigger-open,
     div.nav-trigger-close {
@@ -15041,12 +15145,11 @@ body.frontend.portaltype-portlet-page.section-frontpage {
 			}
 		}
 	}
-
-	
 }
 
 body.frontend.portaltype-portlet-page.section-frontpage {
 	section.frontpage-permanent {
+		overflow: hidden;
 		#row-items:not(.init) {
 			visibility: hidden;
 		}
@@ -15168,8 +15271,8 @@ body.frontend.portaltype-document {
 					color: #575656;
 
 					@media(max-width: 991px) {
-						font-size: 6vw;
-						line-height: 6.5vw;
+						font-size: 9vw;
+						line-height: 11vw;
 						padding-top: 40px;
 						padding-bottom: 0px;
 					}
@@ -15434,4 +15537,12 @@ body.frontend #below-content .portlet.frontpage-collection-online.portlet-collec
 	}
 }
 
+
+.portlet.frontpage-collection-online .slick-slider:not(.slick-initialized) {
+	visibility: hidden;
+}
+
+.portlet.frontpage-collection-online .slick-slider.slick-initialized {
+	visibility: visible;
+}
 

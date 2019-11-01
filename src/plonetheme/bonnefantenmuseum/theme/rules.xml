@@ -193,7 +193,18 @@
         css:theme="#event-summary"
         css:content=".event.summary"
         method="raw"
+        css:if-not-content=".event.summary.recurrence"
       />
+
+      <replace
+        css:theme="#event-summary.has-recurrence"
+        css:content=".event.summary"
+        method="raw"
+        css:if-content=".event.summary.recurrence"
+      />
+
+      <drop css:theme="#event-summary:not(.has-recurrence)" css:if-content=".event.summary.recurrence"/>
+      <drop css:theme="#event-summary.has-recurrence" css:if-not-content=".event.summary.recurrence"/>
 
       <drop css:content="#viewlet-social-like"/>
 
