@@ -810,12 +810,16 @@
 body {
 	background-color: #777894;
 	overflow-x: hidden;
+	overflow-y: hidden;
 	height: 100%;
 }
 
 html {
 	background-color: transparent;
 	height: 100%;
+}
+
+html:not([data-presentation="enabled"]) {
 	overflow: hidden;
 }
 
@@ -1180,11 +1184,10 @@ div.logo-wrapper {
 	margin-left: 0px;
 
 
-	transition: all 0.2s ease-in;
-    -webkit-transition: all 0.2s ease-in;
-	-moz-transition: all 0.2s ease-in;
-	-o-transition: all 0.2s ease-in;
-	transition: all 0.2s ease-in;
+    -webkit-transition: all 0.3s ease-in;
+	-moz-transition: all 0.3s ease-in;
+	-o-transition: all 0.3s ease-in;
+	transition: all 0.3s ease-in;
 
 	.BonnefantenBlock();
 	
@@ -3583,7 +3586,7 @@ footer {
 					line-height: 10vw;
 				}
 
-				@media(min-width: 1400px) {
+				@media(min-width: 1480px) {
 					font-size: 95px;
 					line-height: 120px;
 				}
@@ -4109,7 +4112,7 @@ body.frontend .portletMailChimp,
 			text-align: center;
 			margin-top: 0px;
 
-			@media(min-width: 1400px) {
+			@media(min-width: 1480px) {
 				font-size: 95px;
 				line-height: 120px;
 			}
@@ -6934,9 +6937,11 @@ body.frontend.portaltype-formfolder {
 	border-bottom: 0px;
 
 	@media(max-width: 768px) {
-		margin-top: 5px;
+		margin-top: 0px;
 	}
 }
+
+
 
 .navbar {
 	margin-bottom: 0px;
@@ -6959,7 +6964,7 @@ body.frontend:not(.portaltype-object) .intro-header,
 body.template-edit.portaltype-object .intro-header,
 body.template-collective-object-object .intro-header,
 body.portaltype-object:not(.template-edit).userrole-authenticated {
-	margin-top: 0px;
+	
 }
 
 @media (max-width: 767px) and (orientation:landscape) {
@@ -10076,6 +10081,9 @@ body.frontend, body#tinymce {
 }
 
 /* PRESENTATION */
+html[data-presentation="enabled"] body {
+	background-color: #faf5b8;
+}
 body.frontend #presentation {
 	.presentation-item.text-only {
 	    position: relative;
@@ -10092,8 +10100,8 @@ body.frontend #presentation {
 	    margin: 0 0 3em;
 	    padding: 3em;
 	    text-align: center;
-	    color: @brand-primary-titles;
-	    background: #f9fafb;
+	    color: #7841b3;
+	    background: #faf5b8;
 	    margin-bottom: 0px;
 
 	    padding-top: 50px;
@@ -10114,7 +10122,7 @@ body.frontend #presentation {
 	    	.StyreneRegular();
 
 	    	@media(min-width: 991px) {
-	    		font-size: 3vw;
+	    		font-size: 4vw;
     			line-height: 4.7vw;
     			margin-top: 20px;
     		}
@@ -10248,9 +10256,10 @@ body.frontend #presentation {
 
     					p {
 
-    						color: @brand-primary-titles;
+    						color: #b6a782;
     						&.discreet {
-    							color: #e70518;
+    							color: #7841b3;
+    							.BonnefantenBlock();
 
     							@media(max-width: 991px) {
     								
@@ -10259,7 +10268,7 @@ body.frontend #presentation {
     						}
 
     						@media (min-width: 768px) {
-							    font-size: 2vw;
+							    font-size: 1.8vw;
 							    line-height: 1.45em;
 
 							    &.discreet {
@@ -10268,7 +10277,7 @@ body.frontend #presentation {
 							}
 
 							@media (min-width: 992px) {
-							    font-size: 2vw;
+							    font-size: 1.8vw;
 							    line-height: 1.45em;
 
 							    &.discreet {
@@ -10277,11 +10286,11 @@ body.frontend #presentation {
 							}
 
     						@media (min-width: 1200px) {
-							    font-size: 2vw;
+							    font-size: 1.8vw;
 							    line-height: 1.45em;
 
 							    &.discreet {
-							    	font-size: 1.5vw;
+							    	font-size: 1.8vw;
 							    }
     						}
     					}
@@ -10360,9 +10369,11 @@ body.frontend #presentation {
 			}
 
 			p {
-				color: @brand-primary-titles;
+				color: #b6a782;
+
 				&.discreet {
-					color: #e70518;
+					.BonnefantenBlock();
+					color: #7841b3;
 
 					@media(max-width: 991px) {
 						
@@ -10389,11 +10400,13 @@ body.frontend #presentation {
 				}
 
 				@media (min-width: 1200px) {
-				    font-size: 2vw;
+				    font-size: 1.8vw;
 				    line-height: 1.45em;
 
+
+
 				    &.discreet {
-				    	font-size: 1.5vw;
+				    	font-size: 1.8vw;
 				    }
 				}
 			}
@@ -10432,6 +10445,7 @@ body.frontend #presentation {
 
 			p {
 				color:#ffffff;
+				
 
 				@media(max-width: 991px) {
 					font-size: 4.5vw;
@@ -10450,6 +10464,7 @@ body.frontend #presentation {
 			}
 
 			p.discreet {
+				.BonnefantenBlock();
 				font-size: 0.85em;
 
 				@media(max-width: 991px) {
@@ -10463,7 +10478,7 @@ body.frontend #presentation {
 				}
 
 				@media(min-width: 992px) {
-					font-size: 2.1vw;
+					font-size: 3vw;
 					margin-bottom: 18px;
 				}
 			}
@@ -12248,7 +12263,7 @@ body.frontend.portaltype-portlet-page.section-home-page {
     				max-width: 550px;
 
     				@media(min-width: 1300px) {
-    					padding-top: 70px;
+    					padding-top: 0px;
     				}
 
 					h4 {
@@ -12682,7 +12697,7 @@ body.frontend.portaltype-person {
 				float: right;
 
 				h3 {
-					max-width: 200px;
+					max-width: 350px;
 				    font-size: 3vw;
 				    line-height: 4.0vw;
 				    margin-top: 0.8vw;
@@ -13114,7 +13129,7 @@ body.frontend.portaltype-portlet-page.section-home-page {
 body.frontend {
 	.button-container {
 		padding-top: 30px;
-		text-align: center;
+		text-align: left;
 
 		button.btn,
 		a.btn {
@@ -13123,6 +13138,18 @@ body.frontend {
 			display: inline-block !important;
 			background:transparent;
 			text-transform: uppercase;
+
+			margin-left: 0;
+		    width: auto;
+		    text-transform: uppercase;
+		    background-color: #fa7d6c;
+		    border: 1px solid #fa7d6c;
+		    color: #777894;
+		    padding-left: 15px;
+		    padding-right: 15px;
+		    padding-top: 5px;
+		    padding-bottom: 5px;
+		    font-size: 19px;
 		}
 	}
 
@@ -13675,7 +13702,7 @@ body.frontend #website-wrapper.presentation .extra-info-wrapper {
 		p.event-date {
 			font-size: 15px;
 		    line-height: 35px;
-		    color: #282931;
+		    color: #b6a782;
 		    letter-spacing: 0.05em;
 		    margin-bottom: 0px;
 		    margin-top: 14px;
@@ -13691,7 +13718,7 @@ body.frontend #website-wrapper.presentation .extra-info-wrapper {
 		    font-family: 'StyreneBold', Arial, sans-serif;
 		    font-size: 32px;
 		    line-height: 40px;
-		    color: #282931;
+		    color: #7841b3;
 		    clear: both;
 		}
 
@@ -13700,6 +13727,7 @@ body.frontend #website-wrapper.presentation .extra-info-wrapper {
 		    line-height: 30px;
 		    margin-bottom: 5px;
 		    font-size: 1.180em;
+		    color: #b6a782;
 		}
 	}
 
@@ -13752,11 +13780,11 @@ body.frontend #website-wrapper.presentation .extra-info-wrapper {
 			    font-family: 'StyreneBold', Arial, sans-serif;
 			    font-size: 32px;
 			    line-height: 40px;
-			    color: #282931;
+			    color: #7841b3;
 			    clear: both;
 
-			    font-size: 4.5vw;
-    			line-height: 0.85;
+			    font-size: 3.5vw;
+    			line-height: 4vw;
     			@media (min-width: 1300px) and (min-width: 992px) {
     				font-size: 60px;
 				}
@@ -13768,6 +13796,7 @@ body.frontend #website-wrapper.presentation .extra-info-wrapper {
 			    line-height: 30px;
 			    margin-bottom: 5px;
 			    font-size: 1.230em;
+			    color: #b6a782;
     		}
 		}
 	}
@@ -13785,6 +13814,26 @@ body.frontend #website-wrapper.presentation .extra-info-wrapper {
 		.buttonField();
 		width: auto;
 		margin-left: 0;
+		margin-left: 0;
+	    width: auto;
+	    text-transform: uppercase;
+	    background-color: #7841b3;
+	    border: 1px solid #7841b3;
+	    color: #faf5b8;
+	    padding-left: 15px;
+	    padding-right: 15px;
+	    padding-top: 5px;
+	    padding-bottom: 5px;
+	    font-size: 19px;
+
+	    &:hover,
+		&:active,
+		&:focus,
+		&:focus:active {
+			background-color: #b6a782;
+			color: #faf5b8;
+			border: 1px solid #b6a782;
+		}
 	}
 }
 
@@ -13804,7 +13853,7 @@ body.frontend #website-wrapper.presentation .extra-info-wrapper {
   overflow: hidden;
   text-indent: 100%;
   white-space: nowrap;
-  background: #fbf9f2 url(/++theme++plonetheme.hetpark/images/cd-top-arrow.svg) no-repeat center 50%;
+  background: #fa7d6c url(/++theme++plonetheme.hetpark/images/cd-top-arrow.svg) no-repeat center 50%;
   visibility: hidden;
   opacity: 0;
   -webkit-transition: opacity .3s 0s, visibility 0s .3s, background-color .3s 0s;
@@ -13831,10 +13880,10 @@ body.frontend #website-wrapper.presentation .extra-info-wrapper {
 }
 
 .cd-top:hover {
-  background-color: #282931;
+  background-color: #b6a782;
   opacity: 1;
 
-  background: #282931 url(/++theme++plonetheme.hetpark/images/cd-top-arrow-white.svg) no-repeat center 50%;
+  background: #b6a782 url(/++theme++plonetheme.hetpark/images/cd-top-arrow-white.svg) no-repeat center 50%;
 }
 
 @media only screen and (min-width: 768px) {
@@ -14720,7 +14769,7 @@ body.frontend #global_statusmessage {
 
 
 	@media(min-width: 992px) {
-		right: 35px;
+		right: 20px;
 	    top: 25px;
 	    width: 75px;
 	    height: 75px;
@@ -15545,4 +15594,62 @@ body.frontend #below-content .portlet.frontpage-collection-online.portlet-collec
 .portlet.frontpage-collection-online .slick-slider.slick-initialized {
 	visibility: visible;
 }
+
+#website-wrapper .scroll-wrapper {
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+}
+
+#website-wrapper .scroll-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+
+/* COLOR SCHEME */
+
+body:not(.mobile) {
+	nav#website-nav {
+		right: 15px;
+	}
+}
+
+body .intro-header,
+body.frontend .intro-header {
+	margin-top: 10.5vw;
+
+	@media(min-width: 992px) {
+		margin-top: 118px;
+	}
+}
+
+
+.navbar-default#website-nav {
+	background: #ff4438;
+	-webkit-transition: all 0.3s ease-in;
+    -moz-transition: all 0.3s ease-in;
+    -o-transition: all 0.3s ease-in;
+    transition: all 0.3s ease-in;
+}
+
+body.navigation-is-open-end {
+	.navbar-default#website-nav {
+		background: #ffd100;
+		-webkit-transition: all 0.3s ease-in;
+	    -moz-transition: all 0.3s ease-in;
+	    -o-transition: all 0.3s ease-in;
+	    transition: all 0.3s ease-in;
+	}
+}
+
+
+
+
+
+
+
 

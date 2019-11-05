@@ -1032,7 +1032,13 @@ jQuery(document).ready(function($){
     mainHeader.toggleClass('nav-open');
   });
 
-  jQuery("#website-wrapper").on('scroll', function(){
+  var scrolling_style = "#website-wrapper";
+
+  if (jQuery("html[data-presentation='enabled']").length > 0) {
+  	var scrolling_style = window;
+  }
+
+  jQuery(scrolling_style).on('scroll', function(){
     if( !scrolling ) {
       scrolling = true;
       (!window.requestAnimationFrame)
@@ -1041,13 +1047,13 @@ jQuery(document).ready(function($){
     }
   });
 
-  jQuery("#website-wrapper").on('resize', function(){
+  jQuery(scrolling_style).on('resize', function(){
     headerHeight = mainHeader.height();
   });
 
 
   function autoHideHeader() {
-    var currentTop = jQuery("#website-wrapper").scrollTop();
+    var currentTop = jQuery(scrolling_style).scrollTop();
 
     ( belowNavHeroContent.length > 0 ) 
       ? checkStickyNavigation(currentTop) // secondary navigation below intro

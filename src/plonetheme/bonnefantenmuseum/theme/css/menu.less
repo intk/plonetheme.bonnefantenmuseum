@@ -199,12 +199,17 @@ body:not(.navigation-is-open) .cd-nav-trigger:hover .cd-nav-icon::before {
   -webkit-transition: visibility 0s 0.4s;
   -moz-transition: visibility 0s 0.4s;
   transition: visibility 0s 0.4s;
+  overflow: hidden;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
 }
 
 .cd-nav .cd-navigation-wrapper {
   /* all navigation content */
   height: 100%;
-  overflow-y: auto;
+  overflow-y: unset;
+  
   -webkit-overflow-scrolling: touch;
   padding: 40px 5% 40px calc(5% + 80px);
   /* Force Hardware Acceleration in WebKit */
@@ -215,14 +220,11 @@ body:not(.navigation-is-open) .cd-nav-trigger:hover .cd-nav-icon::before {
   transform: translateZ(0);
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
-  -webkit-transform: translateX(-50%);
-  -moz-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  -o-transform: translateX(-50%);
-  transform: translateX(-50%);
-  -webkit-transition: -webkit-transform 0.4s;
-  -moz-transition: -moz-transform 0.4s;
-  transition: transform 0.4s;
+
+  
+  -webkit-transition: -webkit-transform 0.3s;
+  -moz-transition: -moz-transform 0.3s;
+  transition: transform 0.3s;
   -webkit-transition-timing-function: cubic-bezier(0.86, 0.01, 0.77, 0.78);
   -moz-transition-timing-function: cubic-bezier(0.86, 0.01, 0.77, 0.78);
   transition-timing-function: cubic-bezier(0.86, 0.01, 0.77, 0.78);
@@ -262,11 +264,12 @@ body:not(.navigation-is-open) .cd-nav-trigger:hover .cd-nav-icon::before {
   transition: visibility 0s 0s;
 }
 .navigation-is-open .cd-nav .cd-navigation-wrapper {
-  -webkit-transform: translateX(0);
-  -moz-transform: translateX(0);
-  -ms-transform: translateX(0);
-  -o-transform: translateX(0);
-  transform: translateX(0);
+  -webkit-transform: translateY(0);
+  -moz-transform: translateY(0);
+  -ms-transform: translateY(0);
+  -o-transform: translateY(0);
+  transform: translateY(0);
+
   -webkit-transition: -webkit-transform 0.3s;
   -moz-transition: -moz-transform 0.3s;
   transition: transform 0.3s;
@@ -402,12 +405,12 @@ body:not(.navigation-is-open) .cd-nav-trigger:hover .cd-nav-icon::before {
   z-index: 2;
   background: #ffffff;
   height: 100%;
-  overflow-y: auto;
+  overflow: hidden;
   -webkit-overflow-scrolling: touch;
   /* Force Hardware Acceleration in WebKit */
-  -webkit-transition: -webkit-transform 0.4s;
-  -moz-transition: -moz-transform 0.4s;
-  transition: transform 0.4s;
+  -webkit-transition: -webkit-transform 0.3s;
+  -moz-transition: -moz-transform 0.3s;
+  transition: transform 0.3s;
   -webkit-transition-timing-function: cubic-bezier(0.91, 0.01, 0.6, 0.99);
   -moz-transition-timing-function: cubic-bezier(0.91, 0.01, 0.6, 0.99);
   transition-timing-function: cubic-bezier(0.91, 0.01, 0.6, 0.99);
@@ -424,11 +427,11 @@ body:not(.template-online_experience) {
 }
 
 .navigation-is-open #website-wrapper {
-  -webkit-transform: translateX(100%);
-  -moz-transform: translateX(100%);
-  -ms-transform: translateX(100%);
-  -o-transform: translateX(100%);
-  transform: translateX(100%);
+  -webkit-transform: translateY(100%);
+  -moz-transform: translateY(100%);
+  -ms-transform: translateY(100%);
+  -o-transform: translateY(100%);
+  transform: translateY(100%);
 }
 
 .no-js .cd-nav {
@@ -440,11 +443,11 @@ body:not(.template-online_experience) {
   height: auto;
   overflow: visible;
   padding: 100px 5%;
-  -webkit-transform: translateX(0);
-  -moz-transform: translateX(0);
-  -ms-transform: translateX(0);
-  -o-transform: translateX(0);
-  transform: translateX(0);
+  -webkit-transform: translateY(0);
+  -moz-transform: translateY(0);
+  -ms-transform: translateY(0);
+  -o-transform: translateY(0);
+  transform: translateY(0);
 }
 
 /* CUSTOM */

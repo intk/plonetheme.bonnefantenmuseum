@@ -230,11 +230,11 @@
       <drop css:theme=".page-container" css:if-content="#presentation"/>
       
 
-      <replace
+      <!--<replace
         css:theme-children="#slideshow-btn-wrapper"
         css:content=".slideshow-btn-wrapper"
         css:if-content="#presentation"
-        />
+        />-->
 
       <drop css:theme="#slideshow-btn-wrapper" css:if-not-content="#presentation"/>
       
