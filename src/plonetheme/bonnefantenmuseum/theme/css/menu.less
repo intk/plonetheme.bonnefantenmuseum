@@ -209,7 +209,7 @@ body:not(.navigation-is-open) .cd-nav-trigger:hover .cd-nav-icon::before {
   /* all navigation content */
   height: 100%;
   overflow-y: unset;
-  
+
   -webkit-overflow-scrolling: touch;
   padding: 40px 5% 40px calc(5% + 80px);
   /* Force Hardware Acceleration in WebKit */
@@ -240,7 +240,7 @@ body:not(.navigation-is-open) .cd-nav-trigger:hover .cd-nav-icon::before {
   padding-top: 0px;
 
   @media(max-width: 991px) {
-    padding-top: 80px;
+    padding-top: 16vw;
   }
 }
 
@@ -248,7 +248,7 @@ body:not(.navigation-is-open) .cd-nav-trigger:hover .cd-nav-icon::before {
   padding-top: 0px;
 
   @media(max-width: 992px) {
-    padding-top: 100px; 
+    padding-top: 13vw; 
     padding-bottom: 80px;
   }
 
@@ -347,7 +347,7 @@ body:not(.navigation-is-open) .cd-nav-trigger:hover .cd-nav-icon::before {
 @media only screen and (min-width: 992px) {
   .cd-nav .cd-navigation-wrapper {
     padding: 0px;
-    padding-top: 150px;
+    padding-top: 14vw;
     margin-top: 0px;
     background-color: #ffd100;
   }
@@ -396,6 +396,13 @@ body:not(.navigation-is-open) .cd-nav-trigger:hover .cd-nav-icon::before {
   }
   .cd-nav .cd-contact-info li, .cd-nav .cd-contact-info a, .cd-nav .cd-contact-info span {
     font-size: 2rem;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .cd-nav .cd-navigation-wrapper {
+    padding: 0px;
+    padding-top: 150px;
   }
 }
 
