@@ -787,6 +787,66 @@ jQuery(document).ready(function($) {
 	  });
 	}
 
+	if (jQuery('body.portaltype-document').length > 0 || jQuery('body.portaltype-event').length || jQuery('body.portaltype-news-item').length || jQuery('body.portaltype-collection').length || jQuery('body.portaltype-folder').length)  {
+		
+		jQuery("section.portlet").scrollie({
+			parentElement: jQuery("div.scroll-wrapper"),
+			scrollOffset: 150,
+			scrollRatio: 0,
+			scrollingOutOfView: function(elem, offset, direction, coords, scrollRatio, thisTop, winPos) {
+				var colour_scheme = elem.data('background');
+				jQuery("body").attr("data-background", colour_scheme);
+			}
+		});
+
+		jQuery("header.intro-header").scrollie({
+			parentElement: jQuery("div.scroll-wrapper"),
+			scrollOffset: 150,
+			scrollRatio: 0,
+			direction : 'down',
+			scrollingOutOfView: function(elem) {
+				jQuery("body").attr("data-background", "sequence-00");
+			}
+		});
+		
+		jQuery("#content-core").scrollie({
+			parentElement: jQuery("div.scroll-wrapper"),
+			scrollOffset: 150,
+			scrollRatio: 0,
+			scrollingOutOfView: function(elem) {
+				jQuery("body").attr("data-background", "sequence-07");
+			}
+		});
+
+		var mailchimp_offset = 150;
+		if (jQuery("body.mobile").length > 0) {
+			mailchimp_offset = 0;
+		}
+
+		jQuery("dl.portletMailChimp").scrollie({
+			parentElement: jQuery("div.scroll-wrapper"),
+			scrollOffset: mailchimp_offset,
+			scrollRatio: 0,
+			scrollingOutOfView: function(elem) {
+				jQuery("body").attr("data-background", "sequence-04");
+			}
+		});
+
+		var footer_offset = 0;
+		if (jQuery("body.mobile").length > 0) {
+			footer_offset = 0;
+		}
+
+		jQuery(".portlet-static-footer").scrollie({
+			parentElement: jQuery("div.scroll-wrapper"),
+			scrollOffset: footer_offset,
+			scrollRatio: 0,
+			scrollingOutOfView: function(elem) {
+				jQuery("body").attr("data-background", "sequence-05");
+			}
+		});
+	};
+
 	if (jQuery(".frontpage-permanent #row-items").length) {
 		imagesLoaded('.frontpage-permanent #row-items', function() {
 		    var elem = document.querySelector('.frontpage-permanent #row-items');
@@ -797,49 +857,57 @@ jQuery(document).ready(function($) {
 		    });
 		    $(".frontpage-permanent #row-items").addClass('init');
 		    
-		    // scrollie background scheme
-			jQuery("section.portlet").scrollie({
-				parentElement: jQuery("div.scroll-wrapper"),
-				scrollOffset: 120,
-				scrollRatio: 0,
-				scrollingOutOfView: function(elem, offset, direction, coords, scrollRatio, thisTop, winPos) {
-					var colour_scheme = elem.data('background');
-					jQuery("body").attr("data-background", colour_scheme);
-				}
-			});
 
-			jQuery("header.intro-header").scrollie({
-				parentElement: jQuery("div.scroll-wrapper"),
-				scrollOffset: 120,
-				scrollRatio: 0,
-				direction : 'down',
-				scrollingOutOfView: function(elem) {
-					jQuery("body").attr("data-background", "sequence-00");
-				}
-			});
+		    if (jQuery('body.portaltype-portlet-page.section-frontpage').length > 0) {
+			    // scrollie background scheme
+				jQuery("section.portlet").scrollie({
+					parentElement: jQuery("div.scroll-wrapper"),
+					scrollOffset: 120,
+					scrollRatio: 0,
+					scrollingOutOfView: function(elem, offset, direction, coords, scrollRatio, thisTop, winPos) {
+						var colour_scheme = elem.data('background');
+						jQuery("body").attr("data-background", colour_scheme);
+					}
+				});
 
-			jQuery("dl.portletMailChimp").scrollie({
-				parentElement: jQuery("div.scroll-wrapper"),
-				scrollOffset: 120,
-				scrollRatio: 0,
-				scrollingOutOfView: function(elem) {
-					jQuery("body").attr("data-background", "sequence-04");
-				}
-			});
+				jQuery("header.intro-header").scrollie({
+					parentElement: jQuery("div.scroll-wrapper"),
+					scrollOffset: 120,
+					scrollRatio: 0,
+					direction : 'down',
+					scrollingOutOfView: function(elem) {
+						jQuery("body").attr("data-background", "sequence-00");
+					}
+				});
 
-			var footer_offset = -500;
-			if (jQuery("body.mobile").length > 0) {
-				footer_offset = -120;
+				var mailchimp_offset = 120;
+				if (jQuery("body.mobile").length > 0) {
+					mailchimp_offset = 0;
+				}
+
+				jQuery("dl.portletMailChimp").scrollie({
+					parentElement: jQuery("div.scroll-wrapper"),
+					scrollOffset: mailchimp_offset,
+					scrollRatio: 0,
+					scrollingOutOfView: function(elem) {
+						jQuery("body").attr("data-background", "sequence-04");
+					}
+				});
+
+				var footer_offset = -10;
+				if (jQuery("body.mobile").length > 0) {
+					footer_offset = -120;
+				}
+
+				jQuery(".portlet-static-footer").scrollie({
+					parentElement: jQuery("div.scroll-wrapper"),
+					scrollOffset: footer_offset,
+					scrollRatio: 0,
+					scrollingOutOfView: function(elem) {
+						jQuery("body").attr("data-background", "sequence-05");
+					}
+				});
 			}
-
-			jQuery(".portlet-static-footer").scrollie({
-				parentElement: jQuery("div.scroll-wrapper"),
-				scrollOffset: footer_offset,
-				scrollRatio: 0,
-				scrollingOutOfView: function(elem) {
-					jQuery("body").attr("data-background", "sequence-05");
-				}
-			});
 
 	 	});
 	}

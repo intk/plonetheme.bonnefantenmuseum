@@ -203,8 +203,17 @@
         css:if-content=".event.summary.recurrence"
       />
 
-      <drop css:theme="#event-summary:not(.has-recurrence)" css:if-content=".event.summary.recurrence"/>
+      <drop css:theme="#event-summary:not(.has-recurrence):not(.news)" css:if-content=".event.summary.recurrence"/>
       <drop css:theme="#event-summary.has-recurrence" css:if-not-content=".event.summary.recurrence"/>
+
+      <replace
+        css:theme-children="#news-summary.news"
+        css:content="ul.event.dates"
+        method="raw"
+        css:if-content="body.portaltype-news-item"
+      />
+      <drop css:theme="#news-summary.news" css:if-not-content="body.portaltype-news-item"/>
+
 
       <drop css:content="#viewlet-social-like"/>
 
