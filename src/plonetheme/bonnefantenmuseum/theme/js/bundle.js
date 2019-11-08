@@ -774,10 +774,12 @@ jQuery(document).ready(function($) {
      document.documentElement.className+=' ie'+document.documentMode;
   }
 
-
   /* Randomize the logo */
-  var scroll_breakpoint = 100;
+  var scroll_breakpoint = 200;
   var last_scroll_top = 0;
+  var consume_array = new Array();
+  var previous_movement = undefined;
+  var previous_break_movement = undefined;
 
   var possible_classes = ["gothic", "slab", "block"];
 
@@ -785,7 +787,7 @@ jQuery(document).ready(function($) {
 
   	var scroll_top = jQuery('div.scroll-wrapper').scrollTop();
 
-  	if (scroll_top <= 100) {
+  	if (scroll_top <= 200) {
 
   		jQuery("body").attr("data-menutop", "true");
 
@@ -804,6 +806,10 @@ jQuery(document).ready(function($) {
 
   	} else if (scroll_top > last_scroll_top) {
   		jQuery("body").attr("data-menutop", "false");
+  		
+  		if (previous_movement == "down") {
+  			scroll_breakpoint += 400;
+  		}
   		// scroll up
   		if (scroll_top >= scroll_breakpoint) {
 
@@ -819,31 +825,102 @@ jQuery(document).ready(function($) {
 	  		jQuery(selector_font_one).attr('class', font_class_one);
 	  		jQuery(selector_font_two).attr('class', font_class_two);
 
+	  		consume_item1 = jQuery("#portal-logo span:nth-child(1)").attr('class');
+	  		consume_item2 = jQuery("#portal-logo span:nth-child(2)").attr('class');
+	  		consume_item3 = jQuery("#portal-logo span:nth-child(3)").attr('class');
+	  		consume_item4 = jQuery("#portal-logo span:nth-child(4)").attr('class');
+	  		consume_item5 = jQuery("#portal-logo span:nth-child(5)").attr('class');
+	  		consume_item6 = jQuery("#portal-logo span:nth-child(6)").attr('class');
+	  		consume_item7 = jQuery("#portal-logo span:nth-child(7)").attr('class');
+	  		consume_item8 = jQuery("#portal-logo span:nth-child(8)").attr('class');
+	  		consume_item9 = jQuery("#portal-logo span:nth-child(9)").attr('class');
+	  		consume_item10 = jQuery("#portal-logo span:nth-child(10)").attr('class');
+	  		consume_item11 = jQuery("#portal-logo span:nth-child(11)").attr('class');
+
+	  		var consume_item = new Object();
+  			consume_item.consume_item1 = consume_item1;
+			consume_item.consume_item2 = consume_item2;
+			consume_item.consume_item3 = consume_item3;
+			consume_item.consume_item4 = consume_item4;
+			consume_item.consume_item5 = consume_item5;
+			consume_item.consume_item6 = consume_item6;
+			consume_item.consume_item7 = consume_item7;
+			consume_item.consume_item8 = consume_item8;
+			consume_item.consume_item9 = consume_item9;
+			consume_item.consume_item10 = consume_item10;
+			consume_item.consume_item11 = consume_item11;
+
+	  		consume_array.push(consume_item);
+
 	  		/* randomise the fonts */
-	  		scroll_breakpoint += 100;
+	  		scroll_breakpoint += 200;
+	  		previous_break_movement = "up";
+	  		
 	  	}
-
-
+	  	previous_movement = "up";
+	  	
   	} else {
+
   		// scroll down
   		jQuery("body").attr("data-menutop", "false");
+
+  		if (previous_movement == "up") {
+  			scroll_breakpoint -= 200;
+  		}
+
   		if (scroll_top <= scroll_breakpoint) {
+  			if (consume_array.length > 1) {
+  				if (previous_break_movement == "up") {
+  					var current_item = consume_array.pop();
+  				}
+  				
+  				var consume_item = consume_array.pop();
 
-	  		var random_font_one = Math.floor(Math.random() * 11) + 1;
-	  		var random_font_two = Math.floor(Math.random() * 11) + 1;
+		  		var consume_item1 = consume_item.consume_item1;
+				var consume_item2 = consume_item.consume_item2;
+				var consume_item3 = consume_item.consume_item3;
+				var consume_item4 = consume_item.consume_item4;
+				var consume_item5 = consume_item.consume_item5;
+				var consume_item6 = consume_item.consume_item6;
+				var consume_item7 = consume_item.consume_item7;
+				var consume_item8 = consume_item.consume_item8;
+				var consume_item9 = consume_item.consume_item9;
+				var consume_item10 =consume_item.consume_item10;
+				var consume_item11 =consume_item.consume_item11;
 
-	  		var selector_font_one = "#portal-logo span:nth-child("+random_font_one+")";
-	  		var selector_font_two = "#portal-logo span:nth-child("+random_font_two+")";
+				jQuery("#portal-logo span:nth-child(1)").attr('class', consume_item1);
+		  		jQuery("#portal-logo span:nth-child(2)").attr('class', consume_item2);
+		  		jQuery("#portal-logo span:nth-child(3)").attr('class', consume_item3);
+		  		jQuery("#portal-logo span:nth-child(4)").attr('class', consume_item4);
+		  		jQuery("#portal-logo span:nth-child(5)").attr('class', consume_item5);
+		  		jQuery("#portal-logo span:nth-child(6)").attr('class', consume_item6);
+		  		jQuery("#portal-logo span:nth-child(7)").attr('class', consume_item7);
+		  		jQuery("#portal-logo span:nth-child(8)").attr('class', consume_item8);
+		  		jQuery("#portal-logo span:nth-child(9)").attr('class', consume_item9);
+		  		jQuery("#portal-logo span:nth-child(10)").attr('class', consume_item10);
+		  		jQuery("#portal-logo span:nth-child(11)").attr('class', consume_item11);
 
-	  		var font_class_one = possible_classes[Math.floor(Math.random() * 3)];
-	  		var font_class_two = possible_classes[Math.floor(Math.random() * 3)];
+  			} else {
+  				var random_font_one = Math.floor(Math.random() * 11) + 1;
+		  		var random_font_two = Math.floor(Math.random() * 11) + 1;
 
-	  		jQuery(selector_font_one).attr('class', font_class_one);
-	  		jQuery(selector_font_two).attr('class', font_class_two);
+		  		var selector_font_one = "#portal-logo span:nth-child("+random_font_one+")";
+		  		var selector_font_two = "#portal-logo span:nth-child("+random_font_two+")";
+
+		  		var font_class_one = possible_classes[Math.floor(Math.random() * 3)];
+		  		var font_class_two = possible_classes[Math.floor(Math.random() * 3)];
+
+		  		jQuery(selector_font_one).attr('class', font_class_one);
+		  		jQuery(selector_font_two).attr('class', font_class_two);
+  			}
 
 	  		/* randomise the fonts */
-	  		scroll_breakpoint -= 100;
+	  		scroll_breakpoint -= 200;
+	  		previous_break_movement = "down";
+	  		
 	  	}
+	  	previous_movement = "down";
+	  	
   	}
   	last_scroll_top = scroll_top;
 
@@ -959,7 +1036,7 @@ jQuery(document).ready(function($) {
 
 				var mailchimp_offset = 120;
 				if (jQuery("body.mobile").length > 0) {
-					mailchimp_offset = 0;
+					mailchimp_offset = -200;
 				}
 
 				jQuery("dl.portletMailChimp").scrollie({
