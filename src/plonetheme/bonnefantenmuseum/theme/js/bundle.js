@@ -774,6 +774,83 @@ jQuery(document).ready(function($) {
      document.documentElement.className+=' ie'+document.documentMode;
   }
 
+
+  /* Randomize the logo */
+  var scroll_breakpoint = 100;
+  var last_scroll_top = 0;
+
+  var possible_classes = ["gothic", "slab", "block"];
+
+  jQuery('div.scroll-wrapper').on('scroll', function() {
+
+  	var scroll_top = jQuery('div.scroll-wrapper').scrollTop();
+
+  	if (scroll_top <= 100) {
+
+  		jQuery("body").attr("data-menutop", "true");
+
+  		jQuery("#portal-logo span:nth-child(1)").attr('class', 'gothic');
+  		jQuery("#portal-logo span:nth-child(2)").attr('class', 'slab');
+  		jQuery("#portal-logo span:nth-child(3)").attr('class', 'block');
+  		jQuery("#portal-logo span:nth-child(4)").attr('class', 'slab');
+  		jQuery("#portal-logo span:nth-child(5)").attr('class', 'block');
+  		jQuery("#portal-logo span:nth-child(6)").attr('class', 'gothic');
+  		jQuery("#portal-logo span:nth-child(7)").attr('class', 'slab');
+  		jQuery("#portal-logo span:nth-child(8)").attr('class', 'slab');
+  		jQuery("#portal-logo span:nth-child(9)").attr('class', 'block');
+  		jQuery("#portal-logo span:nth-child(10)").attr('class', 'gothic');
+  		jQuery("#portal-logo span:nth-child(11)").attr('class', 'block');
+
+
+  	} else if (scroll_top > last_scroll_top) {
+  		jQuery("body").attr("data-menutop", "false");
+  		// scroll up
+  		if (scroll_top >= scroll_breakpoint) {
+
+	  		var random_font_one = Math.floor(Math.random() * 11) + 1;
+	  		var random_font_two = Math.floor(Math.random() * 11) + 1;
+
+	  		var selector_font_one = "#portal-logo span:nth-child("+random_font_one+")";
+	  		var selector_font_two = "#portal-logo span:nth-child("+random_font_two+")";
+
+	  		var font_class_one = possible_classes[Math.floor(Math.random() * 3)];
+	  		var font_class_two = possible_classes[Math.floor(Math.random() * 3)];
+
+	  		jQuery(selector_font_one).attr('class', font_class_one);
+	  		jQuery(selector_font_two).attr('class', font_class_two);
+
+	  		/* randomise the fonts */
+	  		scroll_breakpoint += 100;
+	  	}
+
+
+  	} else {
+  		// scroll down
+  		jQuery("body").attr("data-menutop", "false");
+  		if (scroll_top <= scroll_breakpoint) {
+
+	  		var random_font_one = Math.floor(Math.random() * 11) + 1;
+	  		var random_font_two = Math.floor(Math.random() * 11) + 1;
+
+	  		var selector_font_one = "#portal-logo span:nth-child("+random_font_one+")";
+	  		var selector_font_two = "#portal-logo span:nth-child("+random_font_two+")";
+
+	  		var font_class_one = possible_classes[Math.floor(Math.random() * 3)];
+	  		var font_class_two = possible_classes[Math.floor(Math.random() * 3)];
+
+	  		jQuery(selector_font_one).attr('class', font_class_one);
+	  		jQuery(selector_font_two).attr('class', font_class_two);
+
+	  		/* randomise the fonts */
+	  		scroll_breakpoint -= 100;
+	  	}
+  	}
+  	last_scroll_top = scroll_top;
+
+  	
+  });	
+
+
 	if (jQuery('#masonry-grid').length) {
 	  imagesLoaded('#masonry-grid', function() {
 	    var elem = document.querySelector('#masonry-grid');
