@@ -9934,6 +9934,26 @@ body.frontend {
 	#subscribe-result p {
 		color: inherit !important;
 		margin-bottom: 0px !important;
+		font-size: 16px;
+		margin-left: 25px;
+
+		@media(min-width: 992px) {
+			max-width: 70%;
+		}
+
+		a {
+			color: inherit !important;
+			border-bottom: 0px !important;
+
+			text-decoration: underline !important;
+
+			&:hover,
+			&:focus,
+			&:active,
+			&:active:focus {
+				text-decoration: none !important;
+			}
+		}
 	}
 }
 
