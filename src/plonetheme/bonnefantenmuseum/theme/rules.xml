@@ -349,12 +349,22 @@
         </div>
       </replace>
 
-      <!--<xsl:template match="//script[contains(@src, 'hetpark-bundle')]">
+      <xsl:template match="//script[contains(@src, 'production')]">
         <xsl:copy>
           <xsl:attribute name="async">true</xsl:attribute>
           <xsl:copy-of select="@*" />
           <xsl:apply-templates />
         </xsl:copy>
-      </xsl:template>-->
+      </xsl:template>
+
+      <xsl:template match="//link[contains(@rel, 'stylesheet')]">
+        <xsl:copy>
+          <xsl:copy-of select="@*" />
+          <xsl:attribute name="rel">preload</xsl:attribute>
+          <xsl:attribute name="as">style</xsl:attribute>
+          <xsl:attribute name="onload">this.onload=null;this.rel='stylesheet'</xsl:attribute>
+          <xsl:apply-templates />
+        </xsl:copy>
+      </xsl:template>
 
 </rules>

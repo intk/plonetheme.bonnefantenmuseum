@@ -815,6 +815,13 @@ body {
 	height: 100%;
 }
 
+
+body.patterns-loaded {
+	nav#website-nav, #website-wrapper, footer, #cd-nav, header.intro-header, a.cd-nav-trigger, .nav-trigger-open svg, nav-trigger-close svg, div.logo-wrapper {
+		opacity: 1 !important;
+	}
+}
+
 html {
 	background-color: transparent;
 	height: 100%;
@@ -9393,14 +9400,19 @@ body.frontend.portaltype-folder #slickcarousel .carousel-item.portrait {
 
 	#title-container-wrapper {
 		padding-top: 90px;
-		padding-bottom: 60px;
+		margin-bottom: 60px;
+
+		@media(max-width: 991px) {
+			padding-top: 40px;
+			margin-bottom: 0px;
+		}
 	}
 	
 
 	@media(min-width: 768px) {
 
 		#title-container-wrapper {
-			padding-top: 120px;
+			padding-top: 20px;
 		}
 	}
 }
@@ -9423,7 +9435,7 @@ body.userrole-authenticated #website-wrapper.empty-slideshow .page-container {
 
 	#title-container-wrapper {
 		padding-top: 40px;
-		padding-bottom: 60px;
+		margin-bottom: 60px;
 
 		@media(max-width: 768px) {
 			padding-bottom: 0px;
@@ -12446,6 +12458,19 @@ body.frontend.portaltype-portlet-page.section-home-page {
 		}
 	}
 
+	@media (min-width: 1200px) {
+
+		.portletCollection.frontpage-portlet-collection {
+			.portletHeader {
+
+				h3 {
+					font-size: 75px;
+				    line-height: 120px;
+				}
+			}
+		}
+	}
+
 	@media (min-width: 1480px) {
 
 		.portletCollection.frontpage-portlet-collection {
@@ -13084,7 +13109,7 @@ body.frontend.portaltype-portlet-page.subsection-now-in-the-museum {
 
 		.page-container {
 			@media(max-width: 991px) {
-				background: #faf5b8;
+				background: inherit;
 				padding-left: 0px;
 	    		padding-right: 0px;
     		}
@@ -15234,6 +15259,14 @@ body.frontend.portaltype-portlet-page.section-frontpage {
 
 		#row-items.init {
 			visibility: visible !important;
+		}
+
+		#row-items:not(.init) {
+
+			@media(min-width: 992px) {
+				padding-bottom: 1250px;
+			}
+
 		}
 
 		.portlet-item {
