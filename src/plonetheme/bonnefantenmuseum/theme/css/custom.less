@@ -817,7 +817,7 @@ body {
 
 
 body.patterns-loaded {
-	nav#website-nav, #website-wrapper, footer, #cd-nav, header.intro-header, a.cd-nav-trigger, .nav-trigger-open svg, nav-trigger-close svg, div.logo-wrapper {
+	nav#website-nav, #website-wrapper, footer, #cd-nav, header.intro-header, a.cd-nav-trigger, .nav-trigger-open svg, .nav-trigger-close svg, div.logo-wrapper {
 		opacity: 1 !important;
 	}
 }
@@ -1171,6 +1171,15 @@ div.logo-wrapper {
 	padding-left: 10px;
 	padding-right: 10px;
 
+	@media(max-width: 991px) {
+		padding-left: 22px;
+	}
+
+
+	@media(min-width: 992px) {
+		padding-left: 20px;
+	}
+
 	div.brand-logo {
 		position: relative;
 		float: left;
@@ -1199,12 +1208,12 @@ div.logo-wrapper {
 
 	.BonnefantenBlock();
 	
-	font-size: 9vw;
-    line-height: 11vw;
+	font-size: 8vw;
+    line-height: 10vw;
 
 
-    @media(max-width: 768px) {
-    	line-height: 14vw;
+    @media(max-width: 767px) {
+    	line-height: 10vw;
     }
 	span.block {
 		.BonnefantenBlock();
@@ -1226,10 +1235,11 @@ div.logo-wrapper {
 		border-bottom: 0px !important;
 	}
 
-	@media (min-width: 992px) {
-		font-size: 95px;
-		line-height: 120px;
+	@media (min-width: 1400px) {
+		font-size: 110px;
+		line-height: 135px;
 	}
+
 }
 
 
@@ -1542,8 +1552,8 @@ body.frontend, body#tinymce {
     	}
 
     	#row-items {
-    		padding-left: 0px;
-    		padding-right: 0px;
+    		padding-left: 4px !important;
+    		padding-right: 4px !important;
     		/*margin-left: -15px;*/
     		/*margin-right: -15px;*/
     	}
@@ -2285,6 +2295,9 @@ body.frontend, body#tinymce {
 	/* PORTLET PAGE */
 	&.portaltype-portlet-page,
 	&.portaltype-event #below-content,
+	&.portaltype-document #below-content,
+	&.portaltype-collection #below-content,
+	&.portaltype-folder #below-content,
 	&.portaltype-person #below-content {
 
 		#title-container-wrapper .header-quotes-wrapper {
@@ -2333,8 +2346,8 @@ body.frontend, body#tinymce {
 		}
 
 		.portletHeader h3 {
-			font-size: 7.5vw;
-		    line-height: 8vw;
+			font-size: 8vw;
+		    line-height: 10vw;
 		    margin-top: 8px;
 		    color: #b6a782;
 			.BonnefantenBlock();
@@ -2345,18 +2358,18 @@ body.frontend, body#tinymce {
 			letter-spacing: 0.00em;
 
 			@media (max-width: 991px) {
-				font-size: 9vw;
-				line-height: 11vw;
-				padding-left: 12px;
-    			padding-right: 12px;
+				font-size: 8vw;
+				line-height: 10vw;
+				padding-left: 15px;
+    			padding-right: 15px;
     			margin-top: 0px;
     			padding-top: 0px;
     			padding-bottom: 0px;
 			}
 
 			@media(min-width: 1400px) {
-				font-size: 75px;
-		    	line-height: 120px;
+				font-size: 110px;
+		    	line-height: 135px;
 			}
 		}
 
@@ -4144,8 +4157,8 @@ body.frontend .portletMailChimp,
 
 		@media(max-width: 991px) {
 			h3 {
-				font-size: 9vw;
-				line-height: 11vw;
+				font-size: 8vw;
+				line-height: 10vw;
 			}
 		}
 
@@ -6181,6 +6194,15 @@ body.plone-toolbar-left-expanded {
 			left: 120px;
 		}
 	}
+}
+
+body.plone-toolbar-left-default {
+	@media (min-width: 768px) {
+		.navbar-default {
+			left: 60px;
+		}
+	}
+
 }
 
 .navbar-default a.navbar-brand {
@@ -12260,8 +12282,8 @@ body.frontend.portaltype-portlet-page.section-home-page {
 				margin-bottom: 45px;
 
 				h3 {
-					font-size: 7.5vw;
-				    line-height: 8vw;
+					font-size: 110px;
+				    line-height: 135px;
 				    margin-top: 8px;
 				    color: #b6a782;
 				}
@@ -12458,31 +12480,19 @@ body.frontend.portaltype-portlet-page.section-home-page {
 		}
 	}
 
-	@media (min-width: 1200px) {
+	@media (min-width: 1400px) {
 
 		.portletCollection.frontpage-portlet-collection {
 			.portletHeader {
 
 				h3 {
-					font-size: 75px;
-				    line-height: 120px;
+					font-size: 110px;
+				    line-height: 135px;
 				}
 			}
 		}
 	}
 
-	@media (min-width: 1480px) {
-
-		.portletCollection.frontpage-portlet-collection {
-			.portletHeader {
-
-				h3 {
-					font-size: 75px;
-				    line-height: 120px;
-				}
-			}
-		}
-	}
 }
 
 .desc-mdash {
@@ -14784,13 +14794,20 @@ body.frontend #global_statusmessage {
 /* NEW MENU Trigger */
 .nav-trigger-wrapper {
 	position: absolute;
-    right: 35px;
-    top: 1.55vw;
-    width: 8vw;
-    height: 8vw;
+    right: 25px;
+    top: 2.1vw;
+    width: 6vw;
+    height: 6vw;
 
-    @media(max-width: 768px) {
-    	top: 2.8vw;
+    @media(max-width: 767px) {
+    	top: 2.1vw;
+    	width: 6.3vw;
+    	height: 6.3vw;
+
+    }
+
+    @media(max-width: 991px) {
+    	right: 15px;
     }
 
     div.nav-trigger-open,
@@ -14822,17 +14839,17 @@ body.frontend #global_statusmessage {
 	}
 
 
-	@media(min-width: 992px) {
+	@media(min-width: 1400px) {
 		right: 20px;
-	    top: 25px;
-	    width: 75px;
-	    height: 75px;
+	    top: 27px;
+	    width: 85px;
+	    height: 85px;
 	}
 }
 
 body.mobile .nav-trigger-wrapper {
 	@media(max-width: 991px) {
-		right: 15px;
+		right: 25px;
 	}
 }
 
@@ -14872,6 +14889,7 @@ body#tinymce {
 	background-color: #fddace;
 	padding-left: 15px !important;
 	padding-right: 15px !important;
+	overflow-y: auto !important;
 }
 
 html {
@@ -15050,8 +15068,8 @@ body.frontend.portaltype-portlet-page.section-frontpage {
     		bottom: 0px;
     		pointer-events: all;
 
-		    padding-left: 20px;
-		    padding-right: 20px;
+		    padding-left: 25px;
+		    padding-right: 25px;
 		    margin-bottom: 25px;
 
 		    width: 100%;
@@ -15116,14 +15134,14 @@ body.frontend.portaltype-portlet-page.section-frontpage {
 
 
 	.portlet-collection-wrapper {
-		padding-left: 10px;
-	    padding-right: 10px;
+		padding-left: 3px;
+	    padding-right: 3px;
 	    padding-top: 40px;
 	    background: #faf5b8;
 
 	    @media(max-width: 768px) {
-	    	padding-left: 10px;
-	    	padding-right: 10px;
+	    	padding-left: 6px;
+	    	padding-right: 6px;
 	    }
 
 	    .portletHeader {
@@ -15157,13 +15175,13 @@ body.frontend.portaltype-portlet-page.section-frontpage {
 
 	    .portlet-item {
 	    	.header-quotes-wrapper .quote-bonnefanten.quote-top-left {
-			    left: -15px;
+			    left: -12px;
 			    top: 0px !important;
 			    line-height: 100px;
 			}
 
 			.header-quotes-wrapper .quote-bonnefanten.quote-top-right {
-			    right: -15px;
+			    right: -12px;
 			    top: 0px !important;
 			    line-height: 100px;
 			}
@@ -15193,6 +15211,8 @@ body.frontend.portaltype-portlet-page.section-frontpage {
 	.frontpage-collection-online {
 		h3 {
 			color: #b6a782;
+			margin-left: 4px;
+			margin-right: 4px;
 		}
 
 		.portlet-collection-wrapper {
@@ -15263,10 +15283,27 @@ body.frontend.portaltype-portlet-page.section-frontpage {
 
 		#row-items:not(.init) {
 
-			@media(min-width: 992px) {
-				padding-bottom: 1250px;
+			padding-bottom: 1250px;
+
+			@media(max-width: 991px) {
+				padding-bottom: 2020px;
 			}
 
+			@media(max-width: 768px) {
+				padding-bottom: 3380px;
+			}
+		}
+
+		#row-items {
+			margin-left: 4px !important;
+			margin-right: 4px !important;
+			padding-left: 0px !important;
+			padding-right: 0px !important;
+
+			@media(min-width: 992px) {
+				margin-left: 8px !important;
+				margin-right: 8px !important;
+			}
 		}
 
 		.portlet-item {
@@ -15285,8 +15322,8 @@ body.frontend.portaltype-portlet-page.section-frontpage {
 
 		.portletHeader {
 			@media(min-width: 992px) {
-				margin-left: 15px;
-				margin-right: 15px;
+				margin-left: 17px;
+				margin-right: 17px;
 				padding-bottom: 25px;
 			}
 		}
@@ -15382,15 +15419,15 @@ body.frontend.portaltype-document {
 					color: #575656;
 
 					@media(max-width: 991px) {
-						font-size: 9vw;
-						line-height: 11vw;
+						font-size: 8vw;
+						line-height: 10vw;
 						padding-top: 40px;
 						padding-bottom: 0px;
 					}
 
 					@media(min-width: 1400px) {
-						font-size: 95px;
-    					line-height: 120px;
+						font-size: 110px;
+    					line-height: 135px;
 					}
 				}
 
@@ -15475,8 +15512,8 @@ body.frontend.portaltype-portlet-page .portlet.frontpage-collection-online.portl
 
 
 	    @media(max-width: 991px) {
-	    	font-size: 9vw;
-		    line-height: 11vw;
+	    	font-size: 8vw;
+		    line-height: 10vw;
 		    padding-left: 12px;
 		    padding-right: 12px;
 		    margin-top: 0px;
@@ -17067,7 +17104,7 @@ body.frontend.portaltype-portlet-page.section-frontpage {
     		&:active:focus {
     			background: #ffd100;
 			    border: 2px solid #7841b3;
-			    color: #ffd100;
+			    color: #7841b3;
     		}
 		}
 

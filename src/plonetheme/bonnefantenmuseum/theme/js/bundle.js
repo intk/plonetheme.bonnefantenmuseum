@@ -804,14 +804,15 @@ function generate_random_transition(current_transition) {
 	var new_transition = copy_existing_transition(current_transition);
 
 	var random_font_one = Math.floor(Math.random() * 11) + 1;
-	var random_font_two = Math.floor(Math.random() * 11) + 1;
+	
+	/*var random_font_two = Math.floor(Math.random() * 11) + 1;
 	if (random_font_two == random_font_one) {
 		if (random_font_two < 11) {
 			random_font_two += 1;
 		} else {
 			random_font_two = Math.floor(Math.random() * 6) + 1;
 		}
-	}
+	}*/
 
 	switch(random_font_one) {
 		case 1:
@@ -849,7 +850,7 @@ function generate_random_transition(current_transition) {
 			break;
 	};
 
-	switch(random_font_two) {
+	/*switch(random_font_two) {
 		case 1:
 			new_transition.letter1 = possible_classes[Math.floor(Math.random() * 3)];
 			break;
@@ -883,7 +884,7 @@ function generate_random_transition(current_transition) {
 		case 11:
 			new_transition.letter11 = possible_classes[Math.floor(Math.random() * 3)];
 			break;
-	};
+	};*/
 	return new_transition;
 };
 
@@ -932,8 +933,9 @@ function activate_transition(transition) {
 function do_logo_animation() {
 	var total_transitions = 50;
 	var transitions = generate_random_transitions(total_transitions);
-	var scroll_breakpoint = 200;
-	var scroll_increment = 200;
+	var scroll_breakpoint = 350;
+	var scroll_increment = 350;
+	var scroll_top_margin = 350;
 	var last_scroll_top = 0;
 	var current_slide_index = 0;
 	var previous_movement = undefined;
@@ -941,7 +943,7 @@ function do_logo_animation() {
 	jQuery('div.scroll-wrapper').on('scroll', function() {
 		var scroll_top = jQuery('div.scroll-wrapper').scrollTop();
 
-		if (scroll_top <= 200) {
+		if (scroll_top <= scroll_top_margin) {
 			jQuery("body").attr("data-menutop", "true");
 			var next_transition = transitions[0];
 			activate_transition(next_transition);
@@ -950,10 +952,6 @@ function do_logo_animation() {
 			// scroll up
 			jQuery("body").attr("data-menutop", "false");
 
-			/*if (previous_movement == "down") {
-	  			scroll_breakpoint += scroll_increment*2;
-	  		}*/
-
 			if (scroll_top >= scroll_breakpoint) {
 				
 				// Get transition
@@ -961,9 +959,7 @@ function do_logo_animation() {
 				if (current_slide_index > total_transitions-1) {
 					current_slide_index = 0;
 				}
-				//console.log("[UP] Get transition index: "+current_slide_index);
 				var new_transition = transitions[current_slide_index];
-				//console.log(new_transition);
 
 				// Activate transition
 				activate_transition(new_transition);
@@ -976,10 +972,6 @@ function do_logo_animation() {
 			// scroll down
 			jQuery("body").attr("data-menutop", "false");
 
-			/*if (previous_movement == "up") {
-	  			scroll_breakpoint -= scroll_increment;
-	  		}*/
-
 			if (scroll_top <= scroll_breakpoint) {
 				// Get transition
 				current_slide_index -= 1;
@@ -988,8 +980,6 @@ function do_logo_animation() {
 				}
 
 				var new_transition = transitions[current_slide_index];
-				//console.log("[DOWN] Get transition index: "+current_slide_index);
-				//console.log(new_transition);
 
 				// Activate transition
 				activate_transition(new_transition);
@@ -1002,6 +992,9 @@ function do_logo_animation() {
 	});
 };
 
+/* * * * * * * * * * * * * */
+/* UTILS                   */
+/* * * * * * * * * * * * * */
 
 /* RANDOM ANIMATION */
 
@@ -1161,7 +1154,6 @@ function do_logo_animation_random() {
 };
 
 
-
 function init_masonry_grid() {
 	if (jQuery('#masonry-grid').length) {
 	  imagesLoaded('#masonry-grid', function() {
@@ -1219,7 +1211,7 @@ function init_scrollie_singlecontent() {
 			scrollOffset: mailchimp_offset,
 			scrollRatio: 0,
 			scrollingOutOfView: function(elem) {
-				jQuery("body").attr("data-background", "sequence-04");
+				jQuery("body").attr("data-background", "sequence-05");
 			}
 		});
 
@@ -1246,7 +1238,7 @@ function init_scrollie_frontpage() {
 	    // scrollie background scheme
 		jQuery("section.portlet").scrollie({
 			parentElement: jQuery("div.scroll-wrapper"),
-			scrollOffset: 120,
+			scrollOffset: 140,
 			scrollRatio: 0,
 			scrollingOutOfView: function(elem, offset, direction, coords, scrollRatio, thisTop, winPos) {
 				var colour_scheme = elem.data('background');
@@ -1256,7 +1248,7 @@ function init_scrollie_frontpage() {
 
 		jQuery("header.intro-header").scrollie({
 			parentElement: jQuery("div.scroll-wrapper"),
-			scrollOffset: 120,
+			scrollOffset: 140,
 			scrollRatio: 0,
 			direction : 'down',
 			scrollingOutOfView: function(elem) {
@@ -1264,7 +1256,7 @@ function init_scrollie_frontpage() {
 			}
 		});
 
-		var mailchimp_offset = 120;
+		var mailchimp_offset = 140;
 		if (jQuery("body.mobile").length > 0) {
 			mailchimp_offset = -200;
 		}
@@ -1274,13 +1266,13 @@ function init_scrollie_frontpage() {
 			scrollOffset: mailchimp_offset,
 			scrollRatio: 0,
 			scrollingOutOfView: function(elem) {
-				jQuery("body").attr("data-background", "sequence-04");
+				jQuery("body").attr("data-background", "sequence-05");
 			}
 		});
 
 		var footer_offset = -10;
 		if (jQuery("body.mobile").length > 0) {
-			footer_offset = -120;
+			footer_offset = -140;
 		}
 
 		jQuery(".portlet-static-footer").scrollie({
