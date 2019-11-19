@@ -324,7 +324,7 @@ body:not(.navigation-is-open) .cd-nav-trigger:hover .cd-nav-icon::before {
 }
 .no-touch .cd-nav .cd-primary-nav a:hover {
   color: #b6a782;
-  text-decoration: underline;
+  text-decoration: none;
 }
 .cd-nav .cd-contact-info {
   margin-top: 80px;
@@ -497,6 +497,11 @@ ul.cd-primary-nav {
     .fa.fa-angle-down {
       display: inline-block;
     }
+  }
+
+  @media(min-width: 1480px) {
+    font-size: 95px;
+    line-height: 100px;
   }
 
   @media(min-width: 992px) {

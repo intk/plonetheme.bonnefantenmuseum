@@ -351,7 +351,7 @@
 
       <xsl:template match="//script[contains(@src, 'production')]">
         <xsl:copy>
-          <xsl:attribute name="async">true</xsl:attribute>
+          <xsl:attribute name="defer">defer</xsl:attribute>
           <xsl:copy-of select="@*" />
           <xsl:apply-templates />
         </xsl:copy>

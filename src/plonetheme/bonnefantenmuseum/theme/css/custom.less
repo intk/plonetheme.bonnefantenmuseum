@@ -1295,6 +1295,10 @@ body.frontend, body#tinymce {
 	span.discreet {
 		font-size: 12px;
 		letter-spacing: 0.0;
+		display: block;
+		line-height: 20px;
+		margin-top: 10px;
+		text-align: left;
 	}
 
 	.intro-header {
@@ -2070,7 +2074,7 @@ body.frontend, body#tinymce {
 				&:hover,
 				&:focus,
 				&:active {
-					border-bottom: 2px solid #fa7d6c !important;
+					border-bottom: 1px solid #fa7d6c !important;
 					color: #fa7d6c !important;
 				}
 			}
@@ -2248,7 +2252,7 @@ body.frontend, body#tinymce {
 		    font-size: 25px;
 		    line-height: 35px;
 		    color: #b6a782;
-		    letter-spacing: -0.05em;
+		    letter-spacing: 0.00em;
 		    text-transform: uppercase;
 		    .StyreneRegular();
 
@@ -5004,7 +5008,7 @@ body.frontend.template-default_error_message {
 	    top: 0;
 	    display: block;
 	    float: left;
-	    padding-left: 20px;
+	    padding-left: 25px;
 	    padding-bottom: 30px;
 	    width: 320px;
 
@@ -5014,7 +5018,7 @@ body.frontend.template-default_error_message {
 
 		@media (max-width: 992px) {
 			padding-bottom: 10px;
-			padding-left: 15px;
+			padding-left: 25px;
 		}
 
 		@media (max-width: 767px) {
@@ -5230,8 +5234,18 @@ body.frontend.template-default_error_message {
 
 
 	ul.cd-primary-nav {
-		@media(min-width: 991px) {
+
+		@media(max-width: 991px) {
 			.container-fluid.fluid-tabs {
+				padding-left: 22px;
+				padding-right: 22px;
+			}
+		}
+		@media(min-width: 992px) {
+			.container-fluid.fluid-tabs {
+
+				padding-left: 20px;
+				padding-right: 20px;
 				/*display: -webkit-box;
 		    	display: -ms-flexbox;
 		    	display: flex;
@@ -6320,10 +6334,10 @@ body.plone-toolbar-left-default {
   -webkit-transform: translateZ(0);
           transform: translateZ(0);
   will-change: transform;
-  -webkit-transition: -webkit-transform .5s;
-  transition: -webkit-transform .5s;
-  transition: transform .5s;
-  transition: transform .5s, -webkit-transform .5s;
+  -webkit-transition: -webkit-transform .3s;
+  transition: -webkit-transform .3s;
+  transition: transform .3s;
+  transition: transform .3s, -webkit-transform .3s;
 }
 
 .cd-auto-hide-header.is-hidden {
@@ -9434,7 +9448,7 @@ body.frontend.portaltype-folder #slickcarousel .carousel-item.portrait {
 	@media(min-width: 768px) {
 
 		#title-container-wrapper {
-			padding-top: 20px;
+			padding-top: 140px;
 		}
 	}
 }
@@ -9456,7 +9470,7 @@ body.userrole-authenticated #website-wrapper.empty-slideshow .page-container {
 
 
 	#title-container-wrapper {
-		padding-top: 40px;
+		padding-top: 140px;
 		margin-bottom: 60px;
 
 		@media(max-width: 768px) {
@@ -12263,8 +12277,8 @@ body.frontend.portaltype-portlet-page.section-home-page {
 			&:active,
 			&:active:focus {
 				color: #7841b3 !important;
-				border-bottom: 0px !important;
-				text-decoration: underline !important;
+				border-bottom: 1px solid #7841b3 !important;
+				text-decoration: none !important;
 			}
 		}
 	}
@@ -12282,8 +12296,8 @@ body.frontend.portaltype-portlet-page.section-home-page {
 				margin-bottom: 45px;
 
 				h3 {
-					font-size: 110px;
-				    line-height: 135px;
+					font-size: 8vw;
+				    line-height: 10vw;
 				    margin-top: 8px;
 				    color: #b6a782;
 				}
@@ -15092,7 +15106,7 @@ body.frontend.portaltype-portlet-page.section-frontpage {
     			color: #ffd100;
     			text-transform: uppercase;
     			margin-bottom: 10px;
-    			letter-spacing: -0.05em;
+    			letter-spacing: 0.00em;
     		}
 
     		h3.carousel-title {
@@ -15107,8 +15121,8 @@ body.frontend.portaltype-portlet-page.section-frontpage {
     				&:focus,
     				&:focus:active {
     					color: #ffd100;
-    					text-decoration: underline;
-    					border-bottom: 0px;
+    					text-decoration: none !important;
+    					border-bottom: 1px solid #ffd100 !important;
     				}
     			}
     		}
@@ -15161,7 +15175,7 @@ body.frontend.portaltype-portlet-page.section-frontpage {
 	    				font-size: 20px;
 	    				line-height: 25px;
 	    				margin-bottom: 7px;
-	    				letter-spacing: -0.05em;
+	    				letter-spacing: 0.00em;
 	    			}
 
 	    			p.item-description {
@@ -15230,8 +15244,8 @@ body.frontend.portaltype-portlet-page.section-frontpage {
 					&:active,
 					&:active:focus {
 						color: #b6a782 !important;
-						border-bottom: 0px #b6a782 !important;
-						text-decoration: underline !important;
+						border-bottom: 1px #b6a782 !important;
+						text-decoration: none !important;
 					}
 				}
 			}
@@ -15260,9 +15274,9 @@ body.frontend.portaltype-portlet-page.section-frontpage {
 				&:focus,
 				&:active,
 				&:active:focus {
-					color: #b6a782;
+					color: #7841b3;
 					text-decoration: none;
-					border-bottom: 2px solid #b6a782;
+					border-bottom: 1px solid #7841b3;
 				}
 
 			}
@@ -15284,6 +15298,14 @@ body.frontend.portaltype-portlet-page.section-frontpage {
 		#row-items:not(.init) {
 
 			padding-bottom: 1250px;
+
+			@media(max-width: 1450px) {
+				padding-bottom: 1510px;
+			}
+
+			@media(max-width: 1280px) {
+				padding-bottom: 1250px;
+			}
 
 			@media(max-width: 991px) {
 				padding-bottom: 2020px;
@@ -15365,11 +15387,11 @@ body.frontend.portaltype-portlet-page.section-frontpage {
 }
 
 .nav-trigger-wrapper svg path {
-	transition: fill 0.1s ease-in;
-    -webkit-transition: fill 0.1s ease-in;
-    -moz-transition: fill 0.1s ease-in;
-    -o-transition: fill 0.1s ease-in;
-    transition: fill 0.1s ease-in;
+	transition: fill 0.3s ease-in;
+    -webkit-transition: fill 0.3s ease-in;
+    -moz-transition: fill 0.3s ease-in;
+    -o-transition: fill 0.3s ease-in;
+    transition: fill 0.3s ease-in;
 }
 
 body.frontend #content-core p.error-msg a {
@@ -15497,6 +15519,10 @@ body.frontend .portlet.frontpage-collection-online {
 body.frontend #below-content .portlet.frontpage-collection-online.portlet-collection-slideshow,
 body.frontend.portaltype-portlet-page .portlet.frontpage-collection-online.portlet-collection-slideshow {
 
+	.desc-mdash {
+		display: none;
+	}
+
 	.slick-prev,
 	.slick-next {
 		-webkit-transform: translate(0, -50%) scale(0.5);
@@ -15522,7 +15548,7 @@ body.frontend.portaltype-portlet-page .portlet.frontpage-collection-online.portl
 	    }
 
 	   	@media (min-width: 1400px) {
-	   		font-size: 75px;
+	   		font-size: 60px;
     		line-height: 120px;
 	   	}
 	}
@@ -15643,8 +15669,8 @@ body.frontend.portaltype-portlet-page .portlet.frontpage-collection-online.portl
 			    	&:active,
 			    	&:focus:active {
 			    		color: #ab3c4f !important;
-			    		border-bottom: 0px !important;
-			    		text-decoration: underline !important;
+			    		border-bottom: 1px solid #ab3c4f !important;
+			    		text-decoration: none !important;
 			    	}
 			    }
 
@@ -15744,11 +15770,11 @@ body:not(.mobile) {
 
 body .intro-header,
 body.frontend .intro-header {
-	margin-top: 10.5vw;
+	/*margin-top: 10.5vw;
 
 	@media(min-width: 992px) {
 		margin-top: 122px;
-	}
+	}*/
 }
 
 
@@ -15762,7 +15788,7 @@ body.frontend.portaltype-portlet-page.section-frontpage .intro-header {
 }
 
 .navbar-default#website-nav {
-	background: #777894;
+	background: transparent;
 	-webkit-transition: all 0.3s ease-in;
     -moz-transition: all 0.3s ease-in;
     -o-transition: all 0.3s ease-in;
@@ -15772,6 +15798,10 @@ body.frontend.portaltype-portlet-page.section-frontpage .intro-header {
 		padding-bottom: 5px;
 	}
 	
+}
+
+body:not(.frontend) .navbar-default#website-nav {
+	background: #777894;
 }
 
 body.frontend.portaltype-portlet-page.section-frontpage .navbar-default#website-nav { 
@@ -15794,10 +15824,10 @@ body.frontend.portaltype-portlet-page.navigation-is-open-end {
 
 body.frontend.portaltype-portlet-page.section-frontpage {
 	background-color: #ff4438;
-	-webkit-transition: background-color 0.2s ease-in;
-    -moz-transition: background-color 0.2s ease-in;
-    -o-transition: background-color 0.2s ease-in;
-    transition: background-color 0.2s ease-in;
+	-webkit-transition: background-color 0.3s ease-in;
+    -moz-transition: background-color 0.3s ease-in;
+    -o-transition: background-color 0.3s ease-in;
+    transition: background-color 0.3s ease-in;
 
 	#website-wrapper {
 		background: inherit;
@@ -15851,8 +15881,8 @@ body.frontend.portaltype-portlet-page.section-frontpage {
     		&:active,
     		&:active:focus {
 				color: #7841b3 !important;
-    			border-bottom: 0px !important;
-    			text-decoration: underline;
+    			border-bottom: 1px solid #7841b3 !important;
+    			text-decoration: none !important;
 			}
 		}
 
@@ -15948,9 +15978,9 @@ body.frontend.portaltype-portlet-page.section-frontpage {
     		&:focus,
     		&:active,
     		&:active:focus {
-			    color: #b6a782;
+			    color: #7841b3;
 			    text-decoration: none;
-			    border-bottom: 2px solid #b6a782;
+			    border-bottom: 2px solid #7841b3;
     		}
 		}
 
@@ -16087,6 +16117,8 @@ body.frontend.portaltype-portlet-page.section-frontpage {
 	    		&:active,
 	    		&:active:focus {
 				    color: #7841b3 !important;
+				    border-bottom: 1px solid #7841b3 !important;
+				    text-decoration: none !important;
 	    		}
 			}
 
@@ -16147,8 +16179,8 @@ body.frontend.portaltype-portlet-page.section-frontpage {
     		&:active,
     		&:active:focus {
 				color: #fdcdc0 !important;
-    			border-bottom: 0px !important;
-    			text-decoration: underline;
+    			border-bottom: 1px solid #fdcdc0 !important;
+    			text-decoration: none !important;
 			}
 		}
 
@@ -16244,9 +16276,9 @@ body.frontend.portaltype-portlet-page.section-frontpage {
     		&:focus,
     		&:active,
     		&:active:focus {
-			    color: #b6a782;
+			    color: #fdcdc0;
 			    text-decoration: none;
-			    border-bottom: 2px solid #b6a782;
+			    border-bottom: 2px solid #fdcdc0;
     		}
 		}
 
@@ -16383,6 +16415,8 @@ body.frontend.portaltype-portlet-page.section-frontpage {
 	    		&:active,
 	    		&:active:focus {
 				    color: #fdcdc0 !important;
+				    border-bottom: 1px solid #fdcdc0 !important;
+				    text-decoration: none !important;
 	    		}
 			}
 
@@ -16443,8 +16477,8 @@ body.frontend.portaltype-portlet-page.section-frontpage {
     		&:active,
     		&:active:focus {
 				color: #cfb3e4 !important;
-    			border-bottom: 0px !important;
-    			text-decoration: underline;
+    			border-bottom: 1px solid #cfb3e4 !important;
+    			text-decoration: none !important;
 			}
 		}
 
@@ -16540,9 +16574,9 @@ body.frontend.portaltype-portlet-page.section-frontpage {
     		&:focus,
     		&:active,
     		&:active:focus {
-			    color: #b6a782;
+			    color: #cfb3e4;
 			    text-decoration: none;
-			    border-bottom: 2px solid #b6a782;
+			    border-bottom: 2px solid #cfb3e4;
     		}
 		}
 
@@ -16679,6 +16713,8 @@ body.frontend.portaltype-portlet-page.section-frontpage {
 	    		&:active,
 	    		&:active:focus {
 				    color: #cfb3e4 !important;
+				    border-bottom: 1px solid #cfb3e4 !important;
+				    text-decoration: none !important;
 	    		}
 			}
 
@@ -16739,8 +16775,8 @@ body.frontend.portaltype-portlet-page.section-frontpage {
     		&:active,
     		&:active:focus {
 				color: #ffd100 !important;
-    			border-bottom: 0px !important;
-    			text-decoration: underline;
+    			border-bottom: 1px solid #ffd100 !important;
+    			text-decoration: none !important;
 			}
 		}
 
@@ -16835,9 +16871,9 @@ body.frontend.portaltype-portlet-page.section-frontpage {
     		&:focus,
     		&:active,
     		&:active:focus {
-			    color: #b6a782;
+			    color: #ffd100;
 			    text-decoration: none;
-			    border-bottom: 2px solid #b6a782;
+			    border-bottom: 2px solid #ffd100;
     		}
 		}
 
@@ -16973,6 +17009,8 @@ body.frontend.portaltype-portlet-page.section-frontpage {
 	    		&:active,
 	    		&:active:focus {
 				    color: #ffd100 !important;
+				    border-bottom: 1px solid #ffd100 !important;
+				    text-decoration: none !important;
 	    		}
 			}
 
@@ -17034,7 +17072,7 @@ body.frontend.portaltype-portlet-page.section-frontpage {
     		&:active,
     		&:active:focus {
 				color: #7841b3 !important;
-    			border-bottom: 0px !important;
+    			border-bottom: 1px solid #7841b3 !important;
     			text-decoration: underline;
 			}
 		}
@@ -17236,6 +17274,8 @@ body.frontend.portaltype-portlet-page.section-frontpage {
 	    		&:active,
 	    		&:active:focus {
 				    color: #7841b3 !important;
+				    border-bottom: 1px solid #7841b3 !important;
+				    text-decoration: none !important;
 	    		}
 			}
 
@@ -17297,8 +17337,8 @@ body.frontend.portaltype-portlet-page.section-frontpage {
     		&:active,
     		&:active:focus {
 				color: #7841b3 !important;
-    			border-bottom: 0px !important;
-    			text-decoration: underline;
+    			border-bottom: 1px solid #7841b3 !important;
+    			text-decoration: none !important;
 			}
 		}
 
@@ -17516,6 +17556,8 @@ body.frontend.portaltype-portlet-page.section-frontpage {
 	    		&:active,
 	    		&:active:focus {
 				    color: #7841b3 !important;
+				    border-bottom: 1px solid #7841b3 !important;
+				    text-decoration: none !important;
 	    		}
 			}
 
@@ -17565,8 +17607,8 @@ body.frontend.portaltype-portlet-page.section-frontpage {
     		&:active,
     		&:active:focus {
 				color: #ffd100 !important;
-    			border-bottom: 0px !important;
-    			text-decoration: underline;
+    			border-bottom: 1px solid #ffd100 !important;
+    			text-decoration: none !important;
 			}
 		}
 
@@ -17608,6 +17650,8 @@ body.frontend.portaltype-portlet-page.section-frontpage {
 	    		&:active,
 	    		&:active:focus {
 				    color: #ffd100 !important;
+				    border-bottom: 1px solid #ffd100 !important;
+				    text-decoration: none !important;
 	    		}
 			}
 
@@ -17681,9 +17725,17 @@ body.frontend:not(.portaltype-portlet-page) {
 
 
 	/* Body text */
-	#parent-fieldname-text p {
+	#parent-fieldname-text p,
+	#parent-fieldname-text p.discreet,
+	#parent-fieldname-text blockquote p.discreet,
+	#parent-fieldname-text p strong {
 		color: #b6a782;
 	}
+
+	#parent-fieldname-text ol li, ul li {
+    	
+    	color: #b6a782;
+    }
 
 	#parent-fieldname-text {
 		h1, h2, h3, h4, h5, h6 {
@@ -17750,9 +17802,9 @@ body.frontend:not(.portaltype-portlet-page) {
 		&:focus,
 		&:active,
 		&:active:focus {
-		    color: #b6a782;
+		    color: #fa7d6c;
 		    text-decoration: none;
-		    border-bottom: 2px solid #b6a782;
+		    border-bottom: 2px solid #fa7d6c;
 		}
 	}
 
@@ -18064,9 +18116,9 @@ body.frontend:not(.portaltype-portlet-page) {
     		&:focus,
     		&:active,
     		&:active:focus {
-			    color: #b6a782;
+			    color: #ffd100;
 			    text-decoration: none;
-			    border-bottom: 2px solid #b6a782;
+			    border-bottom: 2px solid #ffd100;
     		}
 		}
 
@@ -18298,7 +18350,7 @@ body.frontend:not(.portaltype-portlet-page) {
     		&:active:focus {
     			background: #ffd100;
 			    border: 2px solid #7841b3;
-			    color: #ffd100;
+			    color: #7841b3;
     		}
 		}
 
@@ -18431,9 +18483,9 @@ body.frontend:not(.portaltype-portlet-page) {
     		&:focus,
     		&:active,
     		&:active:focus {
-			    color: #b6a782;
+			    color: #7841b3;
 			    text-decoration: none;
-			    border-bottom: 2px solid #b6a782;
+			    border-bottom: 1px solid #7841b3;
     		}
 		}
 
@@ -18586,9 +18638,9 @@ body.frontend:not(.portaltype-portlet-page) {
     		&:focus,
     		&:active,
     		&:active:focus {
-			    color: #575656;
+			    color: #ab3c4f;
 			    text-decoration: none;
-			    border-bottom: 2px solid #575656;
+			    border-bottom: 2px solid #ab3c4f;
     		}
 		}
 
@@ -18736,7 +18788,10 @@ body.frontend:not(.portaltype-portlet-page) {
 		}
 
 		/* Body text */
-		#parent-fieldname-text p {
+		#parent-fieldname-text p,
+		#parent-fieldname-text p.discreet,
+		#parent-fieldname-text blockquote p.discreet,
+		#parent-fieldname-text p strong {
 			color: #575656;
 		}
 
@@ -18745,6 +18800,10 @@ body.frontend:not(.portaltype-portlet-page) {
 				color: #575656;
 			}
 		}
+
+		#parent-fieldname-text ol li, ul li {
+    		color: #575656;
+    	}
 
 		.portlet-rrssb .rrssb-buttons li a .rrssb-icon svg path {
 			fill: #ab3c4f !important;
@@ -18856,9 +18915,9 @@ body.frontend:not(.portaltype-portlet-page) {
     		&:focus,
     		&:active,
     		&:active:focus {
-			    color: #b6a782;
+			    color: #ab3c4f;
 			    text-decoration: none;
-			    border-bottom: 2px solid #b6a782;
+			    border-bottom: 2px solid #ab3c4f;
     		}
 		}
 
@@ -18997,12 +19056,20 @@ body.frontend:not(.portaltype-news-item) div.title-container #news-summary ul.ev
 	display: none !important;
 }
 
+body[data-menutop="true"] .navbar-default#website-nav,
 body[data-menutop="true"].frontend.portaltype-portlet-page.section-frontpage .navbar-default#website-nav {
 	background: transparent !important;
 }
 
-body[data-menutop="false"].frontend.portaltype-portlet-page.section-frontpage .navbar-default#website-nav {
+body[data-menutop="false"][data-background="sequence-00"] .navbar-default#website-nav {
 	background: inherit;
 }
 
+body[data-menutop="false"][data-background="sequence-00"].frontend.portaltype-portlet-page.section-frontpage .navbar-default#website-nav  {
+	background: #ff4438;
+}
+
+body[data-menutop="false"][data-background="sequence-00"].frontend.portaltype-portlet-page.section-frontpage .navbar-default#website-nav  {
+	background: #ff4438;
+}
 
