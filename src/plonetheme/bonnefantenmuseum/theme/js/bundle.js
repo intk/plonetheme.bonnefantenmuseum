@@ -889,17 +889,54 @@ function generate_random_transition(current_transition) {
 };
 
 generate_initial_transition = function() {
+
 	var initial_transition = new Object();
-	initial_transition.letter1 = "gothic";
-	initial_transition.letter2 = "slab";
-	initial_transition.letter3 = "block";
-	initial_transition.letter4 = "slab";
-	initial_transition.letter6 = "block";
-	initial_transition.letter7 = "gothic";
-	initial_transition.letter8 = "slab";
-	initial_transition.letter9 = "block";
-	initial_transition.letter10 = "gothic";
-	initial_transition.letter11 = "block";
+	var initial_type = "gothic";
+
+	if (jQuery("#portal-logo").length > 0) {
+		var generated_type = jQuery("#portal-logo").data('logotype');
+		if (generated_type != undefined) {
+			initial_type = generated_type;
+		}
+	}
+
+	if (initial_type == "block") {
+		initial_transition.letter1 = "block"; // B
+		initial_transition.letter2 = "slab"; // O
+		initial_transition.letter3 = "gothic"; // N
+		initial_transition.letter4 = "slab"; // N
+		initial_transition.letter5 = "block"; // E
+		initial_transition.letter6 = "gothic"; // F
+		initial_transition.letter7 = "slab"; // A
+		initial_transition.letter8 = "block"; // N
+		initial_transition.letter9 = "gothic"; // T
+		initial_transition.letter10 = "slab"; // E
+		initial_transition.letter11 = "block"; // N
+	} else if (initial_type == "slab") {
+		initial_transition.letter1 = "slab"; // B
+		initial_transition.letter2 = "gothic"; // O
+		initial_transition.letter3 = "block"; // N
+		initial_transition.letter4 = "gothic"; // N
+		initial_transition.letter5 = "slab"; // E
+		initial_transition.letter6 = "block"; // F
+		initial_transition.letter7 = "gothic"; // A
+		initial_transition.letter8 = "slab"; // N
+		initial_transition.letter9 = "block"; // T
+		initial_transition.letter10 = "gothic"; // E
+		initial_transition.letter11 = "block"; // N
+	} else {
+		initial_transition.letter1 = "gothic";
+		initial_transition.letter2 = "block";
+		initial_transition.letter3 = "slab";
+		initial_transition.letter4 = "block";
+		initial_transition.letter5 = "gothic"; 
+		initial_transition.letter6 = "slab";
+		initial_transition.letter7 = "block";
+		initial_transition.letter8 = "gothic";
+		initial_transition.letter9 = "slab";
+		initial_transition.letter10 = "block";
+		initial_transition.letter11 = "slab";
+	}
 	return initial_transition;
 };
 
@@ -1179,8 +1216,134 @@ function init_masonry_grid() {
 	}
 };
 
+function init_scrollie_object() {
+	if (jQuery('body.portaltype-object').length > 0)  {
+
+		jQuery("header.intro-header").scrollie({
+			parentElement: jQuery("div.scroll-wrapper"),
+			scrollOffset: 150,
+			scrollRatio: 0,
+			direction : 'down',
+			scrollingOutOfView: function(elem) {
+				jQuery("body").attr("data-background", "sequence-00");
+			}
+		});
+		
+		jQuery("#content-core").scrollie({
+			parentElement: jQuery("div.scroll-wrapper"),
+			scrollOffset: 150,
+			scrollRatio: 0,
+			scrollingOutOfView: function(elem) {
+				jQuery("body").attr("data-background", "sequence-07");
+			}
+		});
+
+		jQuery("#object-fields").scrollie({
+			parentElement: jQuery("div.scroll-wrapper"),
+			scrollOffset: 150,
+			scrollRatio: 0,
+			scrollingOutOfView: function(elem) {
+				jQuery("body").attr("data-background", "sequence-07");
+			}
+		});
+
+		var mailchimp_offset = -150;
+		if (jQuery("body.mobile").length > 0) {
+			mailchimp_offset = 0;
+		}
+
+		jQuery("dl.portletMailChimp").scrollie({
+			parentElement: jQuery("div.scroll-wrapper"),
+			scrollOffset: mailchimp_offset,
+			scrollRatio: 0,
+			scrollingOutOfView: function(elem) {
+				jQuery("body").attr("data-background", "sequence-05");
+			}
+		});
+
+		var footer_offset = 0;
+		if (jQuery("body.mobile").length > 0) {
+			footer_offset = 0;
+		}
+
+		jQuery(".portlet-static-footer").scrollie({
+			parentElement: jQuery("div.scroll-wrapper"),
+			scrollOffset: footer_offset,
+			scrollRatio: 0,
+			scrollingOutOfView: function(elem) {
+				jQuery("body").attr("data-background", "sequence-05");
+			}
+		});
+	};
+};
+
+function init_scrollie_listing() {
+	if (jQuery('body.portaltype-collection').length || jQuery('body.portaltype-folder').length || jQuery('body.portaltype-portlet-page.subsection-nu-te-zien-nu-te-zien').length)  {
+		
+		jQuery("section.portlet").scrollie({
+			parentElement: jQuery("div.scroll-wrapper"),
+			scrollOffset: 150,
+			scrollRatio: 0,
+			scrollingOutOfView: function(elem, offset, direction, coords, scrollRatio, thisTop, winPos) {
+				var colour_scheme = elem.data('background');
+				jQuery("body").attr("data-background", colour_scheme);
+			}
+		});
+
+		jQuery("div.title-container").scrollie({
+			parentElement: jQuery("div.scroll-wrapper"),
+			scrollOffset: 300,
+			scrollRatio: 0,
+			direction : 'down',
+			scrollingOutOfView: function(elem) {
+				jQuery("body").attr("data-background", "sequence-00");
+			}
+		});
+		
+		if (!jQuery('body.portaltype-portlet-page.subsection-nu-te-zien-nu-te-zien').length) {
+			jQuery("#content-core").scrollie({
+				parentElement: jQuery("div.scroll-wrapper"),
+				scrollOffset: 300,
+				scrollRatio: 0,
+				scrollingOutOfView: function(elem) {
+					jQuery("body").attr("data-background", "sequence-07");
+				}
+			});
+		}
+
+		var mailchimp_offset = 20;
+		if (jQuery("body.mobile").length > 0) {
+			mailchimp_offset = 0;
+		}
+
+		jQuery("dl.portletMailChimp").scrollie({
+			parentElement: jQuery("div.scroll-wrapper"),
+			scrollOffset: mailchimp_offset,
+			scrollRatio: 0,
+			scrollingOutOfView: function(elem) {
+				jQuery("body").attr("data-background", "sequence-05");
+			}
+		});
+
+		var footer_offset = 0;
+		if (jQuery("body.mobile").length > 0) {
+			footer_offset = 0;
+		}
+
+		jQuery(".portlet-static-footer").scrollie({
+			parentElement: jQuery("div.scroll-wrapper"),
+			scrollOffset: footer_offset,
+			scrollRatio: 0,
+			scrollingOutOfView: function(elem) {
+				jQuery("body").attr("data-background", "sequence-05");
+			}
+		});
+	};
+};
+
+
 function init_scrollie_singlecontent() {
-	if (jQuery('body.portaltype-document').length > 0 || jQuery('body.portaltype-event').length || jQuery('body.portaltype-news-item').length || jQuery('body.portaltype-collection').length || jQuery('body.portaltype-folder').length)  {
+	if (jQuery('body.portaltype-document').length > 0 || jQuery('body.portaltype-event').length || jQuery('body.portaltype-news-item').length)  {
 		
 		jQuery("section.portlet").scrollie({
 			parentElement: jQuery("div.scroll-wrapper"),
@@ -1211,7 +1374,7 @@ function init_scrollie_singlecontent() {
 			}
 		});
 
-		var mailchimp_offset = 150;
+		var mailchimp_offset = 0;
 		if (jQuery("body.mobile").length > 0) {
 			mailchimp_offset = 0;
 		}
@@ -1337,7 +1500,9 @@ jQuery(document).ready(function($) {
 	/* Scrollie colour scheme  */
 	/* * * * * * * * * * * * * */
 	init_scrollie_singlecontent();
+	init_scrollie_listing();
 	init_scrollie_frontpage();
+	init_scrollie_object();
 
 	if (jQuery(".frontpage-permanent #row-items").length) {
 		
@@ -1351,6 +1516,7 @@ jQuery(document).ready(function($) {
 				/* Lazy load and init front page masonry   */
 				/* * * * * * * * * * * * * * * * * * * * * */
 				lazy_load_images_and_init_masonry();
+				window.already_scrolled_permanent = true;
 
 				/* * * * * * * * * * * * * */
 				/* Scrollie colour scheme  */
@@ -1360,8 +1526,6 @@ jQuery(document).ready(function($) {
 	    			jQuery(".frontpage-permanent #row-items").masonry('layout');
 	    			init_scrollie_frontpage();
 	    		});
-
-	    		window.already_scrolled_permanent = true;
 			}
 		});
 	}

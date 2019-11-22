@@ -349,13 +349,13 @@
         </div>
       </replace>
 
-      <xsl:template match="//script[contains(@src, 'production')]">
+      <!--<xsl:template match="//script[contains(@src, 'production')]">
         <xsl:copy>
           <xsl:attribute name="defer">defer</xsl:attribute>
           <xsl:copy-of select="@*" />
           <xsl:apply-templates />
         </xsl:copy>
-      </xsl:template>
+      </xsl:template>-->
 
       <xsl:template match="//link[contains(@rel, 'stylesheet')]">
         <xsl:copy>
