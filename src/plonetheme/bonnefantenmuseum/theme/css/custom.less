@@ -4487,7 +4487,7 @@ body.frontend.template-advancedsearch {
 			&:focus,
 			&:active,
 			&:focus:active {
-				border-bottom: 2px solid #fa7d6c !important;
+				border-bottom: 1px solid #fa7d6c !important;
 			}
 		}
 	}
@@ -4597,6 +4597,7 @@ body.frontend.template-advancedsearch {
 	.search-input {
 		height: 52px;
 		width: 100% !important;
+		border: 2px solid #fa7d6c !important;
 	}
 
 	.pagination {
@@ -7058,6 +7059,7 @@ body.frontend.template-advancedsearch {
 		text-align: left;
 		padding-top: 17px;
 		padding-right: 0px !important;
+		color: #b6a782;
 	}
 
 	label {
@@ -7671,13 +7673,13 @@ body.frontend:not(.subsection-verhalen):not(.subsection-world-of-utrecht) #websi
 }
 
 body.frontend h4.item-title a.hover {
-	border-bottom: 2px solid #fa7d6c !important;
+	border-bottom: 1px solid #fa7d6c !important;
 }
 
 
 body.frontend #searchform .input-group input.searchPage.btn {
-	padding-top: 16px;
-    padding-bottom: 14px;
+	padding-top: 15px;
+    padding-bottom: 15px;
 }
 
 body.portaltype-formfolder .formid-contact #pfg-fieldwrapper {
@@ -13407,9 +13409,7 @@ body.portaltype-object {
 body.template-infinite_collection_view,
 body.portaltype-object .search-results-portlet-container {
 	.entries.masonry-grid:not(.overview) h4.item-title {
-		font-size: 15px !important;
-		line-height: 22px !important;
-		.StyreneRegular() !important;
+		
 	}
 
 	.plone-loader {
@@ -13437,8 +13437,8 @@ body.portaltype-object .search-results-portlet-container {
     }
 
     p.item-description {
-		line-height: 16px !important;
-		font-size: 0.750em !important;
+		/*line-height: 16px !important;
+		font-size: 0.750em !important;*/
 	}
         
 	.entries.masonry-grid.overview p.item-description {
@@ -18558,6 +18558,11 @@ body.frontend:not(.portaltype-portlet-page) {
 					border-bottom: 1px solid #7841b3 !important;
 				}
 			}
+
+			h4.item-title a.hover {
+				color: #7841b3 !important;
+				border-bottom: 1px solid #7841b3 !important;
+			}
 		}
 
 
@@ -19127,6 +19132,11 @@ body.frontend:not(.portaltype-portlet-page) {
 					color: #ab3c4f !important;
 					border-bottom: 1px solid #ab3c4f !important;
 				}
+			}
+
+			h4.item-title a.hover {
+				color: #ab3c4f !important;
+				border-bottom: 1px solid #ab3c4f !important;
 			}
 		}
 
@@ -20757,6 +20767,463 @@ body.frontend.portaltype-portlet-page.subsection-nu-te-zien-nu-te-zien {
 				}
 			}
 		}
+
+	}
+}
+
+
+body.frontend.template-search,
+body.frontend.template-advancedsearch {
+
+	#search-results p strong {
+		color: #b6a782;
+	}
+
+	#title-container-wrapper {
+		background: inherit;
+	}
+
+	#content-core {
+		a.extra-filter-remove {
+			color: #b6a782;
+		}
+
+		div.div-advanced-search {
+			a {
+				color: #b6a782;
+				border-bottom: 1px solid #b6a782;
+
+				&:hover,
+				&:focus,
+				&:active,
+				&:active:focus {
+					color: #b6a782 !important;
+					border-bottom: 0px solid #b6a782 !important;
+				}
+			}
+		}
+	}
+
+	input:not(.search-btn) {
+
+	}
+
+
+	&[data-background="sequence-07"] {
+		.title-container {
+			h1.brand-name {
+				color: #ab3c4f;
+			}
+		}
+
+		#title-container-wrapper {
+			.quote-bonnefanten {
+				color: #ab3c4f;
+			}
+		}
+
+		.search-input {
+		    border: 2px solid #ab3c4f !important;
+		    border-right: 0px !important;
+		    background-color: #fddace !important;
+		    color: #ab3c4f !important;
+
+		    &::-webkit-input-placeholder {
+			   color: #ab3c4f !important;
+			   text-shadow: none;
+			}
+
+			&:-moz-placeholder { /* Firefox 18- */
+			   color: #ab3c4f !important;  
+			   text-shadow: none;
+			}
+
+			&::-moz-placeholder {  /* Firefox 19+ */
+			   color: #ab3c4f !important;  
+			   text-shadow: none;
+			}
+
+			&:-ms-input-placeholder {  
+			   color: #ab3c4f !important;  
+			   text-shadow: none;
+			}
+		}
+
+		#searchform .input-group input.searchPage.btn {
+			background: #ab3c4f !important;
+		    border: 2px solid #ab3c4f !important;
+
+		    color: #fddace !important;
+
+		    &:hover,
+		    &:focus,
+		    &:active,
+		    &:active:focus {
+		    	background: #fddace !important;
+			    border: 2px solid #ab3c4f !important;
+			    color: #ab3c4f !important;
+		    }
+		}
+
+		.form-horizontal .control-label {
+			color: #575656;
+		}
+
+		/* START Advanced search */
+		.search-input:not(.main-search):not(.searchPage) {
+			border-right: 2px solid #ab3c4f !important;
+		}
+
+		.input-wrapper .form-group.field input {
+			border: 1px solid #ab3c4f !important;
+		    background-color: #fddace !important;
+		    color: #ab3c4f !important;
+
+		    &::-webkit-input-placeholder {
+			   color: #ab3c4f !important;
+			   text-shadow: none;
+			}
+
+			&:-moz-placeholder { /* Firefox 18- */
+			   color: #ab3c4f !important;  
+			   text-shadow: none;
+			}
+
+			&::-moz-placeholder {  /* Firefox 19+ */
+			   color: #ab3c4f !important;  
+			   text-shadow: none;
+			}
+
+			&:-ms-input-placeholder {  
+			   color: #ab3c4f !important;  
+			   text-shadow: none;
+			}
+		}
+
+		.search-btn-wrapper input.search-btn {
+			background: #ab3c4f !important;
+		    border: 2px solid #ab3c4f !important;
+
+		    color: #fddace !important;
+
+		    &:hover,
+		    &:focus,
+		    &:active,
+		    &:active:focus {
+		    	background: #fddace !important;
+			    border: 2px solid #ab3c4f !important;
+			    color: #ab3c4f !important;
+		    }
+		}
+
+		/* END Advanced search */
+
+
+		fieldset > h3 {
+			color: #ab3c4f;
+		}
+
+		h4.item-title a {
+			color: #ab3c4f;
+
+			&:hover,
+		    &:focus,
+		    &:active,
+		    &:active:focus {
+		    	color: #ab3c4f !important;
+			    border-bottom: 1px solid #ab3c4f !important;
+		    }
+		}
+		.item-description {
+			color: #575656;
+		}
+
+		#content-core a.extra-filter-remove {
+			color: #575656;
+		}
+
+		#content-core div.div-advanced-search {
+			a {
+				color: #575656;
+				border-bottom: 1px solid #575656;
+
+				&:hover,
+				&:focus,
+				&:active,
+				&:active:focus {
+					color: #575656 !important;
+					border-bottom: 0px solid #575656 !important;
+				}
+			}
+		}
+
+		#search-filter label {
+			color: #575656;
+		}
+
+		span#results-count {
+			color: #575656;
+		}
+
+		#search-results-bar-wrapper {
+			color: #575656;
+		}
+		p {
+			color: #575656;
+		}
+
+		#content-core .pagination ul.pager li > a {
+			color: #575656;
+
+			&:hover,
+			&:focus,
+			&:active,
+			&:active:focus {
+				color: #575656 !important;
+				border-bottom: 1px solid #575656 !important;
+			}
+		}
+
+		#content-core .pagination ul.pager li.next > a,
+		#content-core .pagination ul.pager li.prev > a {
+			color: #575656;
+
+			&:hover,
+			&:focus,
+			&:active,
+			&:active:focus {
+				color: #575656 !important;
+				border-bottom: 1px solid #575656 !important;
+			}
+		}
+
+		#content-core .pagination ul.pager li.active > span {
+			color: #575656 !important;
+			border-bottom: 1px solid #575656 !important;
+		}
+
+	}
+
+
+	&[data-background="sequence-05"] {
+		.title-container {
+			h1.brand-name {
+				color: #7841b3;
+			}
+		}
+
+		#title-container-wrapper {
+			.quote-bonnefanten {
+				color: #7841b3;
+			}
+		}
+
+		.search-input {
+		    border: 2px solid #7841b3 !important;
+		    border-right: 0px !important;
+		    background-color: #ffd100 !important;
+		    color: #7841b3 !important;
+
+		    &::-webkit-input-placeholder {
+			   color: #7841b3 !important;
+			   text-shadow: none;
+			}
+
+			&:-moz-placeholder { /* Firefox 18- */
+			   color: #7841b3 !important;  
+			   text-shadow: none;
+			}
+
+			&::-moz-placeholder {  /* Firefox 19+ */
+			   color: #7841b3 !important;  
+			   text-shadow: none;
+			}
+
+			&:-ms-input-placeholder {  
+			   color: #7841b3 !important;  
+			   text-shadow: none;
+			}
+		}
+
+		#searchform .input-group input.searchPage.btn {
+			background: #7841b3 !important;
+		    border: 2px solid #7841b3 !important;
+
+		    color: #ffd100 !important;
+
+		    &:hover,
+		    &:focus,
+		    &:active,
+		    &:active:focus {
+		    	background: #ffd100 !important;
+			    border: 2px solid #7841b3 !important;
+			    color: #7841b3 !important;
+		    }
+		}
+
+
+		/* START Advanced search */
+		.search-input:not(.main-search) {
+			border-right: 2px solid #7841b3 !important;
+		}
+
+		.input-wrapper .form-group.field input {
+			border: 1px solid #7841b3 !important;
+		    background-color: #ffd100 !important;
+		    color: #7841b3 !important;
+
+		    &::-webkit-input-placeholder {
+			   color: #7841b3 !important;
+			   text-shadow: none;
+			}
+
+			&:-moz-placeholder { /* Firefox 18- */
+			   color: #7841b3 !important;  
+			   text-shadow: none;
+			}
+
+			&::-moz-placeholder {  /* Firefox 19+ */
+			   color: #7841b3 !important;  
+			   text-shadow: none;
+			}
+
+			&:-ms-input-placeholder {  
+			   color: #7841b3 !important;  
+			   text-shadow: none;
+			}
+		}
+
+		.search-btn-wrapper input.search-btn {
+			background: #7841b3 !important;
+		    border: 2px solid #7841b3 !important;
+
+		    color: #ffd100 !important;
+
+		    &:hover,
+		    &:focus,
+		    &:active,
+		    &:active:focus {
+		    	background: #ffd100 !important;
+			    border: 2px solid #7841b3 !important;
+			    color: #7841b3 !important;
+		    }
+		}
+
+		/* END Advanced search */
+
+
+		fieldset > h3 {
+			color: #7841b3;
+		}
+
+		h4.item-title a {
+			color: #7841b3;
+
+			&:hover,
+		    &:focus,
+		    &:active,
+		    &:active:focus {
+		    	color: #7841b3 !important;
+			    border-bottom: 1px solid #7841b3 !important;
+		    }
+		}
+		.item-description {
+			color: #575656;
+		}
+
+		#content-core a.extra-filter-remove {
+			color: #575656;
+		}
+
+		#content-core div.div-advanced-search {
+			a {
+				color: #575656;
+				border-bottom: 1px solid #575656;
+
+				&:hover,
+				&:focus,
+				&:active,
+				&:active:focus {
+					color: #575656 !important;
+					border-bottom: 0px solid #575656 !important;
+				}
+			}
+		}
+
+		#search-filter label {
+			color: #575656;
+		}
+
+		span#results-count {
+			color: #575656;
+		}
+
+		#search-results-bar-wrapper {
+			color: #575656;
+		}
+		p {
+			color: #575656;
+		}
+
+		#content-core .pagination ul.pager li > a {
+			color: #7841b3;
+
+			&:hover,
+			&:focus,
+			&:active,
+			&:active:focus {
+				color: #7841b3 !important;
+				border-bottom: 1px solid #7841b3 !important;
+			}
+		}
+
+		#content-core .pagination ul.pager li.next > a,
+		#content-core .pagination ul.pager li.prev > a {
+			color: #7841b3;
+
+			&:hover,
+			&:focus,
+			&:active,
+			&:active:focus {
+				color: #7841b3 !important;
+				border-bottom: 1px solid #7841b3 !important;
+			}
+		}
+
+		#content-core .pagination ul.pager li.active > span {
+			color: #7841b3 !important;
+			border-bottom: 1px solid #7841b3 !important;
+		}
+
+	}
+}
+
+
+body.frontend.template-infinite_collection_view {
+
+	#website-wrapper.empty-slideshow .page-container #title-container-wrapper {
+		padding-bottom: 0px !important;
+		margin-bottom: 0px !important;
+	}
+
+	#title-container-wrapper {
+		background: inherit;
+	}
+
+
+	&[data-background="sequence-07"] {
+		.title-container {
+			h1.brand-name {
+				color: #ab3c4f;
+			}
+		}
+
+		#title-container-wrapper {
+			.quote-bonnefanten {
+				color: #ab3c4f;
+			}
+		}
+
 
 	}
 }

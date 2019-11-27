@@ -1278,10 +1278,15 @@ function init_scrollie_object() {
 };
 
 function init_scrollie_listing() {
-	if (jQuery('body.portaltype-collection').length || jQuery('body.portaltype-folder').length || jQuery('body.portaltype-portlet-page.subsection-nu-te-zien-nu-te-zien').length)  {
+	if (jQuery('body.template-search').length || jQuery('body.template-advancedsearch').length || jQuery('body.portaltype-collection').length || jQuery('body.portaltype-folder').length || jQuery('body.portaltype-portlet-page.subsection-nu-te-zien-nu-te-zien').length)  {
 		
+		var parentelement = jQuery("div.scroll-wrapper");
+
+		if (jQuery('body.template-infinite_collection_view').length > 0) {
+			parentelement = jQuery(window);
+		}
 		jQuery("section.portlet").scrollie({
-			parentElement: jQuery("div.scroll-wrapper"),
+			parentElement: parentelement,
 			scrollOffset: 150,
 			scrollRatio: 0,
 			scrollingOutOfView: function(elem, offset, direction, coords, scrollRatio, thisTop, winPos) {
@@ -1290,9 +1295,15 @@ function init_scrollie_listing() {
 			}
 		});
 
+		var title_container_offset = 300;
+
+		if (jQuery('body.template-search').length || jQuery('body.template-advancedsearch').length) {
+			title_container_offset = 300;
+		}
+
 		jQuery("div.title-container").scrollie({
-			parentElement: jQuery("div.scroll-wrapper"),
-			scrollOffset: 300,
+			parentElement: parentelement,
+			scrollOffset: title_container_offset,
 			scrollRatio: 0,
 			direction : 'down',
 			scrollingOutOfView: function(elem) {
@@ -1302,8 +1313,8 @@ function init_scrollie_listing() {
 		
 		if (!jQuery('body.portaltype-portlet-page.subsection-nu-te-zien-nu-te-zien').length) {
 			jQuery("#content-core").scrollie({
-				parentElement: jQuery("div.scroll-wrapper"),
-				scrollOffset: 300,
+				parentElement: parentelement,
+				scrollOffset: title_container_offset,
 				scrollRatio: 0,
 				scrollingOutOfView: function(elem) {
 					jQuery("body").attr("data-background", "sequence-07");
@@ -1317,7 +1328,7 @@ function init_scrollie_listing() {
 		}
 
 		jQuery("dl.portletMailChimp").scrollie({
-			parentElement: jQuery("div.scroll-wrapper"),
+			parentElement: parentelement,
 			scrollOffset: mailchimp_offset,
 			scrollRatio: 0,
 			scrollingOutOfView: function(elem) {
@@ -1331,7 +1342,7 @@ function init_scrollie_listing() {
 		}
 
 		jQuery(".portlet-static-footer").scrollie({
-			parentElement: jQuery("div.scroll-wrapper"),
+			parentElement: parentelement,
 			scrollOffset: footer_offset,
 			scrollRatio: 0,
 			scrollingOutOfView: function(elem) {
@@ -1355,15 +1366,27 @@ function init_scrollie_singlecontent() {
 			}
 		});
 
-		jQuery("header.intro-header").scrollie({
-			parentElement: jQuery("div.scroll-wrapper"),
-			scrollOffset: 150,
-			scrollRatio: 0,
-			direction : 'down',
-			scrollingOutOfView: function(elem) {
-				jQuery("body").attr("data-background", "sequence-00");
-			}
-		});
+		if (jQuery("#website-wrapper.empty-slideshow").length > 0) {
+			jQuery("div.title-container").scrollie({
+				parentElement: jQuery("div.scroll-wrapper"),
+				scrollOffset: 250,
+				scrollRatio: 0,
+				direction : 'down',
+				scrollingOutOfView: function(elem) {
+					jQuery("body").attr("data-background", "sequence-00");
+				}
+			});
+		} else {
+			jQuery("header.intro-header").scrollie({
+				parentElement: jQuery("div.scroll-wrapper"),
+				scrollOffset: 150,
+				scrollRatio: 0,
+				direction : 'down',
+				scrollingOutOfView: function(elem) {
+					jQuery("body").attr("data-background", "sequence-00");
+				}
+			});
+		}
 		
 		jQuery("#content-core").scrollie({
 			parentElement: jQuery("div.scroll-wrapper"),
@@ -1374,7 +1397,7 @@ function init_scrollie_singlecontent() {
 			}
 		});
 
-		var mailchimp_offset = 0;
+		var mailchimp_offset = 150;
 		if (jQuery("body.mobile").length > 0) {
 			mailchimp_offset = 0;
 		}
