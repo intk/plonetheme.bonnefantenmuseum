@@ -1751,12 +1751,15 @@ jQuery(document).ready(function($) {
         slickCarousel.pauseCurrentSlide();
       }
     }
+
     if( !isLateralNavAnimating ) {
       if(jQuery(this).parents('.csstransitions').length > 0 ) isLateralNavAnimating = true; 
+      	jQuery('body').toggleClass('navigation-is-open-end');
       	jQuery('body').toggleClass('navigation-is-open');
-      jQuery('.cd-navigation-wrapper').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', function(){
+      
+      jQuery('.cd-navigation-wrapper').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', function() {
         //animation is over
-        jQuery('body').toggleClass('navigation-is-open-end');
+        /*jQuery('body').toggleClass('navigation-is-open-end');*/
         isLateralNavAnimating = false;
       });
     }
