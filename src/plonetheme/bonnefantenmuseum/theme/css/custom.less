@@ -17789,7 +17789,10 @@ body.frontend:not(.portaltype-portlet-page) {
 	}
 
 	&.portaltype-collection,
-	&.portaltype-folder {
+	&.portaltype-folder,
+	&.portaltype-event,
+	&.portaltype-document,
+	&.portaltype-news-item {
 		#title-container-wrapper {
 			background: inherit;
 
@@ -19154,7 +19157,10 @@ body.frontend:not(.portaltype-portlet-page) {
 		}
 
 		&.portaltype-collection,
-		&.portaltype-folder {
+		&.portaltype-folder,
+		&.portaltype-document,
+		&.portaltyoe-event,
+		&.portaltype-news-item {
 			#title-container-wrapper {
 				h1.brand-name {
 					color: #ab3c4f;
@@ -19165,6 +19171,10 @@ body.frontend:not(.portaltype-portlet-page) {
 				}
 
 				.header-quotes-wrapper .quote-bonnefanten {
+					color: #ab3c4f;
+				}
+
+				li.event-date {
 					color: #ab3c4f;
 				}
 
@@ -21611,5 +21621,24 @@ body[data-menutop="false"][data-background="sequence-00"].frontend.portaltype-po
 	background: #ff4438;
 }
 
+
+body.mce-fullscreen {
+	#website-nav {
+		display: none;
+	}
+ &.plone-toolbar-left-expanded {
+ 	div.mce-fullscreen {
+ 		left: 120px;
+ 	}
+
+ }
+
+ &.plone-toolbar-left-default {
+ 	div.mce-fullscreen {
+ 		left: 60px;
+ 	}
+ }
+
+}
 
 
