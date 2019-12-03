@@ -1386,6 +1386,15 @@ function init_scrollie_singlecontent() {
 					jQuery("body").attr("data-background", "sequence-00");
 				}
 			});
+
+			jQuery("div.title-container").scrollie({
+				parentElement: jQuery("div.scroll-wrapper"),
+				scrollOffset: 150,
+				scrollRatio: 0,
+				scrollingOutOfView: function(elem) {
+					jQuery("body").attr("data-background", "sequence-07");
+				}
+			});
 		}
 		
 		jQuery("#content-core").scrollie({
