@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-presentation="enabled">
+<html lang="en">
 
 <head>
     <!-- Google Tag Manager -->
@@ -15,6 +15,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Het Park</title>
 
+
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -29,17 +30,17 @@
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KXMRGR9"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
-
+    
     <nav class="navbar navbar-default navbar-fixed-top plone-navbar cd-auto-hide-header" id="website-nav">
         
-        <div class="logo-wrapper">
+        <div class="logo-wrapper" style="opacity: 0;">
             <div class="brand-logo">Start Bootstrap</div>
         </div>
 
         <div class="nav-trigger-wrapper">
-            <a href="#cd-nav" class="cd-nav-trigger">
+            <a href="#cd-nav" class="cd-nav-trigger" style="opacity: 0;">
                 <div class="nav-trigger-open">
-                    <svg id="nav-trigger-open-svg" viewBox="0 0 85 85">
+                    <svg id="nav-trigger-open-svg" viewBox="0 0 85 85" style="opacity: 0;">
                       <g>
                         <path d="M76.1606,67.3208H56.4463l-.0046-.0005H8.8394a8.84,8.84,0,0,0,0,17.68H56.4417L56.4463,85H76.1606a8.8394,8.8394,0,1,0,0-17.6787ZM8.8394,81.1465a4.9864,4.9864,0,1,1,4.9877-4.9859A5.0305,5.0305,0,0,1,8.8394,81.1465Zm22.44-.0005A4.9861,4.9861,0,1,1,36.2671,76.16,5.0308,5.0308,0,0,1,31.2793,81.146Zm22.44,0A4.9861,4.9861,0,1,1,58.7068,76.16,5.0308,5.0308,0,0,1,53.719,81.146Zm22.4416,0A4.9864,4.9864,0,1,1,81.1465,76.16,5.0308,5.0308,0,0,1,76.1606,81.146Z" fill="#fa7d6b"/>
                         <path d="M8.8394,17.68H56.4417l.0046,0H76.1606a8.8394,8.8394,0,1,0,0-17.6787H56.4463l-.0046,0H8.8394a8.84,8.84,0,0,0,0,17.68ZM76.1606,3.853A5.0312,5.0312,0,0,1,81.1465,8.84a4.9868,4.9868,0,0,1-9.9736,0A5.0317,5.0317,0,0,1,76.1606,3.853Zm-22.44,0A5.0311,5.0311,0,0,1,58.7068,8.84a4.987,4.987,0,0,1-9.9739,0A5.0315,5.0315,0,0,1,53.7207,3.8535Zm-22.4414,0A5.0315,5.0315,0,0,1,36.2671,8.84a4.987,4.987,0,0,1-9.9739,0A5.0312,5.0312,0,0,1,31.2793,3.8535Zm-22.44,0A5.0315,5.0315,0,0,1,13.8271,8.84a4.9868,4.9868,0,0,1-9.9736,0A5.0314,5.0314,0,0,1,8.8394,3.8535Z" fill="#fa7d6b"/>
@@ -48,7 +49,7 @@
                     </svg>
                 </div>
                 <div class="nav-trigger-close">
-                    <svg id="nav-trigger-close-svg" viewBox="0 0 85 85">
+                    <svg id="nav-trigger-close-svg" viewBox="0 0 85 85" style="opacity: 0;">
                       <path d="M85,12.5v-5L77.5,0h-5L42.5046,30,12.5,0h-5L0,7.51v4.9981L30,42.5,0,72.5v4.9907L7.75,85h4.7571L42.5046,55,72.5,85h5L85,77.4526V72.5l-30-30ZM47.1028,45.473A5.5819,5.5819,0,0,1,45.51,47.0894a5.4907,5.4907,0,0,1-8.39-5.6332,5.5,5.5,0,0,1,1.5168-2.8351,5.4764,5.4764,0,0,1,8.466,6.8519Z" fill="#fa7d6b"/>
                     </svg>
                 </div>
@@ -57,9 +58,11 @@
     </nav>
 
 
-    <div id="website-wrapper" class="presentation">
+    <div id="website-wrapper" class="presentation" style="opacity: 0;">
+
     <div class="scroll-wrapper">
-    <header class="intro-header">
+
+    <header class="intro-header" style="opacity: 0;">
         <div id="slickcarousel">
         </div>
         <div id="slickcarousel-controls">
@@ -81,15 +84,8 @@
     </header>
 
     <div id="title-container-wrapper">
-        <div class="header-quotes-wrapper">
-            <div class="quote-top-left quote-bonnefanten">&ldquo;</div>
-            <div class="quote-top-right quote-bonnefanten">&rdquo;</div>
-        </div>
         <div class="title-container">
-            <div id="event-summary"></div>
-            <h1 class="brand-name">Clean Blog</h1>
             <span class="subheading"><div class="documentDescription">A Clean Blog Theme by Start Bootstrap</div></span>
-            <div id="event-summary" class="has-recurrence"></div>
             <div class="button-container">
                 <button class="btn btn-default" id="prat-info-btn">Praktisch</button>
             </div>
@@ -107,10 +103,12 @@
             </div>
             <div class="title-container">
                 <div id="event-summary"></div>
+                <div id="news-summary" class="news"></div>
                 <h1 class="brand-name">Clean Blog</h1>
                 <span class="subheading"><div class="documentDescription">A Clean Blog Theme by Start Bootstrap</div></span>
                 <div id="event-summary" class="has-recurrence"></div>
-                
+
+                <div id="call-to-actions"></div>
             </div>
         </div>
 
@@ -149,12 +147,13 @@
         <div class="container">
         </div>
     </footer>
-    </div>
-    </div>
 
     <a href="#0" class="cd-top js-cd-top">Top</a>
+    
+    </div>
+    </div>
 
-    <div id="cd-nav" class="cd-nav">
+    <div id="cd-nav" class="cd-nav" style="opacity: 0;">
         <div class="cd-navigation-wrapper">
             
             <div class="navigation-search-wrapper" id="nav-search-wrapper">
@@ -170,6 +169,5 @@
             </div><!-- .cd-half-block -->
         </div> <!-- .cd-navigation-wrapper -->
     </div> <!-- .cd-nav -->
-    
 </body>
 </html>

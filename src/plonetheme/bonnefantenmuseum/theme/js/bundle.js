@@ -652,7 +652,7 @@ $(document).ready(function () {
 		scrolling = false;
 	if( backTop ) {
 		//update back to top visibility on scrolling
-		window.addEventListener("scroll", function(event) {
+		jQuery('div.scroll-wrapper').on("scroll", function(event) {
 			if( !scrolling ) {
 				scrolling = true;
 				(!window.requestAnimationFrame) ? setTimeout(checkBackToTop, 250) : window.requestAnimationFrame(checkBackToTop);
@@ -666,21 +666,21 @@ $(document).ready(function () {
 	}
 
 	function checkBackToTop() {
-		var windowTop = window.scrollY || document.documentElement.scrollTop;
+		var windowTop = jQuery('div.scroll-wrapper').scrollTop();
 		( windowTop > offset ) ? addClass(backTop, 'cd-top--show') : removeClass(backTop, 'cd-top--show', 'cd-top--fade-out');
 		( windowTop > offsetOpacity ) && addClass(backTop, 'cd-top--fade-out');
 		scrolling = false;
 	}
 	
 	function scrollTop(duration) {
-	    var start = window.scrollY || document.documentElement.scrollTop,
+	    var start = jQuery('div.scroll-wrapper').scrollTop();
 	        currentTime = null;
 	        
 	    var animateScroll = function(timestamp){
 	    	if (!currentTime) currentTime = timestamp;        
 	        var progress = timestamp - currentTime;
 	        var val = Math.max(Math.easeInOutQuad(progress, start, -start, duration), 0);
-	        window.scrollTo(0, val);
+	        jQuery('div.scroll-wrapper')[0].scrollTo(0, val);
 	        if(progress < duration) {
 	            window.requestAnimationFrame(animateScroll);
 	        }
@@ -1354,7 +1354,65 @@ function init_scrollie_listing() {
 
 
 function init_scrollie_singlecontent() {
-	if (jQuery('body.portaltype-document').length > 0 || jQuery('body.portaltype-event').length || jQuery('body.portaltype-news-item').length)  {
+	if (jQuery("#website-wrapper.presentation").length > 0) {
+
+		jQuery("header.intro-header").scrollie({
+			parentElement: jQuery("div.scroll-wrapper"),
+			scrollOffset: 150,
+			scrollRatio: 0,
+			direction : 'down',
+			scrollingOutOfView: function(elem) {
+				jQuery("body").attr("data-background", "sequence-00");
+			}
+		});
+
+		jQuery("#title-container-wrapper").scrollie({
+			parentElement: jQuery("div.scroll-wrapper"),
+			scrollOffset: 150,
+			scrollRatio: 0,
+			scrollingOutOfView: function(elem) {
+				jQuery("body").attr("data-background", "sequence-07");
+			}
+		});
+
+		jQuery("#content-core").scrollie({
+			parentElement: jQuery("div.scroll-wrapper"),
+			scrollOffset: 150,
+			scrollRatio: 0,
+			scrollingOutOfView: function(elem) {
+				jQuery("body").attr("data-background", "sequence-07");
+			}
+		});
+
+		var mailchimp_offset = 150;
+		if (jQuery("body.mobile").length > 0) {
+			mailchimp_offset = 0;
+		}
+
+		jQuery("dl.portletMailChimp").scrollie({
+			parentElement: jQuery("div.scroll-wrapper"),
+			scrollOffset: mailchimp_offset,
+			scrollRatio: 0,
+			scrollingOutOfView: function(elem) {
+				jQuery("body").attr("data-background", "sequence-05");
+			}
+		});
+
+		var footer_offset = 0;
+		if (jQuery("body.mobile").length > 0) {
+			footer_offset = 0;
+		}
+
+		jQuery(".portlet-static-footer").scrollie({
+			parentElement: jQuery("div.scroll-wrapper"),
+			scrollOffset: footer_offset,
+			scrollRatio: 0,
+			scrollingOutOfView: function(elem) {
+				jQuery("body").attr("data-background", "sequence-05");
+			}
+		});
+
+	} else if (jQuery('body.portaltype-document').length > 0 || jQuery('body.portaltype-event').length || jQuery('body.portaltype-news-item').length)  {
 		
 		jQuery("section.portlet").scrollie({
 			parentElement: jQuery("div.scroll-wrapper"),
@@ -1433,7 +1491,9 @@ function init_scrollie_singlecontent() {
 				jQuery("body").attr("data-background", "sequence-05");
 			}
 		});
-	};
+	} else {
+		// pass
+	}
 };
 
 
@@ -1935,7 +1995,7 @@ jQuery(document).ready(function($){
 
 	//update arrows visibility and detect which section is visible in the viewport
 	setSlider();
-	$(window).on('scroll resize', function(){
+	$('div.scroll-wrapper').on('scroll resize', function(){
 		(!window.requestAnimationFrame) ? setSlider() : window.requestAnimationFrame(setSlider);
 	});
 
@@ -1970,9 +2030,9 @@ jQuery(document).ready(function($){
 	function prevSection() {
 		if (!animating) {
 			var prevSection = $('.is-visible[data-type="slider-item"]');
-			if(prevSection.length > 0 && $(window).scrollTop() != prevSection.offset().top) {
+			if(prevSection.length > 0 && $('div.scroll-wrapper').scrollTop() != prevSection.offset().top) {
 				smoothScroll(prevSection);
-			} else if(prevSection.prev().length > 0 && $(window).scrollTop() == prevSection.offset().top) {
+			} else if(prevSection.prev().length > 0 && $('div.scroll-wrapper').scrollTop() == prevSection.offset().top) {
 				smoothScroll(prevSection.prev('[data-type="slider-item"]'));
 			}
 		}
@@ -1989,12 +2049,12 @@ jQuery(document).ready(function($){
 
 	//detect which section is visible in the viewport
 	function checkVisibleSection() {
-		var scrollTop = $(window).scrollTop(),
-			windowHeight = $(window).height();
+		var scrollTop = $('div.scroll-wrapper').scrollTop(),
+			windowHeight = $('div.scroll-wrapper').height();
 
 		$('[data-type="slider-item"]').each(function(){
 			var actualBlock = $(this),
-				offset = scrollTop - actualBlock.offset().top;
+				offset = scrollTop - actualBlock.position().top;
 			//add/remove .is-visible class if the section is in the viewport - it is used to navigate through the sections
 			if ( offset >= 0 && offset < windowHeight ) {
 				actualBlock.addClass('is-visible');
@@ -2006,7 +2066,7 @@ jQuery(document).ready(function($){
 
 	function smoothScroll(target) {
 		animating = true;
-        $('body,html').animate({'scrollTop': target.offset().top}, 500, function(){ animating = false; });
+        $('div.scroll-wrapper').animate({'scrollTop': target.offset().top}, 500, function(){ animating = false; });
 	}
 });
 

@@ -3274,7 +3274,8 @@ footer, body.mce-content-body {
 	div.sponsors-wrapper {
 		/*display: none !important;*/
 		padding-top: 0px;
-		margin-top: -5px;
+		margin-top: 30px;
+
 
 		a {
 			margin-bottom: 0px;
@@ -3311,6 +3312,39 @@ footer, body.mce-content-body {
 		svg#mondriaanfondssvg {
 			max-width: 60px;
 		}
+
+		
+
+		@media(min-width: 992px) {
+			padding-top: 0px;
+			margin-top: -55px;
+			max-width: 540px;
+
+			svg#dsmsvg {
+				width: 200px;
+			    max-width: 200px;
+			    height: 137px;
+			}
+
+			svg#mondriaanfondssvg {
+				max-width: 100px;
+				height: 100px;
+			}
+
+			svg#banksvg {
+				max-width: 200px;
+				height: 168px;
+			}
+
+			svg#limburg-svg {
+				float: right;
+				max-width: 203px;
+				margin-top: -75px;
+			}
+
+
+
+		}	
 	}
 
 	ul.social-media li {
@@ -3388,7 +3422,7 @@ footer, body.mce-content-body {
 	padding-bottom: 0px;
 
 	.portlet-static-footer {
-		padding-top: 145px;
+		padding-top: 65px;
 		padding-bottom: 110px;
 
 		@media(max-width: 767px) {
@@ -4172,7 +4206,7 @@ body.frontend .portletMailChimp,
 	}
 
 	.portletHeader {
-		padding-top: 80px;
+		padding-top: 70px;
 		padding-bottom: 70px !important;
 
 		
@@ -10260,7 +10294,7 @@ body.frontend #presentation {
 	    padding: 3em;
 	    text-align: center;
 	    color: #7841b3;
-	    background: #faf5b8;
+	    background: #fddace;
 	    margin-bottom: 0px;
 
 	    padding-top: 50px;
@@ -14017,7 +14051,7 @@ body.frontend #website-wrapper.presentation .extra-info-wrapper {
   overflow: hidden;
   text-indent: 100%;
   white-space: nowrap;
-  background: #fa7d6c url(/++theme++plonetheme.hetpark/images/cd-top-arrow.svg) no-repeat center 50%;
+  background: #fa7d6c url(/++theme++plonetheme.bonnefanten/images/cd-top-arrow.svg) no-repeat center 50%;
   visibility: hidden;
   opacity: 0;
   -webkit-transition: opacity .3s 0s, visibility 0s .3s, background-color .3s 0s;
@@ -21821,6 +21855,211 @@ body.frontend {
 	&:not(.portaltype-event):not(.portaltype-document) {
 		#call-to-actions {
 			display: none !important;
+		}
+	}
+}
+
+body.frontend {
+
+	#website-wrapper.presentation {
+		.cd-top {
+			background: #fa7d6c url(/++theme++plonetheme.bonnefanten/images/cd-top-arrow.svg) no-repeat center 50%;
+
+			&:hover,
+			&:focus,
+			&:active,
+			&:active:focus {
+				background-color: #b6a782;
+			}
+		}
+
+		/* Body text */
+		#parent-fieldname-text p,
+		#parent-fieldname-text p.discreet,
+		#parent-fieldname-text blockquote p.discreet,
+		#parent-fieldname-text p strong {
+			color: #b6a782;
+		}
+
+		#parent-fieldname-text ol li, ul li {
+	    	
+	    	color: #b6a782;
+	    }
+
+		#parent-fieldname-text {
+			h1, h2, h3, h4, h5, h6 {
+				color: #b6a782;
+			}
+		}
+
+		#title-container-wrapper {
+			background-color: inherit;
+
+			span.subheading {
+				color: #b6a782;
+			}
+		
+		}
+
+		#presentation .presentation-item.text-only {
+			background: inherit;
+		}
+
+		button#prat-info-btn {
+			background-color: #fa7d6c !important;
+    		border: 1px solid #fa7d6c !important;
+    		color: #777894 !important;
+
+    		&:hover,
+			&:focus,
+			&:active,
+			&:active:focus {
+		        background-color: #b6a782 !important;
+    			color: #777894 !important;
+    			border: 1px solid #b6a782 !important;
+    		}
+		}
+
+		.presentation-item.side-text-slide #parent-fieldname-text > div > div:first-child > div:first-child p,
+		.presentation-item.video-slide #parent-fieldname-text p {
+			color: #b6a782 !important;
+		}
+
+		.presentation-item.side-text-slide #parent-fieldname-text > div > div:first-child > div:first-child p.discreet,
+		.presentation-item.video-slide #parent-fieldname-text p.discreet {
+			color: #fa7d6c !important;
+		}
+
+		.extra-info-wrapper .entry-wrapper h4.item-title {
+			color: #fa7d6c !important;
+		}
+
+		.extra-info-wrapper .entry-wrapper p.event-date,
+		.extra-info-wrapper .entry-wrapper p.item-description {
+			color: #b6a782 !important;
+		}
+
+		.extra-info-wrapper .show-more {
+			background-color: #fa7d6c !important;
+    		border: 1px solid #fa7d6c !important;
+    		color: #777894 !important;
+
+    		&:hover,
+			&:focus,
+			&:active,
+			&:active:focus {
+		        background-color: #b6a782 !important;
+    			color: #777894 !important;
+    			border: 1px solid #b6a782 !important;
+    		}
+		}
+	}
+
+	&[data-background="sequence-07"] {
+		#website-wrapper.presentation {
+			.cd-top {
+				background: #ab3c4f url(/++theme++plonetheme.bonnefanten/images/cd-top-arrow.svg) no-repeat center 50%;
+
+				&:hover,
+				&:focus,
+				&:active,
+				&:active:focus {
+					background-color: #b6a782;
+				}
+
+			}
+			/* Body text */
+			#parent-fieldname-text p,
+			#parent-fieldname-text p.discreet,
+			#parent-fieldname-text blockquote p.discreet,
+			#parent-fieldname-text p strong {
+				color: #575656;
+			}
+
+			#parent-fieldname-text ol li, ul li {
+		    	
+		    	color: #575656;
+		    }
+
+			#parent-fieldname-text {
+				h1, h2, h3, h4, h5, h6 {
+					color: #575656;
+				}
+			}
+
+			#title-container-wrapper {
+				background-color: #fddace;
+
+				span.subheading {
+					color: #575656;
+				}
+			}
+
+			button#prat-info-btn {
+				background-color: #ab3c4f !important;
+	    		border: 1px solid #ab3c4f !important;
+	    		color: #fddace !important;
+
+	    		&:hover,
+				&:focus,
+				&:active,
+				&:active:focus {
+			        background-color: #b6a782 !important;
+	    			color: #fddace !important;
+	    			border: 1px solid #b6a782 !important;
+	    		}
+			}
+
+			.presentation-item.side-text-slide #parent-fieldname-text > div > div:first-child > div:first-child p,
+			.presentation-item.video-slide #parent-fieldname-text p {
+				color: #575656 !important;
+			}
+
+			.presentation-item.side-text-slide #parent-fieldname-text > div > div:first-child > div:first-child p.discreet,
+			.presentation-item.video-slide #parent-fieldname-text p.discreet {
+				color: #ab3c4f !important;
+			}
+
+			.extra-info-wrapper .entry-wrapper h4.item-title {
+				color: #ab3c4f !important;
+			}
+
+			.extra-info-wrapper .entry-wrapper p.event-date,
+			.extra-info-wrapper .entry-wrapper p.item-description {
+				color: #575656 !important;
+			}
+
+			.extra-info-wrapper .show-more {
+				background-color: #ab3c4f !important;
+	    		border: 1px solid #ab3c4f !important;
+	    		color: #fddace !important;
+
+	    		&:hover,
+				&:focus,
+				&:active,
+				&:active:focus {
+			        background-color: #b6a782 !important;
+	    			color: #fddace !important;
+	    			border: 1px solid #b6a782 !important;
+	    		}
+			}
+		}
+	}
+
+	&[data-background="sequence-05"] {
+
+		#website-wrapper.presentation {
+			.cd-top {
+				background: #7841b3 url(/++theme++plonetheme.bonnefanten/images/cd-top-arrow.svg) no-repeat center 50%;
+
+				&:hover,
+				&:focus,
+				&:active,
+				&:active:focus {
+					background-color: #b6a782;
+				}
+			
+			}
 		}
 	}
 }
