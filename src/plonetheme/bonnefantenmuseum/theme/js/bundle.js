@@ -988,6 +988,7 @@ function do_logo_animation() {
 
 		if (scroll_top <= scroll_top_margin) {
 			jQuery("body").attr("data-menutop", "true");
+			jQuery("body").attr("data-background", "sequence-00");
 
 			var next_transition = transitions[0];
 			activate_transition(next_transition);
@@ -1238,6 +1239,15 @@ function init_scrollie_object() {
 			}
 		});
 
+		jQuery("section.portlet-collection-kijk-verder").scrollie({
+			parentElement: jQuery("div.scroll-wrapper"),
+			scrollOffset: 150,
+			scrollRatio: 0,
+			scrollingOutOfView: function(elem) {
+				jQuery("body").attr("data-background", "sequence-07");
+			}
+		});
+
 		jQuery("#object-fields").scrollie({
 			parentElement: jQuery("div.scroll-wrapper"),
 			scrollOffset: 150,
@@ -1414,7 +1424,7 @@ function init_scrollie_singlecontent() {
 
 	} else if (jQuery('body.portaltype-document').length > 0 || jQuery('body.portaltype-event').length || jQuery('body.portaltype-news-item').length)  {
 		
-		jQuery("section.portlet").scrollie({
+		/*jQuery("section.portlet").scrollie({
 			parentElement: jQuery("div.scroll-wrapper"),
 			scrollOffset: 150,
 			scrollRatio: 0,
@@ -1422,7 +1432,7 @@ function init_scrollie_singlecontent() {
 				var colour_scheme = elem.data('background');
 				jQuery("body").attr("data-background", colour_scheme);
 			}
-		});
+		});*/
 
 		if (jQuery("#website-wrapper.empty-slideshow").length > 0) {
 			jQuery("div.title-container").scrollie({
@@ -1435,19 +1445,24 @@ function init_scrollie_singlecontent() {
 				}
 			});
 		} else {
-			jQuery("header.intro-header").scrollie({
+			// with slideshow
+			jQuery("div.title-description-carousel-wrapper").scrollie({
 				parentElement: jQuery("div.scroll-wrapper"),
-				scrollOffset: 150,
+				scrollOffset: 0,
 				scrollRatio: 0,
-				direction : 'down',
-				scrollingOutOfView: function(elem) {
+				direction: "down",
+				scrollingInView: function(elem) {
 					jQuery("body").attr("data-background", "sequence-00");
 				}
 			});
 
+			var title_container_offset = 150;
+			if (isMobile.any()) {
+				var title_container_offset = 30;
+			}
 			jQuery("div.title-container").scrollie({
 				parentElement: jQuery("div.scroll-wrapper"),
-				scrollOffset: 150,
+				scrollOffset: title_container_offset,
 				scrollRatio: 0,
 				scrollingOutOfView: function(elem) {
 					jQuery("body").attr("data-background", "sequence-07");
@@ -1465,8 +1480,8 @@ function init_scrollie_singlecontent() {
 		});
 
 		var mailchimp_offset = 150;
-		if (jQuery("body.mobile").length > 0) {
-			mailchimp_offset = 0;
+		if (isMobile.any()) {
+			mailchimp_offset = -50;
 		}
 
 		jQuery("dl.portletMailChimp").scrollie({
@@ -1479,7 +1494,7 @@ function init_scrollie_singlecontent() {
 		});
 
 		var footer_offset = 0;
-		if (jQuery("body.mobile").length > 0) {
+		if (isMobile.any()) {
 			footer_offset = 0;
 		}
 
@@ -1501,9 +1516,20 @@ function init_scrollie_singlecontent() {
 function init_scrollie_frontpage() {
 	if (jQuery('body.portaltype-portlet-page.section-frontpage').length > 0) {
 	    // scrollie background scheme
-		jQuery("section.portlet").scrollie({
+
+	    var section_nu_te_zien_offset = 150;
+	    var section_altijd_offset = -300;
+	    var section_collectie_offset = 150;
+
+	    if (isMobile.any()) {
+	    	section_nu_te_zien_offset = 50;
+	    	section_altijd_offset = -400;
+	    	section_collectie_offset = 400;
+	    }
+
+		jQuery("section.portlet.portlet-collection-nu-te-zien").scrollie({
 			parentElement: jQuery("div.scroll-wrapper"),
-			scrollOffset: 140,
+			scrollOffset: section_nu_te_zien_offset,
 			scrollRatio: 0,
 			scrollingOutOfView: function(elem, offset, direction, coords, scrollRatio, thisTop, winPos) {
 				var colour_scheme = elem.data('background');
@@ -1511,19 +1537,51 @@ function init_scrollie_frontpage() {
 			}
 		});
 
-		jQuery("header.intro-header").scrollie({
+		jQuery("section.portlet.portlet-collection-altijd ").scrollie({
 			parentElement: jQuery("div.scroll-wrapper"),
-			scrollOffset: 140,
+			scrollOffset: section_altijd_offset,
 			scrollRatio: 0,
-			direction : 'down',
-			scrollingOutOfView: function(elem) {
-				jQuery("body").attr("data-background", "sequence-00");
+			scrollingOutOfView: function(elem, offset, direction, coords, scrollRatio, thisTop, winPos) {
+				var colour_scheme = elem.data('background');
+				jQuery("body").attr("data-background", colour_scheme);
 			}
 		});
 
+		jQuery("section.portlet.portlet-collection-collectie").scrollie({
+			parentElement: jQuery("div.scroll-wrapper"),
+			scrollOffset: section_collectie_offset,
+			scrollRatio: 0,
+			scrollingOutOfView: function(elem, offset, direction, coords, scrollRatio, thisTop, winPos) {
+				var colour_scheme = elem.data('background');
+				jQuery("body").attr("data-background", colour_scheme);
+			}
+		});
+
+		if (jQuery('.carousel-item.video-slide').length > 0 && isMobile.any()) {
+			jQuery("div.video-play-btn").scrollie({
+				parentElement: jQuery("div.scroll-wrapper"),
+				scrollOffset: -100,
+				scrollRatio: 0,
+				direction : 'down',
+				scrollingInView: function(elem) {
+					jQuery("body").attr("data-background", "sequence-00");
+				}
+			});
+		} else {
+			jQuery("header.intro-header").scrollie({
+				parentElement: jQuery("div.scroll-wrapper"),
+				scrollOffset: 140,
+				scrollRatio: 0,
+				direction : 'down',
+				scrollingOutOfView: function(elem) {
+					jQuery("body").attr("data-background", "sequence-00");
+				}
+			});
+		}
+
 		var mailchimp_offset = 140;
-		if (jQuery("body.mobile").length > 0) {
-			mailchimp_offset = -200;
+		if (isMobile.any()) {
+			mailchimp_offset = 150;
 		}
 
 		jQuery("dl.portletMailChimp").scrollie({
@@ -1536,7 +1594,7 @@ function init_scrollie_frontpage() {
 		});
 
 		var footer_offset = -10;
-		if (jQuery("body.mobile").length > 0) {
+		if (isMobile.any()) {
 			footer_offset = -140;
 		}
 
@@ -1596,6 +1654,7 @@ jQuery(document).ready(function($) {
 	init_scrollie_frontpage();
 	init_scrollie_object();
 
+	
 	if (jQuery(".frontpage-permanent #row-items").length) {
 		
 	    /* * * * * * * * * * * * * * */

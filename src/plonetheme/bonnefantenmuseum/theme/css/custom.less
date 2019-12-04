@@ -1349,8 +1349,8 @@ body.frontend, body#tinymce {
 
 	.img-wrapper {
 		@media(max-width: 768px) {
-			margin-left: -15px;
-    		margin-right: -15px;
+			margin-left: -20px;
+    		margin-right: -20px;
     	}
 	}
 
@@ -2426,7 +2426,7 @@ body.frontend, body#tinymce {
 			@media (max-width: 991px) {
 				font-size: 8vw;
 				line-height: 10vw;
-				padding-left: 16px;
+				padding-left: 17px;
     			padding-right: 15px;
     			margin-top: 0px;
     			padding-top: 0px;
@@ -3830,8 +3830,8 @@ footer {
 			}
 
 			.line-wrapper {
-				padding-right: 15px;
-				padding-left: 15px;
+				padding-right: 5px;
+				padding-left: 5px;
 			}
 		}
 	}
@@ -4143,15 +4143,15 @@ body.frontend .portletMailChimp,
 		padding-top: 50px;
 	}
 	@media (max-width: 767px) {
-		padding-left: 30px;
-		padding-right: 30px;
+		padding-left: 20px;
+		padding-right: 20px;
 		padding-top: 50px;
 		padding-bottom: 20px;
 	}
 
 	@media (max-width: 480px) {
-		padding-left: 30px;
-		padding-right: 30px;
+		padding-left: 20px;
+		padding-right: 20px;
 		padding-top: 50px;
 	}
 
@@ -5836,6 +5836,8 @@ body.frontend .event-date {
 @media (max-width: 768px) {
 	.main-container {
 	    width: auto;
+	    padding-left: 20px;
+	    padding-right: 20px;
 	}
 }
 
@@ -9437,9 +9439,9 @@ body.frontend.userrole-authenticated .portlet-rrssb {
 
 @media(max-width: 768px) {
 	.title-container {
-		padding-left: 15px;
-		padding-right: 15px;
-		padding-bottom: 50px;
+		padding-left: 20px;
+		padding-right: 20px;
+		padding-bottom: 20px;
 
 		h1.brand-name {
 			max-width: 100% !important;
@@ -10262,6 +10264,10 @@ body.frontend, body#tinymce {
 			    color: #777894 !important;
 			    border-bottom: 0px !important;
 	    	}
+	    }
+
+	    @media(max-width: 767px) {
+	    	font-size: 16px;
 	    }
 	}
 
@@ -12299,8 +12305,13 @@ body.frontend.portaltype-portlet-page.section-home-page {
 }
 
 body.frontend.portaltype-portlet-page {
+
 	.portlet-item {
 		margin-bottom: 75px;
+
+		@media(max-width: 767px) {
+			margin-bottom: 45px;
+		}
 	}
 	
 }
@@ -13694,6 +13705,20 @@ body.portaltype-object .search-results-portlet-container,
 	text-align: center;
 	padding-bottom: 0px;
 	margin-bottom: 0px;
+	.BonnefantenBlock();
+	color: #b6a782;
+	font-size: 4vw;
+	line-height: 4.5vw;
+
+	@media(max-width: 991px) {
+		font-size: 8vw;
+    	line-height: 10vw;
+	}
+
+	@media(max-width: 768px) {
+		font-size: 6vw;
+    	line-height: 6.5vw;
+	}
 
 	@media(min-width: 992px) {
 		padding-bottom: 30px;
@@ -15193,8 +15218,8 @@ body.frontend {
     		pointer-events: all;
     		z-index: 2;
 
-		    padding-left: 25px;
-		    padding-right: 25px;
+		    padding-left: 20px;
+		    padding-right: 20px;
 		    margin-bottom: 25px;
 
 		    width: 100%;
@@ -15359,7 +15384,7 @@ body.frontend.portaltype-portlet-page.section-frontpage {
 	.portlet-collection-wrapper {
 		padding-left: 3px;
 	    padding-right: 3px;
-	    padding-top: 40px;
+	    padding-top: 30px;
 	    background: #faf5b8;
 
 	    @media(max-width: 768px) {
@@ -15935,7 +15960,7 @@ body.frontend.portaltype-portlet-page .portlet.frontpage-collection-online.portl
 
 	@media(max-width: 767px) {
 		.collection-slider-wrapper {
-			height: 130vw;
+			height: 120vw;
 		}
 	}
 }
@@ -21460,7 +21485,55 @@ body.frontend.template-infinite_collection_view {
 			}
 		}
 
+		section.portletSearch .LSBox input.searchField {
+		    border: 2px solid #ab3c4f;
+		    background-color: #fddace;
+		    color: #ab3c4f;
 
+		    &::-webkit-input-placeholder {
+			   color: #ab3c4f;
+			   text-shadow: none;
+			}
+
+			&:-moz-placeholder { /* Firefox 18- */
+			   color: #ab3c4f;  
+			   text-shadow: none;
+			}
+
+			&::-moz-placeholder {  /* Firefox 19+ */
+			   color: #ab3c4f;  
+			   text-shadow: none;
+			}
+
+			&:-ms-input-placeholder {  
+			   color: #ab3c4f;  
+			   text-shadow: none;
+			}
+
+		    &:hover,
+    		&:focus,
+    		&:active,
+    		&:active:focus {
+    			background: #fddace;
+			    border: 2px solid #ab3c4f;
+			    color: #ab3c4f;
+    		}
+		}
+
+		section.portletSearch .LSBox input.searchButton {
+		    background: #ab3c4f;
+			border: 2px solid #ab3c4f;
+			color: #fddace;
+
+    		&:hover,
+    		&:focus,
+    		&:active,
+    		&:active:focus {
+    			background: #fddace;
+			    border: 2px solid #ab3c4f;
+			    color: #ab3c4f;
+    		}
+		}
 	}
 }
 
@@ -22062,6 +22135,35 @@ body.frontend {
 			}
 		}
 	}
+}
+
+
+body.frontend.portaltype-object {
+
+	&[data-background="sequence-07"] {
+		.portletHeader.search-results-portlet h2 {
+			color: #b6a782;
+		}
+
+
+		.portletCollection h4.item-title a,
+		.portletCollection h4.item-title a.hover {
+			color: #ab3c4f !important;
+
+			&:hover,
+			&:focus,
+			&:active,
+			&:active:focus {
+				color: #ab3c4f !important;
+				border-bottom: 1px solid #ab3c4f !important;
+			}
+		}
+
+		.portletCollection h4.item-title a.hover {
+			border-bottom: 1px solid #ab3c4f !important;
+		}
+	}
+	
 }
 
 
