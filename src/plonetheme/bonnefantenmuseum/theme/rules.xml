@@ -78,6 +78,8 @@
         css:theme-children=".cd-primary-nav"
         css:content-children=".plone-navbar-nav" />
 
+      <drop css:theme="#website-wrapper.empty-slideshow .title-container .header-quotes-wrapper" css:if-not-content=".documentDescription"/>
+      
       <!-- Title and description -->
       <replace
         css:theme-children=".brand-name"
@@ -110,11 +112,14 @@
         css:content-children=".documentFirstHeading"
         method="raw" css:if-content="body.template-mollie_payment_success" />
       
+      
+
       <drop css:content=".documentDescription"/>
       <drop css:content=".documentFirstHeading"/>
       <drop css:theme=".nav-home-wrapper" css:if-content="body.site-ZM"/>
       
       <drop css:theme="#object-header" css:if-not-content="body.portaltype-object"/>
+
 
 
       <replace css:theme="span.subheading" css:if-content="#slickcarousel .carousel-item.portrait[data-index='0']" method="raw">

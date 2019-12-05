@@ -1465,7 +1465,7 @@ function init_scrollie_singlecontent() {
 				scrollOffset: title_container_offset,
 				scrollRatio: 0,
 				scrollingOutOfView: function(elem) {
-					jQuery("body").attr("data-background", "sequence-07");
+					jQuery("body").attr("data-background", "sequence-00");
 				}
 			});
 		}
@@ -1475,7 +1475,7 @@ function init_scrollie_singlecontent() {
 			scrollOffset: 150,
 			scrollRatio: 0,
 			scrollingOutOfView: function(elem) {
-				jQuery("body").attr("data-background", "sequence-07");
+				jQuery("body").attr("data-background", "sequence-00");
 			}
 		});
 
@@ -1537,7 +1537,28 @@ function init_scrollie_frontpage() {
 			}
 		});
 
-		jQuery("section.portlet.portlet-collection-altijd ").scrollie({
+		jQuery("section.portlet.portlet-collection-what2019s-on").scrollie({
+			parentElement: jQuery("div.scroll-wrapper"),
+			scrollOffset: section_nu_te_zien_offset,
+			scrollRatio: 0,
+			scrollingOutOfView: function(elem, offset, direction, coords, scrollRatio, thisTop, winPos) {
+				var colour_scheme = elem.data('background');
+				jQuery("body").attr("data-background", colour_scheme);
+			}
+		});
+
+		
+		jQuery("section.portlet.portlet-collection-altijd").scrollie({
+			parentElement: jQuery("div.scroll-wrapper"),
+			scrollOffset: section_altijd_offset,
+			scrollRatio: 0,
+			scrollingOutOfView: function(elem, offset, direction, coords, scrollRatio, thisTop, winPos) {
+				var colour_scheme = elem.data('background');
+				jQuery("body").attr("data-background", colour_scheme);
+			}
+		});
+
+		jQuery("section.portlet.portlet-collection-permanent").scrollie({
 			parentElement: jQuery("div.scroll-wrapper"),
 			scrollOffset: section_altijd_offset,
 			scrollRatio: 0,
@@ -1548,6 +1569,16 @@ function init_scrollie_frontpage() {
 		});
 
 		jQuery("section.portlet.portlet-collection-collectie").scrollie({
+			parentElement: jQuery("div.scroll-wrapper"),
+			scrollOffset: section_collectie_offset,
+			scrollRatio: 0,
+			scrollingOutOfView: function(elem, offset, direction, coords, scrollRatio, thisTop, winPos) {
+				var colour_scheme = elem.data('background');
+				jQuery("body").attr("data-background", colour_scheme);
+			}
+		});
+
+		jQuery("section.portlet.portlet-collection-collection").scrollie({
 			parentElement: jQuery("div.scroll-wrapper"),
 			scrollOffset: section_collectie_offset,
 			scrollRatio: 0,
