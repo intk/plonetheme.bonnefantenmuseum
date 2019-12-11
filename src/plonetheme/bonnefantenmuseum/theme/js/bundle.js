@@ -1452,7 +1452,7 @@ function init_scrollie_singlecontent() {
 				scrollRatio: 0,
 				direction: "down",
 				scrollingInView: function(elem) {
-					jQuery("body").attr("data-background", "sequence-00");
+					jQuery("body").attr("data-background", "sequence-07");
 				}
 			});
 
@@ -1465,7 +1465,7 @@ function init_scrollie_singlecontent() {
 				scrollOffset: title_container_offset,
 				scrollRatio: 0,
 				scrollingOutOfView: function(elem) {
-					jQuery("body").attr("data-background", "sequence-00");
+					jQuery("body").attr("data-background", "sequence-07");
 				}
 			});
 		}
@@ -1475,7 +1475,7 @@ function init_scrollie_singlecontent() {
 			scrollOffset: 150,
 			scrollRatio: 0,
 			scrollingOutOfView: function(elem) {
-				jQuery("body").attr("data-background", "sequence-00");
+				jQuery("body").attr("data-background", "sequence-07");
 			}
 		});
 
@@ -1803,7 +1803,9 @@ jQuery(document).ready(function($) {
 		}
 
 	} else {
-		jQuery(".sticky-img-stick").hcSticky();
+		jQuery(".sticky-img-stick").hcSticky({
+			stickTo: "div.scroll-wrapper"
+		});
 	}
   
 
