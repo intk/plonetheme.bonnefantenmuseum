@@ -509,7 +509,7 @@ body.frontend.portaltype-object {
 	.object-fieldset {
 		p {
 			margin: 0px 0;
-			color: #fa7d6c;
+			color: #f9423a;
 		}
 
 		h3 {
@@ -674,7 +674,7 @@ body.portaltype-object {
 	}
 
 	#slickcarousel {
-		background: #346b6a;
+		background: #ffe79a;
 
 		.slick-next, .slick-prev {
 			border: none;
@@ -1851,7 +1851,7 @@ body.portaltype-object #slickcarousel-controls {
 }
 
 .slick-lightbox {
-	background: #ffffff !important;
+	background: #f6f6f6 !important;
 
 	.slick-lightbox-close {
 		height: 50px;
@@ -1886,9 +1886,10 @@ body.portaltype-object #slickcarousel-controls {
 
 	.slick-lightbox-slick-caption {
 	    margin: 10px 0 0;
-	    color: #282931;
+	    color: #575756;
 	    display: block;
 	    margin-top: 10px;
+	    letter-spacing: 0.05em;
 	}
 
 		/* Slider */
@@ -2031,6 +2032,11 @@ body.portaltype-object #slickcarousel-controls {
 	    border: none;
 	    outline: none;
 	    background: transparent;
+
+	    svg {
+	    	width: 25px;
+	    	height: 42px;
+	    }
 	}
 	.slick-prev:hover,
 	.slick-prev:focus,
@@ -2040,6 +2046,10 @@ body.portaltype-object #slickcarousel-controls {
 	    color: transparent;
 	    outline: none;
 	    background: transparent;
+
+	    svg path {
+	    	fill: #b6a782;
+	    }
 	}
 	.slick-prev:hover:before,
 	.slick-prev:focus:before,
@@ -2086,11 +2096,11 @@ body.portaltype-object #slickcarousel-controls {
 	}
 	.slick-prev:before
 	{
-	    content: url('/nl/intk/images/arrow-big-left.svg');
+	    
 	}
 	[dir='rtl'] .slick-prev:before
 	{
-	    content: url('/nl/intk/images/arrow-big-right.svg');
+	    
 	}
 
 	.slick-next
@@ -2110,11 +2120,11 @@ body.portaltype-object #slickcarousel-controls {
 	}
 	.slick-next:before
 	{
-	    content: url('/nl/intk/images/arrow-big-right.svg');
+	    
 	}
 	[dir='rtl'] .slick-next:before
 	{
-	    content: url('/nl/intk/images/arrow-big-left.svg');
+	    
 	}
 
 	/* Dots */

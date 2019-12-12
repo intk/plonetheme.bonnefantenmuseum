@@ -736,7 +736,7 @@ function register($form) {
     dataType: 'json',
     contentType: 'application/json; charset=utf-8',
     error: function (err) { 
-    	$form.find('#form-widgets-email').css('borderColor', '#fa7d6c');
+    	$form.find('#form-widgets-email').css('borderColor', '#f9423a');
     	$form.find('#subscribe-result .success-msg').hide();
     	$form.find('#subscribe-result .error-msg').show();
     	$loader.hide();
@@ -753,8 +753,8 @@ function register($form) {
         $loader.hide();
       } else {
         // Something went wrong, do something to notify the user.
-        $form.find('#form-widgets-email').css('borderColor', '#fa7d6c');
-        $form.find('#subscribe-result').css('color', '#fa7d6c');
+        $form.find('#form-widgets-email').css('borderColor', '#f9423a');
+        $form.find('#subscribe-result').css('color', '#f9423a');
         $form.find('#subscribe-result .success-msg').hide();
 
         if (data.msg.indexOf("reeds geabonneerd op lijst") > 0 || data.msg.indexOf("zich al ingeschreven") > 0 || data.msg.indexOf("is already subscribed") > 0) {
@@ -1443,16 +1443,17 @@ function init_scrollie_singlecontent() {
 				scrollingOutOfView: function(elem) {
 					jQuery("body").attr("data-background", "sequence-00");
 				}
+
 			});
 		} else {
 			// with slideshow
 			jQuery("div.title-description-carousel-wrapper").scrollie({
 				parentElement: jQuery("div.scroll-wrapper"),
-				scrollOffset: 0,
+				scrollOffset: -150,
 				scrollRatio: 0,
 				direction: "down",
 				scrollingInView: function(elem) {
-					jQuery("body").attr("data-background", "sequence-07");
+					jQuery("body").attr("data-background", "sequence-00");
 				}
 			});
 
@@ -1730,8 +1731,13 @@ jQuery(document).ready(function($) {
 				    caption: 'caption',
 				    useHistoryApi: 'true',
 				    slick: {
-				    	fade:true,
-				    	speed: 50
+				    	fade: true,
+				    	speed: 50,
+				    	nextArrow: "<div class='wrap-next'><button type='button' class='slick-next'><svg id='Layer_1' data-name='Layer 1' xmlns='http://www.w3.org/2000/svg' width='50' height='85' viewBox='0 0 50 85'><title>Bonnefanten_Website_Assets</title><path d='M50,50.2417,50,42.5l0-7.7417L15.41,0H0V15.4842L26.8853,42.5,0,69.5158V85H15.41ZM13.4024,4.7577l29.936,30.0814-.43.0046-6.8587-.071L6.26,4.8385Zm-8.6675,8.71.08-7.1769L33.8677,35.4837l-3.6114,3.6288Zm0,58.0654L30.2563,45.8875l3.6114,3.6288L4.8152,78.71ZM6.26,80.1615,36.05,50.2273l6.8587-.071.43.0046L13.4024,80.2423Z' fill='#216d6a'/></svg></button></div>",
+                		prevArrow: "<div class='wrap-prev'><button type='button' class='slick-prev'><svg id='Layer_1' data-name='Layer 1' xmlns='http://www.w3.org/2000/svg' width='50' height='85' viewBox='0 0 50 85'><title>_</title><path d='M0,34.7584,0,42.5l0,7.7417L34.59,85H50V69.5158L23.1147,42.5,50,15.4843V0H34.59ZM36.5976,80.2423,6.6616,50.1609l.43-.0046,6.8586.071L43.74,80.1616Zm8.6675-8.71-.08,7.1768L16.1323,49.5163l3.6114-3.6288Zm0-58.0655L19.7437,39.1126l-3.6114-3.6288L45.1847,6.2905ZM43.74,4.8385,13.95,34.7728l-6.8586.071-.43-.0047L36.5976,4.7578Z' fill='#216d6a'/></svg></button></div>",
+				    },
+				    layouts: {
+				    	closeButton: '<button type="button" class="slick-lightbox-close"><svg id="slick-lightbox-close-svg" viewBox="0 0 85 85"><path d="M85,12.5v-5L77.5,0h-5L42.5046,30,12.5,0h-5L0,7.51v4.9981L30,42.5,0,72.5v4.9907L7.75,85h4.7571L42.5046,55,72.5,85h5L85,77.4526V72.5l-30-30ZM47.1028,45.473A5.5819,5.5819,0,0,1,45.51,47.0894a5.4907,5.4907,0,0,1-8.39-5.6332,5.5,5.5,0,0,1,1.5168-2.8351,5.4764,5.4764,0,0,1,8.466,6.8519Z" fill="#216d6a"></path></svg></button>'
 				    }
 				});
 			}
@@ -1752,8 +1758,13 @@ jQuery(document).ready(function($) {
 				    caption: 'caption',
 				    useHistoryApi: 'true',
 				    slick: {
-				    	fade:true,
-				    	speed: 50
+				    	fade: true,
+				    	speed: 50,
+				    	nextArrow: "<div class='wrap-next'><button type='button' class='slick-next'><svg id='Layer_1' data-name='Layer 1' xmlns='http://www.w3.org/2000/svg' width='50' height='85' viewBox='0 0 50 85'><title>Bonnefanten_Website_Assets</title><path d='M50,50.2417,50,42.5l0-7.7417L15.41,0H0V15.4842L26.8853,42.5,0,69.5158V85H15.41ZM13.4024,4.7577l29.936,30.0814-.43.0046-6.8587-.071L6.26,4.8385Zm-8.6675,8.71.08-7.1769L33.8677,35.4837l-3.6114,3.6288Zm0,58.0654L30.2563,45.8875l3.6114,3.6288L4.8152,78.71ZM6.26,80.1615,36.05,50.2273l6.8587-.071.43.0046L13.4024,80.2423Z' fill='#216d6a'/></svg></button></div>",
+                		prevArrow: "<div class='wrap-prev'><button type='button' class='slick-prev'><svg id='Layer_1' data-name='Layer 1' xmlns='http://www.w3.org/2000/svg' width='50' height='85' viewBox='0 0 50 85'><title>_</title><path d='M0,34.7584,0,42.5l0,7.7417L34.59,85H50V69.5158L23.1147,42.5,50,15.4843V0H34.59ZM36.5976,80.2423,6.6616,50.1609l.43-.0046,6.8586.071L43.74,80.1616Zm8.6675-8.71-.08,7.1768L16.1323,49.5163l3.6114-3.6288Zm0-58.0655L19.7437,39.1126l-3.6114-3.6288L45.1847,6.2905ZM43.74,4.8385,13.95,34.7728l-6.8586.071-.43-.0047L36.5976,4.7578Z' fill='#216d6a'/></svg></button></div>",
+				    },
+				    layouts: {
+				    	closeButton: '<button type="button" class="slick-lightbox-close"><svg id="slick-lightbox-close-svg" viewBox="0 0 85 85"><path d="M85,12.5v-5L77.5,0h-5L42.5046,30,12.5,0h-5L0,7.51v4.9981L30,42.5,0,72.5v4.9907L7.75,85h4.7571L42.5046,55,72.5,85h5L85,77.4526V72.5l-30-30ZM47.1028,45.473A5.5819,5.5819,0,0,1,45.51,47.0894a5.4907,5.4907,0,0,1-8.39-5.6332,5.5,5.5,0,0,1,1.5168-2.8351,5.4764,5.4764,0,0,1,8.466,6.8519Z" fill="#216d6a"></path></svg></button>'
 				    }
 				});
 			}
