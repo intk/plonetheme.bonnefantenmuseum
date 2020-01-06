@@ -1644,9 +1644,10 @@ body.frontend, body#tinymce {
     	}
 
     	@media (min-width: 1200px) {
-    		max-width: 1080px;
+    		max-width: 100%;
     		margin-left: 0px;
     		padding-left: 115px;
+    		padding-right: 115px;
 
     		h1.brand-name {
     			max-width: 750px; 
@@ -3337,9 +3338,10 @@ footer, body.mce-content-body {
 			}
 
 			svg#limburg-svg {
-				float: right;
-				max-width: 203px;
-				margin-top: -75px;
+				float: none;
+				max-width: 200px;
+				margin-top: 0px;
+				margin-left: -220px;
 			}
 
 
@@ -4320,6 +4322,10 @@ body.frontend .portletMailChimp,
 	input[type="password"]:not(.btn) {
 		.inputField();
 		-webkit-appearance: none;
+		-webkit-transition: background-color 0.2s ease-in;
+	    -moz-transition: background-color 0.2s ease-in;
+	    -o-transition: background-color 0.2s ease-in;
+	    transition: background-color 0.2s ease-in;
 	}
 
 	#formfield-form-widgets-interest_groups {
@@ -10428,7 +10434,9 @@ body.frontend #presentation {
 	.presentation-item.side-text-slide {
 	    flex-direction: row !important;
 	    margin-bottom: 5.21vw;
+	    padding-bottom: 5.21vw;
 	    margin-top: 5.21vw;
+	    padding-top: 5.21vw;
 	    position: relative;
 	    display: flex;
 	    width: 100%;
@@ -10612,9 +10620,11 @@ body.frontend #presentation {
     						@media (min-width: 1200px) {
 							    font-size: 1.8vw;
 							    line-height: 1.40em;
+							    margin-bottom: 15px;
 
 							    &.discreet {
 							    	font-size: 2.8vw;
+							    	margin-bottom: 40px;
 							    }
     						}
     					}
@@ -10767,7 +10777,7 @@ body.frontend #presentation {
 				padding-top: 6vw;
 				padding-bottom: 7vw;
 				margin-left: auto;
-				margin-right: auto;
+				margin-right: 0;
 			}
 			position: relative;
 
@@ -10775,58 +10785,33 @@ body.frontend #presentation {
 			&:before {
 				position: absolute;
 			    top: 0;
-			    left: 50%;
-			    margin-top: -2.5vw;
-			    margin-left: 0px;
-			    content: "\2013";
+			    left: 0;
+			    margin-top: 7vw;
+			    margin-left: -8vw;
+			    content: "\002F \002F";
 			    font-family: 'BonnefantenBlock', Arial, sans-serif;
-			    font-size: 8vw;
+			    font-size: 6vw;
 			    color: #b6a782;
-
-			    -webkit-transform: translateX(-50%);
-			    -moz-transform: translateX(-50%);
-			    -ms-transform: translateX(-50%);
-			    -o-transform: translateX(-50%);
-			    transform: translateX(-50%);
 
 			    @media(max-width: 991px) {
 			    	margin-top: 0px;
+			    	margin-left: 0px;
 			    	font-size: 10vw;
+			    	left: 50%;
+
+			    	-webkit-transform: translateX(-50%);
+				    -moz-transform: translateX(-50%);
+				    -ms-transform: translateX(-50%);
+				    -o-transform: translateX(-50%);
+				    transform: translateX(-50%);
 			    }
 
 			    @media(max-width: 767px) {
-			    	margin-top: 0px;
-			    	font-size: 15vw;
+			    	margin-top: 4vw;
+			    	font-size: 6vw;
 			    }
 
 
-			}
-
-			&:after {
-				position: absolute;
-			    bottom: 0;
-			    left: 50%;
-			    margin-left: 0px;
-			    content: "\2013";
-			    font-family: 'BonnefantenBlock', Arial, sans-serif;
-			    font-size: 8vw;
-			    color: #b6a782;
-			    margin-bottom: -2.5vw;
-
-			    -webkit-transform: translateX(-50%);
-			    -moz-transform: translateX(-50%);
-			    -ms-transform: translateX(-50%);
-			    -o-transform: translateX(-50%);
-			    transform: translateX(-50%);
-
-			    @media(max-width: 991px) {
-			    	margin-bottom: 0px;
-			    }
-
-			    @media(max-width: 767px) {
-			    	margin-top: 0px;
-			    	font-size: 15vw;
-			    }
 			}
 
 		}
@@ -12857,6 +12842,18 @@ body.frontend.portaltype-portlet-page.section-home-page {
 				}
 			}
 		}
+
+		.portletCollection.frontpage-portlet-collection #row-items {
+			.thumb-wrapper {
+				img {
+					width: 100%;
+					max-height: none;
+					height: auto;
+					max-width: 100%;
+				}
+			}
+		}
+
 	}
 
 }
@@ -14002,8 +13999,8 @@ body.portaltype-portlet-page .portletCollection #masonry-grid {
     height: 100%;
     position: absolute;
     bottom: 0px;
-    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #ffffff 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00ffffff', endColorstr='#ffffff', GradientType=0);
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #ffe79a 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffe79a', endColorstr='#ffe79a', GradientType=0);
 }
 
 .expandable-text.collapse.in div.body-text:after {
@@ -14296,9 +14293,11 @@ body.frontend #website-wrapper.presentation .extra-info-wrapper {
   cursor: pointer;
   visibility: hidden;
   opacity: 0;
-  -webkit-transition: opacity .3s 0s, visibility 0s .3s, background-color .3s 0s;
-  transition: opacity .3s 0s, visibility 0s .3s, background-color .3s 0s;
+  -webkit-transition: opacity .3s 0s, visibility 0s .3s, background-color .3s;
+  transition: opacity .3s 0s, visibility 0s .3s, background-color .3s;
   z-index: 1000;
+
+
 }
 
 .cd-top.cd-top--show,
@@ -14337,7 +14336,7 @@ body.frontend #website-wrapper.presentation .extra-info-wrapper {
   .cd-top {
     height: 50px;
     width: 50px;
-    right: 25px;
+    right: 35px;
     bottom: 30px;
   }
 }
@@ -16309,6 +16308,11 @@ body.frontend.portaltype-portlet-page.section-frontpage {
 	}
 
 	&[data-background="sequence-01"] {
+
+		#expand-svg path {
+			fill: #7841b3;
+		}
+
 		background-color: #faf5b8;
 
 		.nav-trigger-wrapper svg path {
@@ -16618,6 +16622,10 @@ body.frontend.portaltype-portlet-page.section-frontpage {
 			fill: #fdcdc0;
 		}
 
+		#expand-svg path {
+			fill: #fdcdc0;
+		}
+
 		.navbar-default#website-nav { 
 			background: #276d6a;
 
@@ -16921,6 +16929,10 @@ body.frontend.portaltype-portlet-page.section-frontpage {
 			fill: #cfb3e4;
 		}
 
+		#expand-svg path {
+			fill: #cfb3e4;
+		}
+
 		.navbar-default#website-nav { 
 			background: #ab3c4e;
 
@@ -17219,6 +17231,10 @@ body.frontend.portaltype-portlet-page.section-frontpage {
 
 	&[data-background="sequence-04"] {
 		background-color: #7841b3;
+
+		#expand-svg path {
+			fill: #ffd100;
+		}
 
 		.nav-trigger-wrapper svg path {
 			fill: #ffd100;
@@ -17527,6 +17543,10 @@ body.frontend.portaltype-portlet-page.section-frontpage {
 			fill: #7841b3;
 		}
 
+		#expand-svg path {
+			fill: #7841b3;
+		}
+
 		.navbar-default#website-nav { 
 			background: #ffd100;
 
@@ -17794,6 +17814,10 @@ body.frontend.portaltype-portlet-page.section-frontpage {
 		background-color: #b6a782;
 
 		.nav-trigger-wrapper svg path {
+			fill: #7841b3;
+		}
+
+		#expand-svg path {
 			fill: #7841b3;
 		}
 
@@ -18079,6 +18103,10 @@ body.frontend.portaltype-portlet-page.section-frontpage {
 
 	&:not([data-background="sequence-01"]):not([data-background="sequence-02"]):not([data-background="sequence-03"]):not([data-background="sequence-04"]):not([data-background="sequence-05"]):not([data-background="sequence-future-events"]) {
 		background-color: #ff4438;
+
+		#expand-svg path {
+			fill: #ffd100;
+		}
 
 		.portletCollection.frontpage-portlet-collection #row-items .entry-wrapper h4 a,
 		section.frontpage-permanent h4.item-title a {
@@ -18488,6 +18516,10 @@ body.frontend:not(.portaltype-portlet-page) {
 	&[data-background="sequence-04"] {
 		background-color: #7841b3;
 
+		div#parent-fieldname-text table:not(.picker__table) tr:first-child td {
+			color: #7841b3;
+		}
+
 		.nav-trigger-wrapper svg path {
 			fill: #ffd100;
 		}
@@ -18752,6 +18784,10 @@ body.frontend:not(.portaltype-portlet-page) {
 
 	&[data-background="sequence-05"] {
 		background-color: #ffd100;
+
+		div#parent-fieldname-text table:not(.picker__table) tr:first-child td {
+			color: #ffd100;
+		}
 
 		.nav-trigger-wrapper svg path {
 			fill: #7841b3;
@@ -19071,6 +19107,10 @@ body.frontend:not(.portaltype-portlet-page) {
 	&[data-background="sequence-06"] {
 		background-color: #b5a685;
 
+		div#parent-fieldname-text table:not(.picker__table) tr:first-child td {
+			color: #b5a685;
+		}
+
 		.nav-trigger-wrapper svg path {
 			fill: #ab3c4f;
 		}
@@ -19341,6 +19381,10 @@ body.frontend:not(.portaltype-portlet-page) {
 
 	&[data-background="sequence-07"] {
 		background-color: #fedacd;
+		
+		div#parent-fieldname-text table:not(.picker__table) tr:first-child td {
+			color: #fedacd;
+		}
 
 		.nav-trigger-wrapper svg path {
 			fill: #216d6a;
@@ -19722,6 +19766,12 @@ body.frontend.portaltype-object {
 
 
 	&[data-background="sequence-07"] {
+
+		.expandable-text div.body-text:after {
+		    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #fedacd 100%);
+		    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fedacd', endColorstr='#fedacd', GradientType=0);
+		}
+
 		#slickcarousel {
 			-webkit-transition: background-color 0.2s ease-in;
 		    -moz-transition: background-color 0.2s ease-in;
@@ -19798,6 +19848,11 @@ body.frontend.portaltype-object {
 
 		}
 
+		.expandable-text div.body-text:after {
+		    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #ffd100 100%);
+		    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffd100', endColorstr='#ffd100', GradientType=0);
+		}
+
 		#content-core a.btn.object-details-btn {
 
 			background: #7841b3;
@@ -19858,7 +19913,8 @@ body.frontend.portaltype-object {
 
 }
 
-body.frontend.portaltype-portlet-page.subsection-nu-te-zien-nu-te-zien {
+body.frontend.portaltype-portlet-page.subsection-nu-te-zien-nu-te-zien,
+body.frontend.portaltype-portlet-page.subsection-now-in-the-museum {
 	background-color: #ffe79a;
 
 	-webkit-transition: background-color 0.2s ease-in;
@@ -22308,7 +22364,12 @@ body.frontend {
 body.frontend {
 
 	#website-wrapper.presentation {
-
+		.cd-top path {
+			-webkit-transition: fill 0.2s ease-in;
+		    -moz-transition: fill 0.2s ease-in;
+		    -o-transition: fill 0.2s ease-in;
+		    transition: fill 0.2s ease-in;
+		}
 		.cd-top {
 			path {
 				fill: #f9423a;
@@ -22592,7 +22653,7 @@ body.frontend.portaltype-object {
 	}
 
 	@media(min-width: 1400px) {
-		max-width: 1260px;
+		max-width: 100%;
 		margin-left: auto;
 		margin-right: auto;
 	}
@@ -22690,5 +22751,15 @@ body.frontend.portaltype-news-item {
 }
 
 
+body.frontend #website-wrapper.presentation {
+	#title-container {
+		padding-bottom: 80px !important;
+	}
+}
 
+body.frontend:not(.portaltype-event) #website-wrapper.presentation {
+	button#prat-info-btn {
+		display: none !important;
+	}
+}
 
