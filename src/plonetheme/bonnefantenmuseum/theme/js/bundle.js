@@ -1288,7 +1288,7 @@ function init_scrollie_object() {
 };
 
 function init_scrollie_listing() {
-	if (jQuery('body.template-search').length || jQuery('body.template-advancedsearch').length || jQuery('body.portaltype-collection').length || jQuery('body.portaltype-folder').length || jQuery('body.portaltype-portlet-page.subsection-nu-te-zien-nu-te-zien').length)  {
+	if (jQuery('body.template-search').length || jQuery('body.template-advancedsearch').length || jQuery('body.portaltype-collection').length || jQuery('body.portaltype-folder').length || jQuery('body.portaltype-portlet-page.subsection-nu-te-zien-nu-te-zien').length || jQuery('body.portaltype-portlet-page.subsection-now-in-the-museum').length)  {
 		
 		var parentelement = jQuery("div.scroll-wrapper");
 
