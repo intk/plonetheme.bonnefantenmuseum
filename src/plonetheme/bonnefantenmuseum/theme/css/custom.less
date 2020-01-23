@@ -2585,6 +2585,10 @@ body.frontend, body#tinymce {
 	&.portaltype-portlet-page.subsection-nu-te-zien-nu-te-zien {
 		#title-container-wrapper .header-quotes-wrapper {
 			display: block;
+
+			@media(max-width: 992px) {
+				display: none !important;
+			}
 		}
 	}
 	
@@ -13384,7 +13388,7 @@ body.frontend.portaltype-portlet-page.subsection-now-in-the-museum {
 				&:active:focus {
 					background: #ffe79a;
     				color: #f9423a;
-    				border: 1px solid #f9423a;
+    				border: 2px solid #f9423a;
 				}
 			}
 		}
@@ -19996,7 +20000,7 @@ body.frontend.portaltype-portlet-page.subsection-now-in-the-museum {
 			}
 		}
 
-		.formControls, portletFooter {
+		.formControls, .portletFooter {
 			background: inherit;
 		}
 	}
@@ -20836,6 +20840,21 @@ body.frontend.portaltype-portlet-page.subsection-now-in-the-museum {
 					border-bottom: 0px !important;
 				}
 			}
+
+			.portletFooter input.show-more {
+				background-color: #7841b3 !important;
+				border: 2px solid #7841b3 !important;
+				color: #ffd100 !important;
+
+				&:hover,
+				&:focus,
+				&:active,
+				&:active:focus {
+					background-color: #b6a782 !important;
+					border: 2px solid #b6a782 !important;
+					color: #ffd100 !important;
+				}
+			}
 		}
 
 	}
@@ -21423,6 +21442,21 @@ body.frontend.portaltype-portlet-page.subsection-now-in-the-museum {
 					color: #ab3c4f !important;
 					text-decoration: none !important;
 					border-bottom: 0px !important;
+				}
+			}
+
+			.portletFooter input.show-more {
+				background-color: #ab3c4f !important;
+				border: 2px solid #ab3c4f !important;
+				color: #fedacd !important;
+
+				&:hover,
+				&:focus,
+				&:active,
+				&:active:focus {
+					background-color: #b6a782 !important;
+					border: 2px solid #b6a782 !important;
+					color: #fedacd !important;
 				}
 			}
 		}
