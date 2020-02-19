@@ -22799,9 +22799,27 @@ body.frontend #website-wrapper.presentation {
 	}
 }
 
-body.frontend:not(.portaltype-event) #website-wrapper.presentation {
+body.frontend:not(.portaltype-event)  #website-wrapper.presentation #website-wrapper.presentation {
 	button#prat-info-btn {
 		display: none !important;
 	}
 }
 
+body.site-en  #website-wrapper.presentation #title-container-wrapper {
+	a.tickets-btn.site-nl {
+		display: none !important;
+	}
+}
+
+body.site-nl  #website-wrapper.presentation #title-container-wrapper {
+	a.tickets-btn.site-en {
+		display: none !important;
+	}
+}
+
+
+body:not(.site-en):not(.site-nl) #website-wrapper.presentation #title-container-wrapper {
+	a.tickets-btn.site-en {
+		display: none !important;
+	}
+}
