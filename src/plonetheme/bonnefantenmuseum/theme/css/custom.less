@@ -821,7 +821,7 @@ body {
 
 body.patterns-loaded {
 	nav#website-nav, #website-wrapper, footer, #cd-nav, header.intro-header, a.cd-nav-trigger, .nav-trigger-open svg, .nav-trigger-close svg, div.logo-wrapper {
-		opacity: 1 !important;
+		/*opacity: 1 !important;*/
 	}
 }
 
@@ -1104,19 +1104,19 @@ body:not(.frontend) {
 	    padding: 0; 
 	}
 
-	table:not(.picker__table) {
+	table:not(.picker__table):not(.CookieDeclarationTable) {
 		margin-top: 0px;
 		width: 100% !important;
 		max-width: 100% !important;
 		border: 0px;
 	}
 
-	table:not(.picker__table) > thead > tr > th,
-	table:not(.picker__table) > tbody > tr > th,
-	table:not(.picker__table) > tfoot > tr > th,
-	table:not(.picker__table) > thead > tr > td,
-	table:not(.picker__table) > tbody > tr > td,
-	table:not(.picker__table) > tfoot > tr > td {
+	table:not(.picker__table):not(.CookieDeclarationTable) > thead > tr > th,
+	table:not(.picker__table):not(.CookieDeclarationTable) > tbody > tr > th,
+	table:not(.picker__table):not(.CookieDeclarationTable) > tfoot > tr > th,
+	table:not(.picker__table):not(.CookieDeclarationTable) > thead > tr > td,
+	table:not(.picker__table):not(.CookieDeclarationTable) > tbody > tr > td,
+	table:not(.picker__table):not(.CookieDeclarationTable) > tfoot > tr > td {
 	  border: 1px solid @brand-primary-text;
 	}
 
@@ -1129,19 +1129,19 @@ body:not(.frontend) {
 		border-top: 0px;
 	}
 
-	table:not(.picker__table) tr {
+	table:not(.picker__table):not(.CookieDeclarationTable) tr {
 		border: 1px solid @brand-primary-text;
 	}
 
-	table:not(.picker__table) tr:nth-child(even) {
+	table:not(.picker__table):not(.CookieDeclarationTable) tr:nth-child(even) {
 		background: transparent;
 	}
 
-	table:not(.picker__table) tr:nth-child(odd) {
+	table:not(.picker__table):not(.CookieDeclarationTable) tr:nth-child(odd) {
 		background: transparent;
 	}
 
-	table:not(.picker__table) td {
+	table:not(.picker__table):not(.CookieDeclarationTable) td {
 		padding: 0;
 		padding-left: 15px;
 		padding-right: 20px;
@@ -1171,7 +1171,7 @@ body:not(.frontend) {
     	}
 	}
 
-	table:not(.picker__table) tr:first-child td {
+	table:not(.picker__table):not(.CookieDeclarationTable) tr:first-child td {
 		.StyreneBold();
 		text-transform: none;
 		font-size: 17px;
@@ -3082,14 +3082,14 @@ body.frontend, body#tinymce {
 
         @media (min-width: 992px) {
         	 position: relative;
-             width: 950px;
+             width: 100%;
              margin: 0 auto;
              z-index: 3;
         }
 
         @media (min-width: 1200px) {
                 position: relative;
-                width: 1060px;
+                width: 100%;
                 margin: 0 auto;
                 z-index: 3;
         }
@@ -3251,6 +3251,12 @@ body.frontend, body#tinymce {
     	}
 
 
+
+    	@media(min-width: 1200px) {
+    		left: 90px;
+    	}
+
+
     }
 }
 
@@ -3343,12 +3349,12 @@ footer, body.mce-content-body {
 				height: 100px;
 			}
 
-			svg#banksvg {
+			svg#limburg-svg {
 				max-width: 200px;
 				height: 168px;
 			}
 
-			svg#limburg-svg {
+			svg#banksvg {
 				float: none;
 				max-width: 200px;
 				margin-top: 0px;
@@ -4439,7 +4445,7 @@ body.frontend .portletMailChimp,
 
 /* Event recurrence */
 div.riform {
-	z-index: 1000;
+	z-index: 9999;
 }
 
 div.occurrence {
@@ -5202,16 +5208,16 @@ body.frontend.template-default_error_message {
 
 	.searchField {
 		padding-right: 45px;
-		padding-left: 14px;
+		padding-left: 16px;
 		border-radius: 0px;
 		height: 40px;
-		font-size: 14px;
+		font-size: 16px;
 		font-style: italic;
 		color: #ff4438;
 		border: 1px solid #ff4438;
 		background: #ffd100;
 		background-color: #ffd100;
-		padding-top: 5px;
+		padding-top: 4px;
 		padding-bottom: 5px;
 		width: 100%;
 		margin-left: 0;
@@ -7254,9 +7260,11 @@ body.frontend.template-advancedsearch {
 		padding-left: 5px !important;
 		padding-right: 28px;
 
+
 		input.select2-input {
 			padding-left: 28px !important;
-			padding-top: 2px !important;
+			padding-top: 0px !important;
+			color: #f9423a !important;
 		}
 	}
 
@@ -7267,7 +7275,7 @@ body.frontend.template-advancedsearch {
 	.select2-input {
 		border: 0px !important;
 		padding: 0px !important;
-		line-height: 34px;
+		line-height: 37px;
 	}
 
 	.select2-container-multi .select2-choices .select2-search-choice {
@@ -7278,8 +7286,10 @@ body.frontend.template-advancedsearch {
 		padding-right: 8px;
 		
 		&> div {
-			line-height: 18px;
-    		padding-top: 4px;
+			line-height: 20px;
+    		padding-top: 0px;
+    		color: #ffe79a !important;
+    		font-size: 16px;
 		}
 
 		a.select2-search-choice-close {
@@ -7304,7 +7314,62 @@ body.frontend.template-advancedsearch {
 	.search-btn-wrapper {
 		padding-top: 40px;
 	}
+
+	.select2-drop-active {
+    	border: 2px solid #f9423a !important;
+    	border-top: none;
+	}
+
+	.select2-drop {
+		background: #ffe79a;
+	}
+
+	.select2-results .select2-highlighted {
+		background: #f9423a !important;
+		color: #ffe79a !important;
+	}
+
+	.select2-container-multi .select2-choices .select2-search-choice {
+		border: 2px solid #f9423a !important; 
+	}
+
+	.select2-container-multi .select2-choices .select2-search-choice {
+		box-shadow: none;
+		filter: none;
+		background-image: none;
+		background-color: #f9423a !important;
+	}
+
+	.select2-search-choice-close {
+		background: none !important;
+
+		top: 3px !important;
+		font-size: 14px !important;
+		font-family: FontAwesome;
+	    font-style: normal;
+	    font-weight: normal;
+	    line-height: 1;
+	    -webkit-font-smoothing: antialiased;
+	    color: #ffe79a !important;
+	}
+
+	.select2-search-choice-close:hover {
+		opacity: 0.8 !important;
+	}
+
+	.select2-search-choice-close:before {
+		content: "\f00d";
+	}
+
+	.select2-results .select2-no-results, .select2-results .select2-searching, .select2-results .select2-ajax-error, .select2-results .select2-selection-limit {
+		background: #ffe79a;
+	}
+
+	.select2-results .select2-ajax-error {
+	    background: rgba(255,50,50,0.2);
+	}
 }
+
 
 /* OBJECT Logged in view */
 @media (min-width: 768px) {
@@ -11683,7 +11748,11 @@ body.navigation-is-open #website-wrapper.presentation {
 
 body.navigation-is-open {
 	div.logo-wrapper div.brand-logo:after {
-		border-bottom: 0px !important;
+		border-color: #ff4438;
+	}
+
+	div.menu-call-to-actions:before {
+		border-color: #ff4438;
 	}
 }
 
@@ -11985,6 +12054,11 @@ body.frontend.template-search {
 		#search-term {
 			font-style: italic;
 		}
+	}
+
+	#search-term {
+		font-weight: 400 !important;
+		.BonnefantenSlab();
 	}
 
 	#website-wrapper.empty-slideshow .page-container #title-container-wrapper {
@@ -15226,6 +15300,9 @@ body.frontend #global_statusmessage {
 
     &:hover,
 	&:focus {
+
+		cursor: pointer;
+
 		svg path {
 			fill: #b6a782;
 		}
@@ -15296,7 +15373,7 @@ html {
 #lang-menu-wrapper {
 	position: relative;
     display: block;
-    float: left;
+    float: right;
     margin-left: 20px;
 
     @media(max-width: 992px) {
@@ -16490,8 +16567,21 @@ body.frontend.portaltype-portlet-page.section-frontpage {
 			background-color: #7841b3;
 		}
 
-		.cd-navigation-wrapper {
+		div.menu-call-to-actions {
 			background-color: #7841b3;
+		}
+
+		.cd-navigation-wrapper, #cd-nav {
+			background-color: #7841b3;
+		}
+
+		&.navigation-is-open-end div.logo-wrapper div.brand-logo:after, {
+			border-color: #faf5b8;
+		}
+
+
+		&.navigation-is-open-end div.menu-call-to-actions:before {
+			border-color: #faf5b8;
 		}
 
 		.main-block {
@@ -16519,7 +16609,8 @@ body.frontend.portaltype-portlet-page.section-frontpage {
     		}
 		}
 
-		.cd-nav .cd-primary-nav ul li a {
+		.cd-nav .cd-primary-nav ul li a,
+		.menu-call-to-actions .tickets-call-to-actions a {
 			color: #faf5b8;
 			&:hover,
     		&:focus,
@@ -16792,11 +16883,22 @@ body.frontend.portaltype-portlet-page.section-frontpage {
     		}
 		}
 
+		&.navigation-is-open-end div.logo-wrapper div.brand-logo:after {
+			border-color: #276d6a;
+		}
+		&.navigation-is-open-end div.menu-call-to-actions:before {
+			border-color: #276d6a;
+		}
+
 		.cd-nav {
 			background-color: #fdcdc0;
 		}
 
-		.cd-navigation-wrapper {
+		div.menu-call-to-actions {
+			background-color: #fdcdc0;
+		}
+
+		.cd-navigation-wrapper, #cd-nav {
 			background-color: #fdcdc0;
 		}
 
@@ -16825,7 +16927,8 @@ body.frontend.portaltype-portlet-page.section-frontpage {
     		}
 		}
 
-		.cd-nav .cd-primary-nav ul li a {
+		.cd-nav .cd-primary-nav ul li a,
+		.menu-call-to-actions .tickets-call-to-actions a {
 			color: #276d6a;
 			&:hover,
     		&:focus,
@@ -17104,9 +17207,24 @@ body.frontend.portaltype-portlet-page.section-frontpage {
 			background-color: #cfb3e4;
 		}
 
-		.cd-navigation-wrapper {
+		div.menu-call-to-actions {
 			background-color: #cfb3e4;
 		}
+
+		&.navigation-is-open-end div.logo-wrapper div.brand-logo:after {
+			border-color: #ab3c4e;
+		}
+		&.navigation-is-open-end div.menu-call-to-actions:before {
+			border-color: #ab3c4e;
+		}
+
+		.cd-navigation-wrapper, #cd-nav {
+			background-color: #cfb3e4;
+		}
+		div.menu-call-to-actions {
+			background-color: #cfb3e4;
+		}
+
 
 		.main-block {
 			background-color: #cfb3e4;
@@ -17133,7 +17251,8 @@ body.frontend.portaltype-portlet-page.section-frontpage {
     		}
 		}
 
-		.cd-nav .cd-primary-nav ul li a {
+		.cd-nav .cd-primary-nav ul li a,
+		.menu-call-to-actions .tickets-call-to-actions a {
 			color: #ab3c4e;
 			&:hover,
     		&:focus,
@@ -17409,7 +17528,19 @@ body.frontend.portaltype-portlet-page.section-frontpage {
 			background-color: #ffd100;
 		}
 
-		.cd-navigation-wrapper {
+		div.menu-call-to-actions {
+			background-color: #ffd100;
+		}
+
+
+		&.navigation-is-open-end div.logo-wrapper div.brand-logo:after {
+			border-color: #7841b3;
+		}
+		&.navigation-is-open-end div.menu-call-to-actions:before {
+			border-color: #7841b3;
+		}
+
+		.cd-navigation-wrapper, #cd-nav {
 			background-color: #ffd100;
 		}
 
@@ -17438,7 +17569,8 @@ body.frontend.portaltype-portlet-page.section-frontpage {
     		}
 		}
 
-		.cd-nav .cd-primary-nav ul li a {
+		.cd-nav .cd-primary-nav ul li a,
+		.menu-call-to-actions .tickets-call-to-actions a {
 			color: #7841b3;
 			&:hover,
     		&:focus,
@@ -17684,7 +17816,18 @@ body.frontend.portaltype-portlet-page.section-frontpage {
 			background-color: #7841b3;
 		}
 
-		.cd-navigation-wrapper {
+		div.menu-call-to-actions {
+			background-color: #7841b3;
+		}
+
+		&.navigation-is-open-end div.logo-wrapper div.brand-logo:after {
+			border-color: #ffd100;
+		}
+		&.navigation-is-open-end div.menu-call-to-actions:before {
+			border-color: #ffd100;
+		}
+
+		.cd-navigation-wrapper, #cd-nav {
 			background-color: #7841b3;
 		}
 
@@ -17713,7 +17856,8 @@ body.frontend.portaltype-portlet-page.section-frontpage {
     		}
 		}
 
-		.cd-nav .cd-primary-nav ul li a {
+		.cd-nav .cd-primary-nav ul li a,
+		.menu-call-to-actions .tickets-call-to-actions a {
 			color: #ffd100;
 			&:hover,
     		&:focus,
@@ -17954,11 +18098,22 @@ body.frontend.portaltype-portlet-page.section-frontpage {
     		}
 		}
 
+		&.navigation-is-open-end div.logo-wrapper div.brand-logo:after {
+			border-color: #b6a782;
+		}
+		&.navigation-is-open-end div.menu-call-to-actions:before {
+			border-color: #b6a782;
+		}
+
 		.cd-nav {
 			background-color: #7841b3;
 		}
 
-		.cd-navigation-wrapper {
+		div.menu-call-to-actions {
+			background-color: #7841b3;
+		}
+
+		.cd-navigation-wrapper, #cd-nav {
 			background-color: #7841b3;
 		}
 
@@ -17987,7 +18142,8 @@ body.frontend.portaltype-portlet-page.section-frontpage {
     		}
 		}
 
-		.cd-nav .cd-primary-nav ul li a {
+		.cd-nav .cd-primary-nav ul li a,
+		.menu-call-to-actions .tickets-call-to-actions a {
 			color: #b6a782;
 			&:hover,
     		&:focus,
@@ -18434,7 +18590,18 @@ body.frontend:not(.portaltype-portlet-page) {
 		background-color: #f9423a;
 	}
 
-	.cd-navigation-wrapper {
+	.cd-navigation-wrapper, #cd-nav {
+		background-color: #f9423a;
+	}
+
+	&.navigation-is-open-end div.logo-wrapper div.brand-logo:after {
+		border-color: #ffe79a;
+	}
+	&.navigation-is-open-end div.menu-call-to-actions:before {
+		border-color: #ffe79a;
+	}
+
+	div.menu-call-to-actions {
 		background-color: #f9423a;
 	}
 
@@ -18463,7 +18630,8 @@ body.frontend:not(.portaltype-portlet-page) {
 		}
 	}
 
-	.cd-nav .cd-primary-nav ul li a {
+	.cd-nav .cd-primary-nav ul li a,
+	.menu-call-to-actions .tickets-call-to-actions a {
 		color: #ffe79a;
 		&:hover,
 		&:focus,
@@ -18699,11 +18867,23 @@ body.frontend:not(.portaltype-portlet-page) {
     		}
 		}
 
+		&.navigation-is-open-end div.logo-wrapper div.brand-logo:after {
+			border-color: #7841b3;
+		}
+
+		&.navigation-is-open-end div.menu-call-to-actions:before {
+			border-color: #7841b3;
+		}
+
 		.cd-nav {
 			background-color: #ffd100;
 		}
 
-		.cd-navigation-wrapper {
+		div.menu-call-to-actions {
+			background-color: #ffd100;
+		}
+
+		.cd-navigation-wrapper, #cd-nav {
 			background-color: #ffd100;
 		}
 
@@ -18732,7 +18912,8 @@ body.frontend:not(.portaltype-portlet-page) {
     		}
 		}
 
-		.cd-nav .cd-primary-nav ul li a {
+		.cd-nav .cd-primary-nav ul li a,
+		.menu-call-to-actions .tickets-call-to-actions a {
 			color: #7841b3;
 			&:hover,
     		&:focus,
@@ -18957,13 +19138,26 @@ body.frontend:not(.portaltype-portlet-page) {
 			background-color: #7841b3;
 		}
 
-		.cd-navigation-wrapper {
+		div.menu-call-to-actions {
 			background-color: #7841b3;
+		}
+
+		.cd-navigation-wrapper, #cd-nav {
+			background-color: #7841b3;
+		}
+
+		&.navigation-is-open-end div.logo-wrapper div.brand-logo:after {
+			border-color: #ffd100;
+		}
+		&.navigation-is-open-end div.menu-call-to-actions:before {
+			border-color: #ffd100;
 		}
 
 		.main-block {
 			background-color: #7841b3;
 		}
+
+
 
 		#lang-menu-wrapper h5 a {
 			color: #ffd100;
@@ -18986,7 +19180,8 @@ body.frontend:not(.portaltype-portlet-page) {
     		}
 		}
 
-		.cd-nav .cd-primary-nav ul li a {
+		.cd-nav .cd-primary-nav ul li a,
+		.menu-call-to-actions .tickets-call-to-actions a {
 			color: #ffd100;
 			&:hover,
     		&:focus,
@@ -19300,8 +19495,20 @@ body.frontend:not(.portaltype-portlet-page) {
 			background-color: #ab3c4f;
 		}
 
-		.cd-navigation-wrapper {
+		div.menu-call-to-actions {
 			background-color: #ab3c4f;
+		}
+
+		.cd-navigation-wrapper, #cd-nav {
+			background-color: #ab3c4f;
+		}
+
+		&.navigation-is-open-end div.logo-wrapper div.brand-logo:after {
+			border-color: #b5a685;
+		}
+
+		&.navigation-is-open-end div.menu-call-to-actions:before {
+			border-color: #b5a685;
 		}
 
 		.main-block {
@@ -19329,7 +19536,8 @@ body.frontend:not(.portaltype-portlet-page) {
     		}
 		}
 
-		.cd-nav .cd-primary-nav ul li a {
+		.cd-nav .cd-primary-nav ul li a,
+		.menu-call-to-actions .tickets-call-to-actions a {
 			color: #b5a685;
 			&:hover,
     		&:focus,
@@ -19634,7 +19842,19 @@ body.frontend:not(.portaltype-portlet-page) {
 			background-color: #216d6a;
 		}
 
-		.cd-navigation-wrapper {
+		div.menu-call-to-actions {
+			background-color: #216d6a;
+		}
+
+		&.navigation-is-open-end div.logo-wrapper div.brand-logo:after {
+			border-color: #fedacd;
+		}
+
+		&.navigation-is-open-end div.menu-call-to-actions:before {
+			border-color: #fedacd;
+		}
+
+		.cd-navigation-wrapper, #cd-nav {
 			background-color: #216d6a;
 		}
 
@@ -19663,7 +19883,8 @@ body.frontend:not(.portaltype-portlet-page) {
     		}
 		}
 
-		.cd-nav .cd-primary-nav ul li a {
+		.cd-nav .cd-primary-nav ul li a,
+		.menu-call-to-actions .tickets-call-to-actions a {
 			color: #fedacd;
 			&:hover,
     		&:focus,
@@ -20182,8 +20403,20 @@ body.frontend.portaltype-portlet-page.subsection-now-in-the-museum {
 		background-color: #f9423a;
 	}
 
-	.cd-navigation-wrapper {
+	.cd-navigation-wrapper, #cd-nav {
 		background-color: #f9423a;
+	}
+
+	div.menu-call-to-actions {
+		background-color: #f9423a;
+	}
+
+	&.navigation-is-open-end div.logo-wrapper div.brand-logo:after {
+		border-color: #ffe79a;
+	}
+
+	&.navigation-is-open-end div.menu-call-to-actions:before {
+		border-color: #ffe79a;
 	}
 
 	.main-block {
@@ -20211,7 +20444,8 @@ body.frontend.portaltype-portlet-page.subsection-now-in-the-museum {
 		}
 	}
 
-	.cd-nav .cd-primary-nav ul li a {
+	.cd-nav .cd-primary-nav ul li a,
+	.menu-call-to-actions .tickets-call-to-actions a {
 		color: #ffe79a;
 		&:hover,
 		&:focus,
@@ -20447,8 +20681,21 @@ body.frontend.portaltype-portlet-page.subsection-now-in-the-museum {
 			background-color: #ffd100;
 		}
 
-		.cd-navigation-wrapper {
+
+		div.menu-call-to-actions {
 			background-color: #ffd100;
+		}
+
+		.cd-navigation-wrapper, #cd-nav {
+			background-color: #ffd100;
+		}
+
+		&.navigation-is-open-end div.logo-wrapper div.brand-logo:after {
+			border-color: #7841b3;
+		}
+
+		&.navigation-is-open-end div.menu-call-to-actions:before {
+			border-color: #7841b3;
 		}
 
 		.main-block {
@@ -20476,7 +20723,8 @@ body.frontend.portaltype-portlet-page.subsection-now-in-the-museum {
     		}
 		}
 
-		.cd-nav .cd-primary-nav ul li a {
+		.cd-nav .cd-primary-nav ul li a,
+		.menu-call-to-actions .tickets-call-to-actions a {
 			color: #7841b3;
 			&:hover,
     		&:focus,
@@ -20676,11 +20924,23 @@ body.frontend.portaltype-portlet-page.subsection-now-in-the-museum {
     		}
 		}
 
+		&.navigation-is-open-end div.logo-wrapper div.brand-logo:after {
+			border-color: #ffd100;
+		}
+
+		&.navigation-is-open-end div.menu-call-to-actions:before {
+			border-color: #ffd100;
+		}
+
 		.cd-nav {
 			background-color: #7841b3;
 		}
 
-		.cd-navigation-wrapper {
+		.cd-navigation-wrapper, #cd-nav {
+			background-color: #7841b3;
+		}
+
+		div.menu-call-to-actions {
 			background-color: #7841b3;
 		}
 
@@ -20709,7 +20969,8 @@ body.frontend.portaltype-portlet-page.subsection-now-in-the-museum {
     		}
 		}
 
-		.cd-nav .cd-primary-nav ul li a {
+		.cd-nav .cd-primary-nav ul li a,
+		.menu-call-to-actions .tickets-call-to-actions a {
 			color: #ffd100;
 			&:hover,
     		&:focus,
@@ -21035,11 +21296,24 @@ body.frontend.portaltype-portlet-page.subsection-now-in-the-museum {
     		}
 		}
 
+		&.navigation-is-open-end div.logo-wrapper div.brand-logo:after {
+			border-color: #b5a685;
+		}
+
+		&.navigation-is-open-end div.menu-call-to-actions:before {
+			border-color: #b5a685;
+		}
+
 		.cd-nav {
 			background-color: #ab3c4f;
 		}
 
-		.cd-navigation-wrapper {
+		.cd-navigation-wrapper, #cd-nav {
+			background-color: #ab3c4f;
+		}
+
+
+		div.menu-call-to-actions {
 			background-color: #ab3c4f;
 		}
 
@@ -21068,7 +21342,8 @@ body.frontend.portaltype-portlet-page.subsection-now-in-the-museum {
     		}
 		}
 
-		.cd-nav .cd-primary-nav ul li a {
+		.cd-nav .cd-primary-nav ul li a,
+		.menu-call-to-actions .tickets-call-to-actions a {
 			color: #b5a685;
 			&:hover,
     		&:focus,
@@ -21134,14 +21409,14 @@ body.frontend.portaltype-portlet-page.subsection-now-in-the-museum {
 		background-color: #fedacd;
 
 		.nav-trigger-wrapper svg path {
-			fill: #ab3c4f;
+			fill: #216d6a;
 		}
 
 		.navbar-default#website-nav { 
 			background: #fedacd;
 
 			#portal-logo {
-				color: #ab3c4f;
+				color: #216d6a;
 			}
 		}
 
@@ -21164,7 +21439,7 @@ body.frontend.portaltype-portlet-page.subsection-now-in-the-museum {
     	}
 
 		.portlet-rrssb .rrssb-buttons li a .rrssb-icon svg path {
-			fill: #ab3c4f !important;
+			fill: #216d6a !important;
 		}
 
 		.portlet-rrssb .rrssb-buttons li a {
@@ -21180,11 +21455,11 @@ body.frontend.portaltype-portlet-page.subsection-now-in-the-museum {
 
 		/* Nu te zien */
 		#below-content .portlet.frontpage-collection-online.portlet-collection-slideshow .slide-inner-img-wrapper div.slide-inner-title h4 a {
-			color: #ab3c4f;
+			color: #216d6a;
 		}
 
 		#below-content .portlet.frontpage-collection-online.portlet-collection-slideshow .slide-inner-img-wrapper div.slide-inner-title p.item-description {
-			color: #ab3c4f;
+			color: #216d6a;
 		}
 
 		#below-content .portlet.frontpage-collection-online.portlet-collection-slideshow .slide-inner-img-wrapper div.slide-inner-title p.event-date {
@@ -21196,8 +21471,8 @@ body.frontend.portaltype-portlet-page.subsection-now-in-the-museum {
 		}
 
 		#below-content .portletCollection .slide-inner-img-wrapper div.slide-inner-title .show-more-portlet-item input  {
-			background-color: #ab3c4f;
-			border: 1px solid #ab3c4f;
+			background-color: #216d6a;
+			border: 1px solid #216d6a;
 			color: #fedacd;
 
 			&:hover,
@@ -21211,34 +21486,34 @@ body.frontend.portaltype-portlet-page.subsection-now-in-the-museum {
 		}
 
 		.portletMailChimp #form-widgets-email {
-		    border: 2px solid #ab3c4f;
+		    border: 2px solid #216d6a;
 		    background-color: #fedacd;
-		    color: #ab3c4f;
+		    color: #216d6a;
 
 		    &::-webkit-input-placeholder {
-			   color: #ab3c4f;
+			   color: #216d6a;
 			   text-shadow: none;
 			}
 
 			&:-moz-placeholder { /* Firefox 18- */
-			   color: #ab3c4f;  
+			   color: #216d6a;  
 			   text-shadow: none;
 			}
 
 			&::-moz-placeholder {  /* Firefox 19+ */
-			   color: #ab3c4f;  
+			   color: #216d6a;  
 			   text-shadow: none;
 			}
 
 			&:-ms-input-placeholder {  
-			   color: #ab3c4f;  
+			   color: #216d6a;  
 			   text-shadow: none;
 			}
 		}
 
 		.portletMailChimp input#form-buttons-subscribe {
-			background: #ab3c4f;
-		    border: 2px solid #ab3c4f;
+			background: #216d6a;
+		    border: 2px solid #216d6a;
 		    color: #fedacd;
 
 		    &:hover,
@@ -21246,19 +21521,19 @@ body.frontend.portaltype-portlet-page.subsection-now-in-the-museum {
     		&:active,
     		&:active:focus {
     			background: #fedacd;
-			    border: 2px solid #ab3c4f;
-			    color: #ab3c4f;
+			    border: 2px solid #216d6a;
+			    color: #216d6a;
     		}
 		}
 
 		.portletMailChimp #privacy-statement-wrapper a {
-			color: #ab3c4f;
+			color: #216d6a;
 
 			&:hover,
     		&:focus,
     		&:active,
     		&:active:focus {
-			    color: #ab3c4f;
+			    color: #216d6a;
     		}
 		}
 
@@ -21267,20 +21542,20 @@ body.frontend.portaltype-portlet-page.subsection-now-in-the-museum {
 		}
 
 		footer div.portlet-static-footer li a:not(.text-button) {
-			color: #ab3c4f;
+			color: #216d6a;
 
 			&:hover,
     		&:focus,
     		&:active,
     		&:active:focus {
-			    color: #ab3c4f;
+			    color: #216d6a;
 			    text-decoration: none;
-			    border-bottom: 2px solid #ab3c4f;
+			    border-bottom: 2px solid #216d6a;
     		}
 		}
 
 		footer div.portlet-static-footer svg .cls-1 {
-			fill: #ab3c4f;
+			fill: #216d6a;
 		}
 
 		footer div.portlet-static-footer a {
@@ -21296,7 +21571,7 @@ body.frontend.portaltype-portlet-page.subsection-now-in-the-museum {
 
 		/* Menu */
 		&.navigation-is-open-end .navbar-default#website-nav {
-			background: #ab3c4f !important;
+			background: #216d6a !important;
 		}
 
 		&.navigation-is-open-end #portal-logo {
@@ -21313,16 +21588,28 @@ body.frontend.portaltype-portlet-page.subsection-now-in-the-museum {
     		}
 		}
 
-		.cd-nav {
-			background-color: #ab3c4f;
+		&.navigation-is-open-end div.logo-wrapper div.brand-logo:after {
+			border-color: #fedacd;
 		}
 
-		.cd-navigation-wrapper {
-			background-color: #ab3c4f;
+		&.navigation-is-open-end div.menu-call-to-actions:before {
+			border-color: #fedacd;
+		}
+
+		div.menu-call-to-actions {
+			background-color: #216d6a;
+		}
+
+		.cd-nav {
+			background-color: #216d6a;
+		}
+
+		.cd-navigation-wrapper, #cd-nav {
+			background-color: #216d6a;
 		}
 
 		.main-block {
-			background-color: #ab3c4f;
+			background-color: #216d6a;
 		}
 
 		#lang-menu-wrapper h5 a {
@@ -21346,7 +21633,8 @@ body.frontend.portaltype-portlet-page.subsection-now-in-the-museum {
     		}
 		}
 
-		.cd-nav .cd-primary-nav ul li a {
+		.cd-nav .cd-primary-nav ul li a,
+		.menu-call-to-actions .tickets-call-to-actions a {
 			color: #fedacd;
 			&:hover,
     		&:focus,
@@ -21360,14 +21648,14 @@ body.frontend.portaltype-portlet-page.subsection-now-in-the-museum {
 			color: #fedacd;
 			border: 1px solid #fedacd;
 
-			background: #ab3c4f;
-    		background-color: #ab3c4f;
+			background: #216d6a;
+    		background-color: #216d6a;
 
 		}
 
 		#cd-nav .LSBox {
-			background: #ab3c4f;
-			border: 1px solid #ab3c4f;
+			background: #216d6a;
+			border: 1px solid #216d6a;
 		}
 
 		#cd-nav .searchField::-webkit-input-placeholder {
@@ -21408,46 +21696,46 @@ body.frontend.portaltype-portlet-page.subsection-now-in-the-museum {
 
 		#title-container-wrapper {
 			h1.brand-name {
-				color: #ab3c4f;
+				color: #216d6a;
 			}
 
 			span.subheading {
-				color: #ab3c4f;
+				color: #216d6a;
 			}
 		}
 
 		#content-core #portletPageTopRow > div:nth-child(odd) .portletCollection.frontpage-news, 
 		#content-core #portletPageTopRow > div:nth-child(even) .portletCollection.frontpage-news {
 			.entry-wrapper h4.item-title a {
-				color: #ab3c4f !important;
+				color: #216d6a !important;
 
 				&:hover,
 				&:focus,
 				&:active,
 				&:active:focus {
-					color: #ab3c4f !important;
+					color: #216d6a !important;
 					text-decoration: none !important;
-					border-bottom: 1px solid #ab3c4f !important;
+					border-bottom: 1px solid #216d6a !important;
 				}
 			}
 
 			.portletHeader .show-more-header {
-				color: #ab3c4f !important;
-				border-bottom: 1px solid #ab3c4f !important;
+				color: #216d6a !important;
+				border-bottom: 1px solid #216d6a !important;
 
 				&:hover,
 				&:focus,
 				&:active,
 				&:active:focus {
-					color: #ab3c4f !important;
+					color: #216d6a !important;
 					text-decoration: none !important;
 					border-bottom: 0px !important;
 				}
 			}
 
 			.portletFooter input.show-more {
-				background-color: #ab3c4f !important;
-				border: 2px solid #ab3c4f !important;
+				background-color: #216d6a !important;
+				border: 2px solid #216d6a !important;
 				color: #fedacd !important;
 
 				&:hover,
@@ -21647,11 +21935,23 @@ body.frontend.portaltype-portlet-page.subsection-now-in-the-museum {
     		}
 		}
 
+		&.navigation-is-open-end div.logo-wrapper div.brand-logo:after {
+			border-color: #276d6a;
+		}
+
+		&.navigation-is-open-end div.menu-call-to-actions:before {
+			border-color: #276d6a;
+		}
+
 		.cd-nav {
 			background-color: #fdcdc0;
 		}
 
-		.cd-navigation-wrapper {
+		div.menu-call-to-actions {
+			background-color: #fdcdc0;
+		}
+
+		.cd-navigation-wrapper, #cd-nav {
 			background-color: #fdcdc0;
 		}
 
@@ -21680,7 +21980,8 @@ body.frontend.portaltype-portlet-page.subsection-now-in-the-museum {
     		}
 		}
 
-		.cd-nav .cd-primary-nav ul li a {
+		.cd-nav .cd-primary-nav ul li a,
+		.menu-call-to-actions .tickets-call-to-actions a {
 			color: #276d6a;
 			&:hover,
     		&:focus,
@@ -23095,8 +23396,10 @@ body.frontend.userrole-authenticated #website-wrapper.empty-slideshow {
 body.frontend.portaltype-collection #website-wrapper.empty-slideshow,
 body.frontend.portaltype-folder #website-wrapper.empty-slideshow {
 	.title-container { 
-		padding-top: 50px !important;
-		padding-bottom: 50px !important;
+		@media(min-width: 992px) {
+			padding-top: 50px !important;
+			padding-bottom: 50px !important;
+		}
 		.header-quotes-wrapper .quote-bonnefanten {
 			top: -35px;
 		}
@@ -23161,3 +23464,211 @@ body:not(.site-en):not(.site-nl) #website-wrapper.presentation #title-container-
 		display: none !important;
 	}
 }
+
+
+body.frontend.userrole-authenticated div.portlet-rrssb {
+	display: none !important;
+}
+
+body.template-edit.portaltype-event { 
+	overflow-y: auto !important;
+
+	.scroll-wrapper {
+		overflow-y: scroll !important;
+	}
+}
+
+
+
+
+/* Cookie statement */
+#CybotCookiebotDialog {
+    right: 0!important;
+    left: auto!important;
+    width: 100%!important;
+    max-width: 550px!important;
+    -webkit-transform: scale(1)!important;
+    -ms-transform: scale(1)!important;
+    transform: scale(1)!important;
+    padding: 0!important;
+    background: 0 0!important;
+    box-shadow: none!important;
+    font-size: 14px!important;
+    font-size: 1.4rem!important;
+}
+
+@media (min-width: 34.375em) {
+        #CybotCookiebotDialog {
+            right: auto!important;
+            left: 50%!important;
+            -webkit-transform: translateX(-50%)!important;
+            -ms-transform: translateX(-50%)!important;
+            transform: translateX(-50%)!important;
+            padding: 1.25vw!important;
+        }
+}
+
+#CybotCookiebotDialogBody, #CybotCookiebotDialogDetail {
+    max-width: 100%!important;
+    padding: 16px!important;
+    background: #282931!important;
+}
+
+#CybotCookiebotDialog a, #CybotCookiebotDialog div, #CybotCookiebotDialogBodyContentTitle {
+    .StyreneRegular();
+    color: #fff!important;
+}
+
+#CybotCookiebotDialog a, #CybotCookiebotDialog br, #CybotCookiebotDialog div, #CybotCookiebotDialog td {
+    line-height: 1.231;
+}
+
+#CybotCookiebotDialogPoweredbyLink {
+        display: none !important;
+}
+
+#CybotCookiebotDialogBodyContent {
+    margin-bottom: 1.25vw!important;
+    padding: 0!important;
+}
+
+#CybotCookiebotDialog h2 {
+    margin: 0 0 .25em!important;
+    .StyreneRegular();
+    font-size: 18px!important;
+    font-size: 1.8rem!important;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+@media (min-width: 48em) {
+        #CybotCookiebotDialogBodyContentText {
+            font-size: 14px!important;
+            font-size: 1.4rem!important;
+        }
+}
+
+@media (min-width: 48em) {
+        a#CybotCookiebotDialogBodyButtonAccept, a#CybotCookiebotDialogBodyLevelButtonAccept {
+            margin: 0!important;
+            font-size: 22px!important;
+            font-size: 2.2rem!important;
+        }
+}
+
+#CybotCookiebotDialogBodyButtons {
+    margin: 0!important;
+}
+
+
+a#CybotCookiebotDialogBodyButtonAccept, a#CybotCookiebotDialogBodyLevelButtonAccept {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    min-width: none!important;
+    background: #fff!important;
+    color: #282931!important;
+    margin: 1.25vw 0 0!important;
+    padding: .26562em .5em!important;
+    font-size: 18px!important;
+    font-size: 1.8rem!important;
+    line-height: 1!important;
+    border: 0;
+    border-radius: 0;
+    cursor: pointer;
+}
+
+
+a#CybotCookiebotDialogBodyButtonAccept:focus, a#CybotCookiebotDialogBodyButtonAccept:hover, a#CybotCookiebotDialogBodyLevelButtonAccept:focus, a#CybotCookiebotDialogBodyLevelButtonAccept:hover {
+    background-color: #ebeae8!important;
+}
+
+#CybotCookiebotDialogBodyButtonDetails {
+    padding-right: 0!important;
+    background: 0 0!important;
+    font-size: inherit!important;
+}
+
+#CybotCookiebotDialogBodyButtons {
+        padding-left: 0px !important;
+}
+
+#CybotCookiebotDialogBodyButtonDetails::after, #CybotCookiebotDialogBodyLevelDetailsButton::after {
+    content: '+';
+    display: inline-block;
+    margin-left: .35em;
+    color: #fff;
+}
+
+.CybotCookiebotDialogBodyLevelDetailsButtonExpanded::after, .CybotCookiebotDialogBodyLinkExpanded::after {
+    content: '-'!important;
+}
+
+
+@media (min-width: 48em) {
+        a#CybotCookiebotDialogBodyButtonAccept, a#CybotCookiebotDialogBodyLevelButtonAccept {
+            margin: 0!important;
+            font-size: 22px!important;
+            font-size: 2.2rem!important;
+        }
+}
+
+#CybotCookiebotDialogDetailBody, #CybotCookiebotDialogDetailBody a, #CybotCookiebotDialogDetailBody div {
+    color: #282931!important;
+}
+
+#CybotCookiebotDialogDetailFooter {
+    padding: 4px!important;
+    font-size: 12px!important;
+    font-size: 1.2rem!important;
+    text-align: center!important;
+}
+
+.CookieDeclarationType {
+    overflow: auto!important;
+    font-size: 12px!important;
+    font-size: 1.2rem!important;
+}
+
+.CookieDeclarationTypeHeader {
+        margin-bottom: 5px !important;
+        margin-bottom: 5px !important;
+    margin-top: 5px !important;
+    line-height: 20px !important;
+}
+
+.CookieDeclarationType table {
+    table-layout: auto!important;
+}
+
+.CookieDeclarationTableHeader {
+        line-height: 16px !important;
+}
+
+
+.CookieDeclarationTableCell {
+        line-height: 16px !important;
+    border: 0px !important;
+    padding-top: 10px !important;
+}
+
+p.CookieDeclarationTypeDescription {
+        font-size: 14px !important;
+        line-height: 20px !important;
+}
+
+.CookieDeclarationTableHeader {
+        border: 0px;
+    border-bottom: 1px solid #e6e6e6;
+}
+
+.CookieDeclarationDialogText {
+        padding-top: 50px !important;
+}
+
+.CybotCookiebotDialogDetailBodyContentTab:first-child {
+    border-radius: 0!important;
+}
+
+

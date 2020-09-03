@@ -122,6 +122,7 @@
 
 
 
+
       <replace css:theme="span.subheading" css:if-content="#slickcarousel .carousel-item.portrait[data-index='0']" method="raw">
           <span class="subheading portrait">
             <xsl:copy-of select="//*[@class='documentDescription description']/text()"/>
@@ -348,12 +349,12 @@
 
       <replace css:theme-children="footer .container" css:content-children="#portal-footer-wrapper" />
       
-      <replace css:content="#form-widgets-email" css:if-content="body.site-nl">
+      <!--<replace css:content="#form-widgets-email" css:if-content="body.site-nl">
         <input id="form-widgets-email" name="EMAIL" class="text-widget required textline-field" value="" type="text" placeholder="Uw mailadres"/>
       </replace>
       <replace css:content="#form-widgets-email" css:if-content="body.site-en">
         <input id="form-widgets-email" name="EMAIL" class="text-widget required textline-field" value="" type="text" placeholder="Email"/>
-      </replace>
+      </replace>-->
 
       <replace css:content="#parent-fieldname-text iframe">
         <div class="iframe-wrapper">
@@ -366,6 +367,14 @@
           <xsl:copy-of select="."/>
         </div>
       </replace>
+
+
+      <replace
+        css:theme-children=".menu-call-to-actions .tickets-call-to-actions"
+        css:content-children=".line-wrapper.line-tickets li a"
+        />
+
+      <drop css:content=".line-wrapper.line-tickets"/>
 
       <!--<xsl:template match="//script[contains(@src, 'production')]">
         <xsl:copy>

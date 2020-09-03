@@ -235,6 +235,10 @@ body:not(.navigation-is-open) .cd-nav-trigger:hover .cd-nav-icon::before {
   }
 }
 
+#cd-nav {
+  background-color: #ffd100;
+}
+
 .cd-nav .cd-navigation-wrapper {
   padding: 0px;
   padding-top: 0px;
@@ -248,7 +252,7 @@ body:not(.navigation-is-open) .cd-nav-trigger:hover .cd-nav-icon::before {
   padding-top: 0px;
 
   @media(max-width: 992px) {
-    padding-top: 13vw; 
+    padding-top: 12vw; 
     padding-bottom: 80px;
   }
 
@@ -359,6 +363,7 @@ body:not(.navigation-is-open) .cd-nav-trigger:hover .cd-nav-icon::before {
     height: auto;
     min-height: 100%;
     background-color: #ffd100;
+    padding-bottom: 80px;
   }
 
   .cd-nav .cd-navigation-wrapper::after {
@@ -402,7 +407,7 @@ body:not(.navigation-is-open) .cd-nav-trigger:hover .cd-nav-icon::before {
 @media only screen and (min-width: 1200px) {
   .cd-nav .cd-navigation-wrapper {
     padding: 0px;
-    padding-top: 150px;
+    padding-top: 170px;
   }
 }
 
@@ -481,7 +486,8 @@ ul.cd-primary-nav {
     }
 }
 
-.cd-nav .cd-primary-nav .line-wrapper > li > a {
+.cd-nav .cd-primary-nav .line-wrapper > li > a,
+.menu-call-to-actions .tickets-call-to-actions a {
   .BonnefantenBlock();
   font-size: 6.2vw;
   line-height: 7vw;
@@ -519,6 +525,24 @@ ul.cd-primary-nav {
     text-decoration: none;
   }
 
+}
+
+.menu-call-to-actions .tickets-call-to-actions a {
+  font-size: 3.8vw;
+  line-height: 1;
+  margin-bottom: 0px;
+  margin-top: 0px;
+
+  @media(max-width: 992px) {
+    font-size: 5vw;
+    line-height: 1;
+    margin-bottom: 0px;
+  }
+
+  @media(min-width: 1480px) {
+    font-size: 50px;
+    line-height: 1;
+  }
 }
 
 .cd-nav .cd-primary-nav ul {
@@ -598,4 +622,71 @@ ul.cd-primary-nav {
     padding-right: 30px;
   }
 }
+
+div.menu-call-to-actions {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: auto;
+  overflow-x: hidden;
+  overflow-y: scroll;
+
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-top: 6px;
+  padding-bottom: 9px;
+
+  background: inherit;
+  z-index: 100;
+
+  @media(min-width: 992px) {
+    padding-right: 25px;
+  }
+
+  &:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 15px;
+    left: 15px;
+    height: 100%;
+    width: calc(~"100% - 30px");
+    border-top: 1px solid #b6a782;
+
+    @media(min-width: 992px) {
+      right: 10px;
+      left: 15px;
+      height: 100%;
+      width: calc(~"100% - 30px");
+    }
+  }
+
+  .tickets-call-to-actions {
+    position: relative;
+    display: block;
+    float: left;
+  }
+
+  #lang-menu-wrapper h5 {
+    margin: 0px !important;
+    line-height: 3.8vw;
+
+    @media(max-width: 992px) {
+      line-height: 5vw;
+    }
+
+    @media(min-width: 1480px) {
+      line-height: 50px;
+    }
+  }
+
+}
+
+.plone-toolbar-expanded div.menu-call-to-actions {
+  margin-left: 120px;
+  width: calc(~"100% - 120px");
+}
+
 
